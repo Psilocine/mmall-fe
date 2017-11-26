@@ -9,11 +9,7 @@
     "dist": "WEBPACK_ENV=online webpack -p",
     "dist_win": "set WEBPACK_ENV=online && webpack -p"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@git.oschina.net:happymmall/mmall-fe.git"
-  },
-  "author": "Rosen",
+  "author": "psilo",
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^0.28.1",

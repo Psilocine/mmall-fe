@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-11-27 11:26:30
+ * @Last Modified time: 2017-11-27 11:47:15
 */
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -40,7 +40,7 @@ var config = {
     },
     output: {
         path: './dist',
-        publicPath : '/dist',
+        publicPath : '//s.psilocine.cn/mmall-fe/dist/',
         filename: 'js/[name].js'
     },
     externals : {

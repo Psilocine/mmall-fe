@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-11-27 13:18:48
+ * @Last Modified time: 2017-11-27 16:02:23
 */
 'use strict';
 require('./index.css');
@@ -14,9 +14,9 @@ var navSide = {
         name : '',
         navList : [
             {name : 'user-center', desc : '个人中心', href: './user-center.html'},
-            {name : 'order-list', desc : '我的订单', href: './order-list.html'},
+            // {name : 'order-list', desc : '我的订单', href: './order-list.html'},
             {name : 'user-pass-update', desc : '修改密码', href: './user-pass-update.html'},
-            {name : 'about', desc : '关于Mall', href: './about.html'}
+            // {name : 'about', desc : '关于Mall', href: './about.html'}
         ]
     },
     init : function(option){

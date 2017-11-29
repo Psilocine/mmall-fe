@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-11-27 13:17:55
+ * @Last Modified time: 2017-11-29 15:19:22
 */
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -32,6 +32,7 @@ var config = {
         'cart'              : ['./src/page/cart/index.js'],
         'user-login'        : ['./src/page/user-login/index.js'],
         'user-register'     : ['./src/page/user-register/index.js'],
+        'user-register-pifa'     : ['./src/page/user-register-pifa/index.js'],
         'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
         'user-center'       : ['./src/page/user-center/index.js'],
         'user-center-update': ['./src/page/user-center-update/index.js'],
@@ -49,7 +50,7 @@ var config = {
     module: {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
-            { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=/resource/[name].[ext]' },
+            { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]' },
             { test: /\.string$/, loader: 'html-loader'}
         ]
     },
@@ -77,6 +78,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-register-pifa', '批发商注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),

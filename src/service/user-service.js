@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-17 17:04:32
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-24 17:11:19
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-11-29 15:18:04
 */
 
 'use strict';
@@ -37,6 +37,16 @@ var _user = {
     register : function(userInfo, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/user/register.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 批发商注册
+    registerPifa : function(userInfo, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/register_pifa.do'),
             data    : userInfo,
             method  : 'POST',
             success : resolve,

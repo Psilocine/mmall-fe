@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-11-27 16:02:23
+ * @Last Modified time: 2017-11-29 14:27:13
 */
 'use strict';
 require('./index.css');
@@ -14,6 +14,10 @@ var navSide = {
         name : '',
         navList : [
             {name : 'user-center', desc : '个人中心', href: './user-center.html'},
+            {name : 'upload-product', desc : '商品添加', href: 'http://admin.psilocine.cn/#/product/save'},
+            {name : 'manage-product', desc : '商品管理', href: 'http://admin.psilocine.cn/#/product/index'},
+            
+            
             // {name : 'order-list', desc : '我的订单', href: './order-list.html'},
             {name : 'user-pass-update', desc : '修改密码', href: './user-pass-update.html'},
             // {name : 'about', desc : '关于Mall', href: './about.html'}

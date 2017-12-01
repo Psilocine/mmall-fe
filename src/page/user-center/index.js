@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:33
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-01 17:15:40
+ * @Last Modified time: 2017-12-01 17:31:28
 */
 
 'use strict';
@@ -33,15 +33,17 @@ var page = {
         _user.getUserInfo(function(res){
             console.log(res);
             switch(res.role) {
-                case "1":
+                case 1:
                     res.role = '管理员';
                     break;
-                case "2":
+                case 2:
                     res.role = '批发商';
                     break;
-                case "3":
+                case 3:
                     res.role = '实体店用户';
                     break;
+                default: 
+                    console.log('Error user type');
             }
             userHtml = _mm.renderHtml(templateIndex, res);
             $('.panel-body').html(userHtml);

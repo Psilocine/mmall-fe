@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:33
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-23 22:30:31
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-12-01 17:15:40
 */
 
 'use strict';
@@ -31,6 +31,18 @@ var page = {
     loadUserInfo : function(){
         var userHtml = '';
         _user.getUserInfo(function(res){
+            console.log(res);
+            switch(res.role) {
+                case "1":
+                    res.role = '管理员';
+                    break;
+                case "2":
+                    res.role = '批发商';
+                    break;
+                case "3":
+                    res.role = '实体店用户';
+                    break;
+            }
             userHtml = _mm.renderHtml(templateIndex, res);
             $('.panel-body').html(userHtml);
         }, function(errMsg){

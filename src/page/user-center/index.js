@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:33
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-01 17:31:28
+ * @Last Modified time: 2017-12-04 15:15:33
 */
 
 'use strict';
@@ -31,7 +31,6 @@ var page = {
     loadUserInfo : function(){
         var userHtml = '';
         _user.getUserInfo(function(res){
-            console.log(res);
             switch(res.role) {
                 case 1:
                     res.role = '管理员';

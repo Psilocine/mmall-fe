@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-23 19:52:16
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-23 23:40:04
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-12-04 15:16:29
 */
 'use strict';
 require('./index.css');
@@ -56,6 +56,19 @@ var page = {
     loadUserInfo : function(){
         var userHtml = '';
         _user.getUserInfo(function(res){
+            switch(res.role) {
+                case 1:
+                    res.role = '管理员';
+                    break;
+                case 2:
+                    res.role = '批发商';
+                    break;
+                case 3:
+                    res.role = '实体店用户';
+                    break;
+                default: 
+                    console.log('Error user type');
+            }
             userHtml = _mm.renderHtml(templateIndex, res);
             $('.panel-body').html(userHtml);
         }, function(errMsg){

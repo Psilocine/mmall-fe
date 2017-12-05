@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-15 15:26:38
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-01 17:04:11
+ * @Last Modified time: 2017-12-05 20:57:48
 */
 
 'use strict';
@@ -69,6 +69,10 @@ var _mm = {
         // 非空验证
         if('require' === type){
             return !!value;
+        }
+        // 汉字验证
+        if('name' === type){
+            return /^[\u2E80-\u9FFF]+$/.test(value);
         }
         // 手机号验证
         if('phone' === type){

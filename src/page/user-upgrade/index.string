@@ -1,0 +1,46 @@
+<div class="form-line">
+  <span class="label">用户名：</span>
+  <span class="text">{{username}}</span>
+</div>
+
+<div class="form-line">
+  <span class="label">姓 名：</span>
+  <input class="input" id="name" autocomplete="off" value="" />
+</div>
+
+<div class="form-line">
+  <span class="label">电 话：</span>
+  <input class="input" id="phone" autocomplete="off" value="" />
+</div>
+
+<div class="form-line">
+  <span class="label">会员等级：</span>
+  <select name="level" id="lvl">
+    <option value="1">全国</option>
+    <option value="2">全省</option>
+    <option value="3">全市</option>
+    <option value="4">全区/县</option>
+  </select>
+</div>
+
+<div data-toggle="distpicker">
+  <div class="form-line">
+    <span class="label">省 份：</span>
+    <select data-province="---- 选择省 ----"></select>
+  </div>
+  <div class="form-line">
+    <span class="label">城 市：</span>
+    <select data-city="---- 选择市 ----"></select>
+  </div>
+  <div class="form-line">
+    <span class="label">区/县：</span>
+    <select data-district="---- 选择区 ----"></select>
+  </div>
+</div>
+
+<div class="form-line">
+  <span class="label">地 址：</span>
+  <input class="input" id="addr" autocomplete="off" value="" />
+</div>
+
+<span class="btn btn-submit">提交</span>

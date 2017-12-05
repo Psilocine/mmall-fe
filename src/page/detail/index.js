@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-28 19:45:49
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-29 18:39:01
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-12-05 15:06:20
 */
 
 'use strict';
@@ -12,7 +12,6 @@ require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var _mm             = require('util/mm.js');
 var _product        = require('service/product-service.js');
-var _cart           = require('service/cart-service.js');
 var templateIndex   = require('./index.string');
 
 var page = {
@@ -50,17 +49,6 @@ var page = {
             else if(type === 'minus'){
                 $pCount.val(currCount > minCount ? currCount - 1 : minCount);
             }
-        });
-        // 加入购物车
-        $(document).on('click', '.cart-add', function(){
-            _cart.addToCart({
-                productId   : _this.data.productId,
-                count       : $('.p-count').val()
-            }, function(res){
-                window.location.href = './result.html?type=cart-add';
-            }, function(errMsg){
-                _mm.errorTips(errMsg);
-            });
         });
     },
     // 加载商品详情的数据

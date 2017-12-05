@@ -1,13 +1,13 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-23 11:50:40
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-23 12:55:57
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-12-05 21:06:57
 */
 
 /* 最外层容器 */
 .page-wrap{
-    padding: 40px 0;
+    padding: 0;
 }
 /* 表单框 */
 .user-con{

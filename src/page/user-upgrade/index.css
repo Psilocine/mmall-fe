@@ -1,0 +1,16 @@
+/*
+* @Author: Rosen
+* @Date:   2017-05-23 19:33:39
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-12-05 16:38:07
+*/
+.form-line{
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.form-line .label{
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}

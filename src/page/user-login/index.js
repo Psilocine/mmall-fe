@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-08 22:26:19
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-21 22:36:14
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-12-05 15:46:35
 */
 
 'use strict';
@@ -10,6 +10,18 @@ require('./index.css');
 require('page/common/nav-simple/index.js');
 var _user   = require('service/user-service.js');
 var _mm     = require('util/mm.js');
+
+
+var pageWrap = document.getElementsByClassName('page-wrap')[0];
+var userCon = document.getElementById('userCon');
+var clientH = document.documentElement.clientHeight;
+
+// 80是footer高度 61是header高度
+var pH = clientH - 80 - 61;
+var sH = (pH - userCon.offsetHeight) / 2;
+
+pageWrap.style.height = pH + 'px';
+userCon.style.top = sH + 'px';
 
 // 表单里的错误提示
 var formError = {

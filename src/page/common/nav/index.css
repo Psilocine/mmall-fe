@@ -1,17 +1,18 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-17 14:16:54
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-17 16:31:15
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-12-05 16:31:01
 */
 .nav{
     background: #eee;
-    height: 30px;
-    line-height: 30px;   
+    height: 40px;
+    line-height: 40px;   
 }
 /* 用户部分 */
 .nav .user{
     float: left;
+    font-size: 16px;
 }
 .nav .user.login{
     display: none;
@@ -23,7 +24,11 @@
 .nav .nav-list{
     float: right;
 }
+.nav-list.login {
+    display: none;
+}
 .nav .nav-list .nav-item{
     display: inline-block;
+    font-size: 16px;
     margin-left: 5px;
 }

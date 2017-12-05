@@ -2,22 +2,22 @@
 * @Author: Rosen
 * @Date:   2017-05-18 19:30:20
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-11-27 14:55:05
+ * @Last Modified time: 2017-12-05 15:21:28
 */
 /* 通用头部导航 */
 .header .logo{
     position: absolute;
-    left: 25px;
-    top: 34px;
+    left: 15px;
+    top: 38px;
     display: block;
-    font-size: 36px;
+    font-size: 30px;
     color: #c60023;
     font-weight: bold;
     text-decoration: none;
 }
 
 .header .search-con{
-    padding: 40px 0 30px 250px;
+    padding: 40px 0 30px 330px;
 }
 .header .search-con .search-input{
     width: 550px;

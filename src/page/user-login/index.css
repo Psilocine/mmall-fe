@@ -1,12 +1,12 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-21 15:11:05
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-21 22:46:39
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2017-12-05 15:44:23
 */
 /* 最外层容器 */
 .page-wrap{
-    padding: 40px 0;
+    padding: 0;
     background: #e72955;
 }
 /* 表单框 */

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-05 21:17:14
+ * @Last Modified time: 2017-12-06 16:35:26
  */
 'use strict';
 require('./index.css');
@@ -63,9 +63,9 @@ var page = {
 	loadUserInfo: function () {
 		var userHtml = '';
 		_user.getUserInfo(function (res) {
+			$('#target').distpicker();
 			userHtml = _mm.renderHtml(templateIndex, res);
 			$('.panel-body').html(userHtml);
-			$('#target').distpicker();
 		}, function (errMsg) {
 			_mm.errorTips(errMsg);
 		});

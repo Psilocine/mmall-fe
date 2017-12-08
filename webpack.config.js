@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-05 16:41:39
+ * @Last Modified time: 2017-12-06 16:51:35
 */
 var webpack             = require('webpack');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
@@ -30,7 +30,7 @@ var config = {
         'list'              : ['./src/page/list/index.js'],
         'detail'            : ['./src/page/detail/index.js'],
         'user-login'        : ['./src/page/user-login/index.js'],
-        'user-upgrade'        : ['./src/page/user-upgrade/index.js'],
+        'user-upgrade'      : ['./src/page/user-upgrade/index.js'],
         'user-register'     : ['./src/page/user-register/index.js'],
         'user-pass-reset'   : ['./src/page/user-pass-reset/index.js'],
         'user-center'       : ['./src/page/user-center/index.js'],
@@ -39,7 +39,7 @@ var config = {
         'result'            : ['./src/page/result/index.js'],
     },
     output: {
-        path: '/dist',
+        path: './dist',
         publicPath : WEBPACK_ENV === 'online' ? '//s.psilocine.cn/mmall-fe/dist/' : '/dist/',
         filename: 'js/[name].js'
     },

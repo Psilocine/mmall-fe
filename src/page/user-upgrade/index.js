@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-06 16:35:26
+ * @Last Modified time: 2017-12-08 19:33:20
  */
 'use strict';
 require('./index.css');
@@ -30,6 +30,7 @@ var page = {
 		});
 		// 加载用户信息
 		this.loadUserInfo();
+
 	},
 	bindEvent: function () {
 		var _this = this;
@@ -39,6 +40,7 @@ var page = {
 					name: $.trim($('#name').val()),
 					phone: $.trim($('#phone').val()),
 					lvl: $('#lvl option:selected').val(),
+					role: $('#role option:selected').val(),
 					province: $("[data-province] option:selected").val(),
 					city: $("[data-city] option:selected").val(),
 					district: $("[data-district] option:selected").val(),
@@ -63,11 +65,11 @@ var page = {
 	loadUserInfo: function () {
 		var userHtml = '';
 		_user.getUserInfo(function (res) {
-			$('#target').distpicker();
 			userHtml = _mm.renderHtml(templateIndex, res);
 			$('.panel-body').html(userHtml);
-		}, function (errMsg) {
-			_mm.errorTips(errMsg);
+			$('#target').distpicker();
+		},function(errMsg){
+				_mm.errorTips(errMsg);
 		});
 	},
 	// 验证字段信息

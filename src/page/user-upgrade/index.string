@@ -1,6 +1,6 @@
 <div class="form-line">
   <span class="label">用户名：</span>
-  <span class="text">{{username}}</span>
+  <span class="text"></span>
 </div>
 
 <div class="form-line">
@@ -13,17 +13,7 @@
   <input class="input" id="phone" autocomplete="off" value="" />
 </div>
 
-<div class="form-line">
-  <span class="label">会员等级：</span>
-  <select name="level" id="lvl">
-    <option value="1">全国</option>
-    <option value="2">全省</option>
-    <option value="3">全市</option>
-    <option value="4">全区/县</option>
-  </select>
-</div>
-
-<div data-toggle="distpicker">
+<div data-toggle="distpicker" id="target">
   <div class="form-line">
     <span class="label">省 份：</span>
     <select data-province="---- 选择省 ----"></select>
@@ -41,6 +31,24 @@
 <div class="form-line">
   <span class="label">地 址：</span>
   <input class="input" id="addr" autocomplete="off" value="" />
+</div>
+
+<div class="form-line">
+  <span class="label">升级类型：</span>
+    <select name="role" id="role">
+    <option value="shiti">实体店</option>
+    <option value="pifa">批发商</option>
+  </select>
+</div>
+
+<div class="form-line">
+  <span class="label">会员等级：</span>
+  <select name="level" id="lvl">
+    <option value="1">全国</option>
+    <option value="2">全省</option>
+    <option value="3">全市</option>
+    <option value="4">全区/县</option>
+  </select>
 </div>
 
 <span class="btn btn-submit">提交</span>

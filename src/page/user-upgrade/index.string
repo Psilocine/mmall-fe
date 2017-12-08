@@ -1,9 +1,4 @@
 <div class="form-line">
-  <span class="label">用户名：</span>
-  <span class="text"></span>
-</div>
-
-<div class="form-line">
   <span class="label">姓 名：</span>
   <input class="input" id="name" autocomplete="off" value="" />
 </div>
@@ -36,8 +31,8 @@
 <div class="form-line">
   <span class="label">升级类型：</span>
     <select name="role" id="role">
-    <option value="shiti">实体店</option>
-    <option value="pifa">批发商</option>
+    <option value="3">实体店</option>
+    <option value="2">批发商</option>
   </select>
 </div>
 

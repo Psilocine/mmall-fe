@@ -7,10 +7,7 @@
         <span class="label">用户类型：</span>
         <span class="text">{{role}}</span>
     </div>
-    <div class="form-line">
-        <span class="label">电 话：</span>
-        <input class="input" id="phone" autocomplete="off" value="{{phone}}" />
-    </div>
+
     <div class="form-line">
         <span class="label">邮 箱：</span>
         <input class="input" id="email" autocomplete="off" value="{{email}}" />

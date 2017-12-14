@@ -18,19 +18,6 @@
             <span class="label">价格:</span>
             <span class="info">￥{{price}}</span>
         </div>
-        <div class="p-info-item">
-            <span class="label">库存:</span>
-            <span class="info">{{stock}}</span>
-        </div>
-        <div class="p-info-item p-count-con">
-            <span class="label">数量:</span>
-            <input class="p-count" value="1" readonly=""/>
-            <span class="p-count-btn plus">+</span>
-            <span class="p-count-btn minus">-</span>
-        </div>
-        <div class="p-info-item">
-            <a class="btn cart-add">加入购物车</a>
-        </div>
     </div>
 </div>
 <div class="detail-wrap">

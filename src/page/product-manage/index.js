@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-15 16:46:27
+ * @Last Modified time: 2017-12-15 17:37:37
  */
 'use strict';
 require('./index.css');
@@ -15,6 +15,7 @@ var _mm = require('util/mm.js');
 var _product = require('service/product.js');
 var templateIndex = require('./index.string');
 
+console.log(_product.getProductList);
 // page 逻辑部分
 var page = {
   data: {

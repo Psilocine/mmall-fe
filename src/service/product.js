@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:15:42 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-15 16:34:10
+ * @Last Modified time: 2017-12-15 16:37:24
  */
 'use strict';
 
@@ -20,21 +20,13 @@ var _product = {
   },
   // 获取商品信息
   getProductList: function (listParam, resolve, reject) {
-    if (listParam.listType == 'list') {
-      return _mm.request({
-        url: _mm.getServerUrl('/product/listB.do'),
-        data:   listParam,
-        success: resolve,
-        error: reject
-      });
-    } else if (listParam.listType == 'search') {
-      return _mm.request({
-        url: _mm.getServerUrl('/product/search.do'),
-        data: listParam,
-        success: resolve,
-        error: reject
-      });
-    }
+    return _mm.request({
+      url: _mm.getServerUrl('/product/listB.do'),
+      data: listParam,
+      success: resolve,
+      error: reject
+    });
+
   },
   // 获取商品信息
   saveProduct: function (product, resolve, reject) {

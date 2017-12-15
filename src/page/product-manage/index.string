@@ -1,30 +1,27 @@
 <table className="table table-striped table-bordered table-hover">
-							<thead>
-								<tr>
-									<th>信息</th>
-									<th>价格</th>
-									<th>状态</th>
-									<th>操作</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<p>{{product.name}}</p>
-										<p>{{product.subtitle}}</p>
-									</td>
-									<td>{{product.price}}</td>
-									<td>
-										<a className="btn btn-xs btn-warning status-btn opear">
-											{{product.status}}
-										</a>
-									</td>
-									<td>
-										<a className="opear" href="./product-detail.html">查看</a>
-										<a className="opear" href="./product-add.html">编辑</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+	<thead>
+		<tr>
+			<th>信息</th>
+			<th>价格</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<p>{{product.name}}</p>
+				<p>{{product.subtitle}}</p>
+			</td>
+			<td>
+				{{product.price}}
+			</td>
+			<td>
+				<a className="btn btn-xs btn-warning opear" id="ediBtn" href="javascript:;">编辑</a>
+				<input type='text' value='{{product.id}}' style='display:none !important'/>
+				<a className="btn btn-xs btn-warning opear" id="delBtn" href="javascript:;">删除</a>		
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 						

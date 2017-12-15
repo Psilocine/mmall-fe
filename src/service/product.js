@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:15:42 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-14 17:14:31
+ * @Last Modified time: 2017-12-15 16:14:32
  */
 'use strict';
 
@@ -43,6 +43,15 @@ var _product = {
     return _mm.request({
       url: _mm.getServerUrl('/product/save.do'),
       data: product,
+      success: resolve,
+      error: reject
+    });
+  },
+  // 删除商品
+  deleteProduct: function (productId, resolve, reject) {
+    return _mm.request({
+      url: _mm.getServerUrl('/product/delete.do'),
+      data: productId,
       success: resolve,
       error: reject
     });

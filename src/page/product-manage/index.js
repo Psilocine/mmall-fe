@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-14 17:41:50
+ * @Last Modified time: 2017-12-15 16:15:10
  */
 'use strict';
 require('./index.scss');
@@ -20,23 +20,21 @@ var page = {
   init: function () {
     this.onLoad();
     this.bindEvent();
-    
   },
   bindEvent: function () {
-    var _this = this;
     // 点击提交按钮后的动作
-    $(document).on('click', '.status-btn', function (productId, status) {
-      var sattusChangeTips = status == '下架' ? '确认要下架该商品?' : '确认要上架该商品?';
-      if (window.confirm(sattusChangeTips)) {
-        // 更改用户信息
-        _product.setProductStatus(productId, status, function (res, msg) {
+    $(document).on('click', '#delBtn', function () {
+      var productId = $(this).sibling('input').val();
+
+      if (window.confirm("确定要删除该商品吗")) {
+        _product.deleteProduct(productId, function (res, msg) {
           _mm.successTips(msg);
           this.loadProductInfo();
         }, function (errMsg) {
           _mm.errorTips(errMsg);
-        });
+        })
       }
-    });
+    })
   },
   onLoad: function () {
     // 初始化左侧菜单
@@ -51,18 +49,6 @@ var page = {
     var userHtml = '';
     _product.getProductList(function (res) {
       console.log(res);
-      switch(res.status) {
-        case 1:
-          // 1在售
-          res.status = '下架';
-          break;
-        case 2:
-          // 2下架状态
-          res.status = '上架';
-          break;
-        default: 
-          break;
-      }
       userHtml = _mm.renderHtml(templateIndex, res);
       $('.panel-body').html(userHtml);
     }, function (errMsg) {

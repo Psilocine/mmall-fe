@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:15:42 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-15 16:14:32
+ * @Last Modified time: 2017-12-15 16:34:10
  */
 'use strict';
 
@@ -23,9 +23,7 @@ var _product = {
     if (listParam.listType == 'list') {
       return _mm.request({
         url: _mm.getServerUrl('/product/listB.do'),
-        data: {
-          pageNum: listParam.pageNum || 1
-        },
+        data:   listParam,
         success: resolve,
         error: reject
       });

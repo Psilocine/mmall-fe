@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-15 16:38:55
+ * @Last Modified time: 2017-12-15 16:46:27
  */
 'use strict';
 require('./index.css');
@@ -17,15 +17,13 @@ var templateIndex = require('./index.string');
 
 // page 逻辑部分
 var page = {
-  data : {
-    listParam : {
-        keyword         : _mm.getUrlParam('keyword')    || '',
-        categoryId      : _mm.getUrlParam('categoryId') || '',
-        orderBy         : _mm.getUrlParam('orderBy')    || 'default',
-        pageNum         : _mm.getUrlParam('pageNum')    || 1,
-        pageSize        : _mm.getUrlParam('pageSize')   || 20
+  data: {
+    listParam: {
+      listType: 'list',
+      searchType: 'productName',
+      pageNum: 1
     }
-},
+  },
   init: function () {
     this.onLoad();
     this.bindEvent();
@@ -56,11 +54,9 @@ var page = {
   // 加载用户信息
   loadProductInfo: function () {
     var userHtml = '';
-    var listParam   = this.data.listParam;
+    var listParam = this.data.listParam;
     _product.getProductList(listParam, function (res) {
-      
-    console.log(res);
-    
+      console.log(res);
       userHtml = _mm.renderHtml(templateIndex, res);
       $('.panel-body').html(userHtml);
     }, function (errMsg) {

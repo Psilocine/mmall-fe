@@ -2,13 +2,13 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-15 16:22:36
+ * @Last Modified time: 2017-12-15 16:24:25
  */
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-require('')
+
 var navSide = require('page/common/nav-side/index.js');
 
 var _mm = require('util/mm.js');

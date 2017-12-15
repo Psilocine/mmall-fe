@@ -2,10 +2,10 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-15 16:15:10
+ * @Last Modified time: 2017-12-15 16:22:36
  */
 'use strict';
-require('./index.scss');
+require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
 require('')

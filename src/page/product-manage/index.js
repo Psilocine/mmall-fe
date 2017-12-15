@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-15 16:30:17
+ * @Last Modified time: 2017-12-15 16:36:00
  */
 'use strict';
 require('./index.css');
@@ -57,7 +57,7 @@ var page = {
   loadProductInfo: function () {
     var userHtml = '';
     var listParam   = this.data.listParam;
-    _product.getProductList(listParam,function (res) {
+    _product.getProductList(listParam, function (res) {
       console.log(res);
       userHtml = _mm.renderHtml(templateIndex, res);
       $('.panel-body').html(userHtml);

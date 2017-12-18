@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-14 17:41:59
+ * @Last Modified time: 2017-12-18 11:59:05
  */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -39,6 +39,7 @@ var config = {
     'product-manage': ['./src/page/product-manage/index.js'],
     'product-detail': ['./src/page/product-detail/index.js'],
     'product-add': ['./src/page/product-add/index.js'],
+    'user-check': ['./src/page/user-check/index.js'],
     'result': ['./src/page/result/index.js'],
   },
   output: {
@@ -103,6 +104,7 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
     new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-check', '用户审核')),
   ]
 };
 

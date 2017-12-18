@@ -2,12 +2,14 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 11:47:37
+ * @Last Modified time: 2017-12-18 11:54:21
  */
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
+require('node_modules/bootstrap/dist/css/bootstrap.min.css')
+require('node_modules/bootstrap/dist/js/bootstrap.min.js')
 
 var navSide = require('page/common/nav-side/index.js');
 
@@ -30,7 +32,7 @@ var page = {
   },
   bindEvent: function () {
     // 点击提交按钮后的动作
-    $(document).on('click', '#delBtn', function () {
+    $(document).on('click', '.delBtn', function () {
       var productId = $(this).sibling('input').val();
 
       if (window.confirm("确定要删除该商品吗")) {
@@ -60,7 +62,7 @@ var page = {
                       <th>价格</th>
                       <th>操作</th>
                     </tr>
-                  </thead>`;
+                  </thead>`
     var listParam = this.data.listParam;
     _product.getProductList(listParam, function (res) {
       console.log(res)

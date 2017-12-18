@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 11:20:44
+ * @Last Modified time: 2017-12-18 11:23:17
  */
 'use strict';
 require('./index.css');
@@ -58,9 +58,9 @@ var page = {
     var listParam = this.data.listParam;
     _product.getProductList(listParam, function (res) {
       console.log(res)
-      
-      for(var i = 0; i < res.length; i++) {
-        userHtml = _mm.renderHtml(templateIndex, res[i]);
+      console.log("res.list: " + res.list)
+      for(var i = 0; i < res.list.length; i++) {
+        userHtml = _mm.renderHtml(templateIndex, res.list[i]);
         frag.appendChild(userHtml);
       }
       $('.panel-body').html(frag);

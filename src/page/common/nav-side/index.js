@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-12 19:10:07
+ * @Last Modified time: 2017-12-18 11:22:02
  */
 'use strict';
 require('./index.css');
@@ -37,7 +37,11 @@ var navSide = {
         desc: '修改密码',
         href: './user-pass-update.html'
       },
-      // {name : 'about', desc : '关于Mall', href: './about.html'}
+      {
+        name: 'user-check',
+        desc: '用户审核',
+        href: './user-check.html'
+      }
     ]
   },
   init: function (option) {

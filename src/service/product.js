@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:15:42 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-15 17:41:57
+ * @Last Modified time: 2017-12-18 12:28:23
  */
 'use strict';
 
@@ -42,6 +42,7 @@ var _product = {
     return _mm.request({
       url: _mm.getServerUrl('/product/delete.do'),
       data: productId,
+      method: 'POST',
       success: resolve,
       error: reject
     });

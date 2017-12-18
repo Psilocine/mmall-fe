@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 12:17:21
+ * @Last Modified time: 2017-12-18 12:33:06
  */
 'use strict';
 require('./index.css');
@@ -32,12 +32,13 @@ var page = {
   },
   bindEvent: function () {
     // 点击提交按钮后的动作
+    var _this = this;
     $(document).on('click', '.delBtn', function () {
       var productId = $(this).siblings('input').val();
       if (window.confirm("确定要删除该商品吗")) {
         _product.deleteProduct(productId, function (res, msg) {
           _mm.successTips(msg);
-          this.loadProductInfo();
+          _this.loadProductInfo();
         }, function (errMsg) {
           _mm.errorTips(errMsg);
         })

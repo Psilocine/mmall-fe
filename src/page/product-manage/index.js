@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 11:23:17
+ * @Last Modified time: 2017-12-18 11:27:56
  */
 'use strict';
 require('./index.css');
@@ -53,15 +53,16 @@ var page = {
   },
   // 加载用户信息
   loadProductInfo: function () {
-    var userHtml = '';
-    var frag = document.createDocumentFragment();
+    var frag = '';
     var listParam = this.data.listParam;
     _product.getProductList(listParam, function (res) {
       console.log(res)
-      console.log("res.list: " + res.list)
-      for(var i = 0; i < res.list.length; i++) {
+      console.log("res.list[1]: " + res.list[1])
+      for (var i = 0; i < res.list.length; i++) {
+        var userHtml = '';
+
         userHtml = _mm.renderHtml(templateIndex, res.list[i]);
-        frag.appendChild(userHtml);
+        frag += userHtml;
       }
       $('.panel-body').html(frag);
     }, function (errMsg) {

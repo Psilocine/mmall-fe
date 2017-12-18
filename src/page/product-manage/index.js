@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 10:54:44
+ * @Last Modified time: 2017-12-18 11:18:33
  */
 'use strict';
 require('./index.css');
@@ -54,10 +54,13 @@ var page = {
   },
   // 加载用户信息
   loadProductInfo: function () {
+    console.log(res)
     var userHtml = '';
     var frag = document.createDocumentFragment();
     var listParam = this.data.listParam;
     _product.getProductList(listParam, function (res) {
+      console.log(res)
+      
       for(var i = 0; i < res.length; i++) {
         userHtml = _mm.renderHtml(templateIndex, res[i]);
         frag.appendChild(userHtml);

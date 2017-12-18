@@ -9,15 +9,15 @@
 	<tbody>
 		<tr>
 			<td>
-				<p>{{product.name}}</p>
-				<p>{{product.subtitle}}</p>
+				<p>{{name}}</p>
+				<p>{{subtitle}}</p>
 			</td>
 			<td>
-				{{product.price}}
+				{{price}}
 			</td>
 			<td>
 				<a className="btn btn-xs btn-warning opear" id="ediBtn" href="javascript:;">编辑</a>
-				<input type='text' value='{{product.id}}' style='display:none !important'/>
+				<input type='text' value='{{id}}' style='display:none !important'/>
 				<a className="btn btn-xs btn-warning opear" id="delBtn" href="javascript:;">删除</a>		
 			</td>
 		</tr>

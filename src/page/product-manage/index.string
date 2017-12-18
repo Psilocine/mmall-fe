@@ -12,5 +12,3 @@
 		<a className="btn btn-xs btn-warning opear delBtn" href="javascript:;">删除</a>		
 	</td>
 </tr>
-
-						

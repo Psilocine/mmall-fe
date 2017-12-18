@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 11:18:33
+ * @Last Modified time: 2017-12-18 11:20:44
  */
 'use strict';
 require('./index.css');
@@ -15,7 +15,6 @@ var _mm = require('util/mm.js');
 var _product = require('service/product.js');
 var templateIndex = require('./index.string');
 
-console.log(_product.getProductList);
 // page 逻辑部分
 var page = {
   data: {
@@ -54,7 +53,6 @@ var page = {
   },
   // 加载用户信息
   loadProductInfo: function () {
-    console.log(res)
     var userHtml = '';
     var frag = document.createDocumentFragment();
     var listParam = this.data.listParam;

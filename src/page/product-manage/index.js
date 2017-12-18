@@ -2,12 +2,13 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 11:27:56
+ * @Last Modified time: 2017-12-18 11:34:43
  */
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
+require('bootstrap');
 
 var navSide = require('page/common/nav-side/index.js');
 
@@ -53,17 +54,24 @@ var page = {
   },
   // 加载用户信息
   loadProductInfo: function () {
-    var frag = '';
+    var frag = `<table className="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>信息</th>
+        <th>价格</th>
+        <th>操作</th>
+      </tr>
+    </thead>`;
     var listParam = this.data.listParam;
     _product.getProductList(listParam, function (res) {
       console.log(res)
-      console.log("res.list[1]: " + res.list[1])
       for (var i = 0; i < res.list.length; i++) {
         var userHtml = '';
 
         userHtml = _mm.renderHtml(templateIndex, res.list[i]);
         frag += userHtml;
       }
+      frag +='</table>';
       $('.panel-body').html(frag);
     }, function (errMsg) {
       _mm.errorTips(errMsg);

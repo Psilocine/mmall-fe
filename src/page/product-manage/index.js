@@ -2,13 +2,12 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 11:54:21
+ * @Last Modified time: 2017-12-18 11:58:21
  */
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-require('node_modules/bootstrap/dist/css/bootstrap.min.css')
 require('node_modules/bootstrap/dist/js/bootstrap.min.js')
 
 var navSide = require('page/common/nav-side/index.js');
@@ -55,7 +54,7 @@ var page = {
   },
   // 加载用户信息
   loadProductInfo: function () {
-    var frag = `<table className="table table-striped table-bordered table-hover">
+    var frag = `<table class="table table-striped table-bordered table-hover">
                   <thead>
                     <tr>
                       <th>信息</th>

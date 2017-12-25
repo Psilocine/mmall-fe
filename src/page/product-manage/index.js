@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 14:18:22
+ * @Last Modified time: 2017-12-25 14:22:10
  */
 'use strict';
 require('./index.css');
@@ -71,7 +71,7 @@ var page = {
         frag += userHtml; 
       }
       if(len === 0) {
-        frag += '<tr colspan="3">还没有添加任何商品</tr>'
+        frag += '<tr><td class="text-center" colspan="3">还没有添加任何商品</td></tr>'
       }
 
       frag += '</table>';

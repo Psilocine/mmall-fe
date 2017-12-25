@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-25 14:24:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 14:50:37
+ * @Last Modified time: 2017-12-25 14:54:04
  */
 'use strict';
 
@@ -30,8 +30,8 @@ var _user = {
   },
   // 获取审核用户名单
   getUserList(listParam, resolve, reject) {
-    return mm.request({
-      url: mm.getServerUrl('/user/get_user_list.do'),
+    return _mm.request({
+      url: _mm.getServerUrl('/user/get_user_list.do'),
       data: {
         pagaNum: listParam.pageNum || 1
       },
@@ -41,8 +41,8 @@ var _user = {
   },
   // 审核通过
   getUserPass(userId, role, status, resolve, reject) {
-    return mm.request({
-      url: mm.getServerUrl('/user/user_pass.do'),
+    return _mm.request({
+      url: _mm.getServerUrl('/user/user_pass.do'),
       data: {
         userId: userId,
         role: role,

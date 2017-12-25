@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 13:57:02
+ * @Last Modified time: 2017-12-25 14:03:20
  */
 'use strict';
 require('./index.css');
@@ -65,10 +65,14 @@ var page = {
                   </thead>`
     var listParam = this.data.listParam;
     _product.getProductList(listParam, function (res) {
-      for (var i = 0; i < res.list.length; i++) {
+      for (var i = 0, len = res.list.length; i < len; i++) {
         var userHtml = '';
         userHtml = _mm.renderHtml(templateIndex, res.list[i]);
+        console.log('userHtml: ' + userHtml);
         frag += userHtml; 
+      }
+      if(len === 0) {
+        frag += '<tr class="colspan="3"">还没有添加任何商品</tr>'
       }
 
       frag += '</table>';

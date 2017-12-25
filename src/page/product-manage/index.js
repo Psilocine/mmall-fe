@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 13:48:10
+ * @Last Modified time: 2017-12-25 13:57:02
  */
 'use strict';
 require('./index.css');
@@ -67,15 +67,10 @@ var page = {
     _product.getProductList(listParam, function (res) {
       for (var i = 0; i < res.list.length; i++) {
         var userHtml = '';
-
         userHtml = _mm.renderHtml(templateIndex, res.list[i]);
+        frag += userHtml; 
       }
-      console.log(userHtml);
-      if (userHtml === '') {
-        frag += '<tr class="colspan="3"">还没有添加任何商品</tr>'
-        break;
-        frag += userHtml;
-      }
+
       frag += '</table>';
       $('.panel-body').html(frag);
     }, function (errMsg) {

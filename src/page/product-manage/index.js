@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 14:03:20
+ * @Last Modified time: 2017-12-25 14:18:22
  */
 'use strict';
 require('./index.css');
@@ -68,11 +68,10 @@ var page = {
       for (var i = 0, len = res.list.length; i < len; i++) {
         var userHtml = '';
         userHtml = _mm.renderHtml(templateIndex, res.list[i]);
-        console.log('userHtml: ' + userHtml);
         frag += userHtml; 
       }
       if(len === 0) {
-        frag += '<tr class="colspan="3"">还没有添加任何商品</tr>'
+        frag += '<tr colspan="3">还没有添加任何商品</tr>'
       }
 
       frag += '</table>';

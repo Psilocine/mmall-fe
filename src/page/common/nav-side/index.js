@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:08:29
+ * @Last Modified time: 2017-12-27 15:11:41
  */
 'use strict';
 require('./index.css');
@@ -28,6 +28,7 @@ var navSide = {
     ]
   },
   init: function (option) {
+    this.roleIdenDiff();    
     // 合并选项
     $.extend(this.option, option);
     this.renderNav();
@@ -84,9 +85,7 @@ var navSide = {
     }
   },
   // 渲染导航菜单
-  renderNav: function () {
-    this.roleIdenDiff();
-    
+  renderNav: function () {    
     // 计算active数据
     for (var i = 0, iLength = this.option.navList.length; i < iLength; i++) {
       if (this.option.navList[i].name === this.option.name) {

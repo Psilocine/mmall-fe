@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:03:12
+ * @Last Modified time: 2017-12-27 16:12:03
  */
 'use strict';
 require('./index.css');
@@ -32,7 +32,7 @@ var navSide = {
     // 合并选项  
     $.extend(this.option, option);
     this.roleIdenDiff();
-    this.renderNav();
+    setTimeout(this.renderNav(), 0);
   },
   // 不同身份用户侧边栏选项不同
   roleIdenDiff: function () {

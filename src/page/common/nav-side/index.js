@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:20:07
+ * @Last Modified time: 2017-12-27 15:21:36
  */
 'use strict';
 require('./index.css');
@@ -10,7 +10,7 @@ var _mm = require('util/mm.js');
 var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 // 侧边导航
-this.roleIdenDiff();
+navSide.roleIdenDiff();
 var navSide = {
   option: {
     name: '',

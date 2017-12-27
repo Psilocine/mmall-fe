@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:20:19
+ * @Last Modified time: 2017-12-27 16:27:55
  */
 'use strict';
 require('./index.css');
@@ -97,6 +97,8 @@ var navSide = {
     var navHtml = _mm.renderHtml(templateIndex, {
       navList: this.option.navList
     });
+    console.log('this.option.navList: ' + this.option.navList);
+    console.log('navHtml: ' + navHtml);
     // 把html放入容器
     $('.nav-side').html(navHtml);
   }

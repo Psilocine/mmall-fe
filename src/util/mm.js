@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-15 15:26:38
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:22:30
+ * @Last Modified time: 2017-12-27 16:26:21
 */
 
 'use strict';
@@ -53,7 +53,6 @@ var _mm = {
         console.log(data);
         var template    = Hogan.compile(htmlTemplate),
             result      = template.render(data);
-        console.log('result: ' +result);
         return result;
     },
     // 成功提示

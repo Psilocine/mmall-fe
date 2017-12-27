@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:32:13
+ * @Last Modified time: 2017-12-27 16:40:33
  */
 'use strict';
 require('./index.css');
@@ -24,6 +24,26 @@ var navSide = {
         name: 'user-pass-update',
         desc: '修改密码',
         href: './user-pass-update.html'
+      },
+      {
+        name: 'user-upgrade',
+        desc: '会员升级',
+        href: './user-upgrade.html'
+      },
+      {
+        name: 'product-add',
+        desc: '商品添加',
+        href: './product-add.html'
+      },
+      {
+        name: 'product-manage',
+        desc: '商品管理',
+        href: './product-manage.html'
+      },
+      {
+        name: 'user-check',
+        desc: '用户审核',
+        href: './user-check.html'
       }
     ]
   },
@@ -33,58 +53,58 @@ var navSide = {
     this.renderNav();
   },
   // 不同身份用户侧边栏选项不同
-  roleIdenDiff: function () {
-    var _this = this;
-    _user.getUserInfo(function (res) {
-      switch (res.role) {
-        // 管理员
-        case "1":
-          _this.option.navList.push({
-            name: 'user-check',
-            desc: '用户审核',
-            href: './user-check.html'
-          });
-          break;
-          // 普通用户
-        case "0":
-          _this.option.navList.push({
-            name: 'user-upgrade',
-            desc: '会员升级',
-            href: './user-upgrade.html'
-          });
-          break;
-          // 批发商
-        case "2":
-          _this.option.navList.push({
-            name: 'product-add',
-            desc: '商品添加',
-            href: './product-add.html'
-          }, {
-            name: 'product-manage',
-            desc: '商品管理',
-            href: './product-manage.html'
-          });
-          break;
-          // 实体店
-        case "3":
-          _this.option.navList.push({
-            name: 'product-add',
-            desc: '商品添加',
-            href: './product-add.html'
-          }, {
-            name: 'product-manage',
-            desc: '商品管理',
-            href: './product-manage.html'
-          });
-          break;
-        default:
-          console.log("can't find the role code")
-          break;
-      }
-    }, function (errMsg) {
-      _mm.errorTips(errMsg);
-    });
-  },
+  // roleIdenDiff: function () {
+  //   var _this = this;
+  //   _user.getUserInfo(function (res) {
+  //     switch (res.role) {
+  //       // 管理员
+  //       case "1":
+  //         _this.option.navList.push({
+  //           name: 'user-check',
+  //           desc: '用户审核',
+  //           href: './user-check.html'
+  //         });
+  //         break;
+  //         // 普通用户
+  //       case "0":
+  //         _this.option.navList.push({
+  //           name: 'user-upgrade',
+  //           desc: '会员升级',
+  //           href: './user-upgrade.html'
+  //         });
+  //         break;
+  //         // 批发商
+  //       case "2":
+  //         _this.option.navList.push({
+  //           name: 'product-add',
+  //           desc: '商品添加',
+  //           href: './product-add.html'
+  //         }, {
+  //           name: 'product-manage',
+  //           desc: '商品管理',
+  //           href: './product-manage.html'
+  //         });
+  //         break;
+  //         // 实体店
+  //       case "3":
+  //         _this.option.navList.push({
+  //           name: 'product-add',
+  //           desc: '商品添加',
+  //           href: './product-add.html'
+  //         }, {
+  //           name: 'product-manage',
+  //           desc: '商品管理',
+  //           href: './product-manage.html'
+  //         });
+  //         break;
+  //       default:
+  //         console.log("can't find the role code")
+  //         break;
+  //     }
+  //   }, function (errMsg) {
+  //     _mm.errorTips(errMsg);
+  //   });
+  // },
   // 渲染导航菜单
   renderNav: function () {
     // 计算active数据
@@ -97,8 +117,6 @@ var navSide = {
     var navHtml = _mm.renderHtml(templateIndex, {
       navList: this.option.navList
     });
-    console.log('this.option.navList: ' + this.option.navList);
-    console.log('navHtml: ' + navHtml);
     // 把html放入容器
     $('.nav-side').html(navHtml);
   }

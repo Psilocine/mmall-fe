@@ -1,24 +1,49 @@
 <div class="user-info">
+  <div class="form-line">
+    <span class="label">用&ensp;户&ensp;名：</span>
+    <span class="text">{{username}}</span>
+  </div>
+  <div class="form-line">
+    <span class="label">用户类型：</span>
+    <span class="text">{{role}}</span>
+  </div>
+  {{#gradeUp}}
     <div class="form-line">
-        <span class="label">用户名：</span>
-        <span class="text">{{username}}</span>
+      <span class="label">手&emsp;&emsp;机：</span>
+      <span class="text">{{phone}}</span>
     </div>
     <div class="form-line">
-        <span class="label">用户类型：</span>
-        <span class="text">{{role}}</span>
-    </div>
-
-    <div class="form-line">
-        <span class="label">邮 箱：</span>
-        <input class="input" id="email" autocomplete="off" value="{{email}}" />
+      <span class="label">姓&emsp;&emsp;名：</span>
+      <span class="text">{{name}}</span>
     </div>
     <div class="form-line">
-        <span class="label">问 题：</span>
-        <input class="input" id="question" autocomplete="off" value="{{question}}" />
+      <span class="label">省&emsp;&emsp;份：</span>
+      <span class="text">{{province}}</span>
     </div>
     <div class="form-line">
-        <span class="label">答 案：</span>
-        <input class="input" id="answer" autocomplete="off" value="{{answer}}" />
+      <span class="label">城&emsp;&emsp;市：</span>
+      <span class="text">{{city}}</span>
     </div>
-    <span class="btn btn-submit">提交</span>
+    <div class="form-line">
+      <span class="label">区&emsp;&emsp;县：</span>
+      <span class="text">{{district}}</span>
+    </div>
+    <div class="form-line">
+      <span class="label">详细地址：</span>
+      <span class="text">{{addr}}</span>
+    </div>
+  {{/gradeUp}}
+  <div class="form-line">
+    <span class="label">邮&emsp;&emsp;箱：</span>
+    <input class="input" id="email" autocomplete="off" value="{{email}}" />
+  </div>
+  <div class="form-line">
+    <span class="label">问&emsp;&emsp;题：</span>
+    <input class="input" id="question" autocomplete="off" value="{{question}}" />
+  </div>
+  <div class="form-line">
+    <span class="label">答&emsp;&emsp;案：</span>
+    <input class="input" id="answer" autocomplete="off" value="{{answer}}" />
+  </div>
+  <span class="btn btn-submit">提交</span>
 </div>

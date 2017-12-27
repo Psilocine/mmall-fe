@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:33
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:19:23
+ * @Last Modified time: 2017-12-27 15:25:47
 */
 
 'use strict';
@@ -39,7 +39,7 @@ var page = {
                     res.roleIden = '管理员';
                     break;
                 case '2':
-                    res.roleIden = '批发商';
+                    res.roleIden = '批发商用户';
                     break;
                 case "3":
                     res.roleIden = '实体店用户';

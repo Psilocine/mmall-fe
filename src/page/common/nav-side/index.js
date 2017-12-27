@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:24:44
+ * @Last Modified time: 2017-12-27 15:26:41
  */
 'use strict';
 require('./index.css');
@@ -32,11 +32,12 @@ var navSide = {
   },
   // 不同身份用户侧边栏选项不同
   roleIdenDiff: function () {
+    var _this = this;
     _user.getUserInfo(function (res) {
       switch (res.role) {
         // 管理员
         case "1":
-          this.option.navList.push({
+          _this.option.navList.push({
             name: 'user-check',
             desc: '用户审核',
             href: './user-check.html'
@@ -44,7 +45,7 @@ var navSide = {
           break;
           // 普通用户
         case "0":
-          this.option.navList.push({
+          _this.option.navList.push({
             name: 'user-upgrade',
             desc: '会员升级',
             href: './user-upgrade.html'
@@ -52,7 +53,7 @@ var navSide = {
           break;
           // 批发商
         case "2":
-          this.option.navList.push({
+          _this.option.navList.push({
             name: 'product-add',
             desc: '商品添加',
             href: './product-add.html'
@@ -64,7 +65,7 @@ var navSide = {
           break;
           // 实体店
         case "3":
-          this.option.navList.push({
+          _this.option.navList.push({
             name: 'product-add',
             desc: '商品添加',
             href: './product-add.html'

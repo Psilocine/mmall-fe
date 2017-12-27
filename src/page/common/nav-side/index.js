@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:14:33
+ * @Last Modified time: 2017-12-27 16:20:19
  */
 'use strict';
 require('./index.css');
@@ -11,7 +11,6 @@ var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 
 
-navSide.roleIdenDiff();
 // 侧边导航
 var navSide = {
   option: {
@@ -94,7 +93,6 @@ var navSide = {
         this.option.navList[i].isActive = true;
       }
     };
-    console.log(iLength);
     // 渲染list数据
     var navHtml = _mm.renderHtml(templateIndex, {
       navList: this.option.navList
@@ -103,5 +101,7 @@ var navSide = {
     $('.nav-side').html(navHtml);
   }
 };
+
+navSide.roleIdenDiff();
 
 module.exports = navSide;

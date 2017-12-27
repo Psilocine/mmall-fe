@@ -6,12 +6,12 @@
   <td>{{city}}</td>
   <td>{{district}}</td>
   <td>{{addr}}</td>
-  <td>{{role == '2' ? '批发商' : '实体店'}}</td>
+  <td>{{roleIden}}</td>
   <td>{{lvl}}</td>
   <td>
-    <a class="btn btn-warning opear pasBtn" href="javascript:;">通过</a>
+    <a class="btn btn-sm btn-warning opear pasBtn" href="javascript:;">通过</a>
     <input type='text' class='id-input' value='{{id}}' style='display:none !important'/>
     <input type='text' class='role-input' value='{{role}}' style='display:none !important'/>    
-    <a class="btn btn-warning opear refBtn" href="javascript:;">忽略</a>
+    <a class="btn btn-sm btn-warning opear refBtn" href="javascript:;">忽略</a>
   </td>
 </tr>

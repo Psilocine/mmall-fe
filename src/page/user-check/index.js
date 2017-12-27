@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 14:51:49
+ * @Last Modified time: 2017-12-27 14:43:56
  */
 'use strict';
 require("./indes.css");
@@ -86,6 +86,9 @@ var page = {
     _user.getUserList(listParam, function (res) {
       for (var i = 0, len = res.list.length; i < len; i++) {
         var userHtml = '';
+
+        res.list[i].role === "2" ? res.list[i].roleIden = '批发商' : res.list[i].roleIden = '实体店';
+
         userHtml = _mm.renderHtml(templateIndex, res.list[i]);
         frag += userHtml;
       }

@@ -2,11 +2,12 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 11:22:02
+ * @Last Modified time: 2017-12-27 14:58:49
  */
 'use strict';
 require('./index.css');
 var _mm = require('util/mm.js');
+var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 // 侧边导航
 var navSide = {
@@ -18,36 +19,68 @@ var navSide = {
         href: './user-center.html'
       },
       {
-        name: 'user-upgrade',
-        desc: '会员升级',
-        href: './user-upgrade.html'
-      },
-      {
-        name: 'product-add',
-        desc: '商品添加',
-        href: './product-add.html'
-      },
-      {
-        name: 'product-manage',
-        desc: '商品管理',
-        href: './product-manage.html'
-      },
-      {
         name: 'user-pass-update',
         desc: '修改密码',
         href: './user-pass-update.html'
-      },
-      {
-        name: 'user-check',
-        desc: '用户审核',
-        href: './user-check.html'
       }
     ]
   },
   init: function (option) {
     // 合并选项
     $.extend(this.option, option);
+    this.roleIdenDiff();
     this.renderNav();
+  },
+  // 不同身份用户侧边栏选项不同
+  roleIdenDiff() {
+    var currentUser = _user.getUserInfo();
+    console.log(currentUser);
+    switch (currentUser.role) {
+      // 管理员
+      case "1":
+        this.option.navList.push({
+          name: 'user-check',
+          desc: '用户审核',
+          href: './user-check.html'
+        });
+        break;
+
+        // 普通用户
+      case "0":
+        this.option.navList.push({
+          name: 'user-upgrade',
+          desc: '会员升级',
+          href: './user-upgrade.html'
+        });
+        break;
+        // 批发商
+      case "2":
+        this.option.navList.push({
+          name: 'product-add',
+          desc: '商品添加',
+          href: './product-add.html'
+        }, {
+          name: 'product-manage',
+          desc: '商品管理',
+          href: './product-manage.html'
+        });
+        break;
+        // 实体店
+      case "3":
+        this.option.navList.push({
+          name: 'product-add',
+          desc: '商品添加',
+          href: './product-add.html'
+        }, {
+          name: 'product-manage',
+          desc: '商品管理',
+          href: './product-manage.html'
+        });
+        break;
+      default:
+      console.log("can't find the role code") 
+        break;
+    }
   },
   // 渲染导航菜单
   renderNav: function () {
@@ -58,7 +91,6 @@ var navSide = {
       }
     };
     // 渲染list数据
-    console.log(addEventListener);
     var navHtml = _mm.renderHtml(templateIndex, {
       navList: this.option.navList
     });

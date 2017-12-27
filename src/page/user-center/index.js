@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:33
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-12 16:26:40
+ * @Last Modified time: 2017-12-27 14:45:56
 */
 
 'use strict';
@@ -33,16 +33,16 @@ var page = {
         _user.getUserInfo(function(res){
             switch(res.role) {
                 case "0":
-                    res.role = '会员';
+                    res.roleIden = '会员';
                     break;
                 case "1":
-                    res.role = '管理员';
+                    res.roleIden = '管理员';
                     break;
                 case '2':
-                    res.role = '批发商';
+                    res.roleIden = '批发商';
                     break;
                 case "3":
-                    res.role = '实体店用户';
+                    res.roleIden = '实体店用户';
                     break;
                 default: 
                     console.log('Error user type');

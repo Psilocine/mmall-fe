@@ -7,8 +7,8 @@
 		{{price}}
 	</td>
 	<td>
-		<a class="btn btn-warning opear ediBtn" href="javascript:;">编辑</a>
+		<a class="btn btn-sm btn-warning opear ediBtn" href="javascript:;">编辑</a>
 		<input type='text' value='{{id}}' style='display:none !important'/>
-		<a class="btn btn-warning opear delBtn" href="javascript:;">删除</a>		
+		<a class="btn btn-sm btn-warning opear delBtn" href="javascript:;">删除</a>		
 	</td>
 </tr>

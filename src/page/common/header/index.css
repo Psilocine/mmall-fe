@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-18 19:30:20
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 12:10:23
+ * @Last Modified time: 2017-12-27 14:36:11
 */
 /* 通用头部导航 */
 .header .logo{
@@ -31,6 +31,7 @@
 }
 .header .search-con .search-btn{
     position: absolute;
+    height: 40px;
     width: 80px;
     border-radius: 0;
 }

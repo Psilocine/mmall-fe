@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:36:23
+ * @Last Modified time: 2017-12-27 15:45:10
  */
 'use strict';
 require('./index.css');
@@ -26,13 +26,12 @@ var navSide = {
     ]
   },
   init: function (option) {
-    // 合并选项
-    this.roleIdenDiff();    
+    // 合并选项  
     $.extend(this.option, option);
     this.renderNav();
   },
   // 不同身份用户侧边栏选项不同
-  roleIdenDiff: function () {
+  roleIdenDiff: (function () {
     var _this = this;
     _user.getUserInfo(function (res) {
       switch (res.role) {
@@ -83,7 +82,7 @@ var navSide = {
     }, function (errMsg) {
       _mm.errorTips(errMsg);
     });
-  },
+  })(),
   // 渲染导航菜单
   renderNav: function () {
     // 计算active数据

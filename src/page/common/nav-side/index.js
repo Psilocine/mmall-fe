@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:49:39
+ * @Last Modified time: 2017-12-27 15:56:29
  */
 'use strict';
 require('./index.css');
@@ -80,6 +80,11 @@ var navSide = {
   init: function (option) {
     // 合并选项  
     $.extend(this.option, option);
+    this.option.navList.push(      {
+      name: 'user-pass-update',
+      desc: '修改密码',
+      href: './user-pass-update.html'
+    });
     this.renderNav();
   },
   // 渲染导航菜单
@@ -90,6 +95,7 @@ var navSide = {
         this.option.navList[i].isActive = true;
       }
     };
+    console.log(iLength);
     // 渲染list数据
     var navHtml = _mm.renderHtml(templateIndex, {
       navList: this.option.navList

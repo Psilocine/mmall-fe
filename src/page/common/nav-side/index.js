@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:12:03
+ * @Last Modified time: 2017-12-27 16:14:33
  */
 'use strict';
 require('./index.css');
@@ -11,7 +11,7 @@ var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 
 
-
+navSide.roleIdenDiff();
 // 侧边导航
 var navSide = {
   option: {
@@ -29,10 +29,9 @@ var navSide = {
     ]
   },
   init: function (option) {
-    // 合并选项  
+    // 合并选项
     $.extend(this.option, option);
-    this.roleIdenDiff();
-    setTimeout(this.renderNav(), 0);
+    this.renderNav();
   },
   // 不同身份用户侧边栏选项不同
   roleIdenDiff: function () {

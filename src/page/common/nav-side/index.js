@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:27:55
+ * @Last Modified time: 2017-12-27 16:32:13
  */
 'use strict';
 require('./index.css');
@@ -103,7 +103,5 @@ var navSide = {
     $('.nav-side').html(navHtml);
   }
 };
-
-navSide.roleIdenDiff();
 
 module.exports = navSide;

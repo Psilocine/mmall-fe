@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:21:36
+ * @Last Modified time: 2017-12-27 15:24:44
  */
 'use strict';
 require('./index.css');
@@ -10,7 +10,6 @@ var _mm = require('util/mm.js');
 var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 // 侧边导航
-navSide.roleIdenDiff();
 var navSide = {
   option: {
     name: '',
@@ -85,6 +84,7 @@ var navSide = {
   },
   // 渲染导航菜单
   renderNav: function () {
+    this.roleIdenDiff();
     // 计算active数据
     for (var i = 0, iLength = this.option.navList.length; i < iLength; i++) {
       if (this.option.navList[i].name === this.option.name) {

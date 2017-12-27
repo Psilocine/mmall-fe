@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:11:41
+ * @Last Modified time: 2017-12-27 15:15:25
  */
 'use strict';
 require('./index.css');
@@ -28,7 +28,6 @@ var navSide = {
     ]
   },
   init: function (option) {
-    this.roleIdenDiff();    
     // 合并选项
     $.extend(this.option, option);
     this.renderNav();

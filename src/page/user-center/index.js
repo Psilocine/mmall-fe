@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:33
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 14:45:56
+ * @Last Modified time: 2017-12-27 15:15:21
 */
 
 'use strict';
@@ -21,6 +21,7 @@ var page = {
     },
     onLoad : function(){
         // 初始化左侧菜单
+        navSide.roleIdenDiff();
         navSide.init({
             name: 'user-center'
         });

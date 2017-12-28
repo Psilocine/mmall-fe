@@ -21,7 +21,7 @@
           </select>
           <select type="password" class="form-control cate-select col-md-5">
             <option value="">请选择二级品类</option>
-          </select> : null
+          </select>
         </div>
       </div>
       <div class="form-group">

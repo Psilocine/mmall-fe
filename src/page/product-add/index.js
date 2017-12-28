@@ -2,13 +2,17 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-25 15:03:05 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-28 18:39:26
+ * @Last Modified time: 2017-12-28 18:42:44
  */
 
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
+
+require('node_modules/bootstrap/dist/css/bootstrap.min.css')
+require('node_modules/bootstrap/dist/js/bootstrap.min.js')
+
 var navSide = require('page/common/nav-side/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product.js')

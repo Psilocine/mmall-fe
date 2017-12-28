@@ -1,23 +1,58 @@
-<div class="user-info">
-    <div class="form-line">
-        <span class="label">用户名：</span>
-        <span class="text">{{username}}</span>
+<div class="row">
+  <div class="form-wrap col-lg-12">
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label htmlFor="name" class="col-md-2 control-label">商品名称</label>
+        <div class="col-md-5">
+          <input type="text" class="form-control" id="name" placeholder="请输入商品名称"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label htmlFor="subtitle" class="col-md-2 control-label">商品描述</label>
+        <div class="col-md-5">
+          <input type="text" class="form-control" id="subtitle" placeholder="请输入商品描述"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label htmlFor="" class="col-md-2 control-label">所属分类</label>
+        <div class="col-md-10">
+          <select type="password" class="form-control cate-select col-md-5" >
+            <option value="">请选择一级品类</option>
+          </select>
+          <select type="password" class="form-control cate-select col-md-5">
+            <option value="">请选择二级品类</option>
+          </select> : null
+        </div>
+      </div>
+      <div class="form-group">
+        <label htmlFor="price" class="col-md-2 control-label">商品价格</label>
+        <div class="col-md-3">
+          <div class="input-group">
+            <input type="number" class="form-control" id="price" placeholder="价格"/>
+            <div class="input-group-addon">元</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label htmlFor="inputEmail3" class="col-md-2 control-label">商品图片</label>
+        <div class="img-con col-md-10"> 
+          <div class="notice">请上传图片</div>
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+          <div>FileUpload</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label htmlFor="inputEmail3" class="col-md-2 control-label">商品详情</label>
+        <div class="col-md-10">
+          <div>RichEditor</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+          <button type="btn" class="btn btn-xl btn-primary">提交</button>
+        </div>
+      </div>
     </div>
-    <div class="form-line">
-        <span class="label">用户类型：</span>
-        <span class="text">{{roleIden}}</span>
-    </div>
-    <div class="form-line">
-        <span class="label">邮 箱：</span>
-        <span class="text">{{email}}</span>
-    </div>
-    <div class="form-line">
-        <span class="label">问 题：</span>
-        <span class="text">{{question}}</span>
-    </div>
-    <div class="form-line">
-        <span class="label">答 案：</span>
-        <span class="text">{{answer}}</span>
-    </div>
-    <a class="btn btn-submit" href="./user-center-update.html">编辑</a>
+  </div>
 </div>

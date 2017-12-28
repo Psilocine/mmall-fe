@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 15:19:24
+ * @Last Modified time: 2017-12-27 16:51:28
  */
 'use strict';
 require("./indes.css");
@@ -67,7 +67,8 @@ var page = {
   },
   // 加载用户信息
   loadUserInfo: function () {
-    var frag = `<table class="table table-striped table-bordered table-hover">
+    var frag = `<span class='text-primary pull-right'>申请等级: 1 国, 2 省, 3 市, 4 区</span>
+                <table class="table table-striped table-bordered table-hover">
                   <thead>
                     <tr>
                       <th>用户名</th>

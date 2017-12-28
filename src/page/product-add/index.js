@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-25 15:03:05 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 15:03:47
+ * @Last Modified time: 2017-12-28 14:26:29
  */
 
 'use strict';
@@ -22,7 +22,7 @@ var page = {
     onLoad : function(){
         // 初始化左侧菜单
         navSide.init({
-            name: 'user-center'
+            name: 'product-add'
         });
         // 加载用户信息
         this.loadUserInfo();

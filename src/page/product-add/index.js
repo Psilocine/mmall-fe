@@ -2,13 +2,15 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:33:33
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-29 16:31:52
+ * @Last Modified time: 2017-12-29 16:49:07
  */
 
 'use strict';
 
 import ProductSave from './index.jsx';
 import React from 'react';
+import { render } from 'react-dom';
+
 
 // bootstrap
 import 'node_modules/bootstrap/dist/css/bootstrap.min.css';

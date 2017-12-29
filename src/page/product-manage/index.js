@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 14:24:01
+ * @Last Modified time: 2017-12-29 21:44:09
  */
 'use strict';
 require('./index.css');
@@ -78,6 +78,7 @@ var page = {
       $('.panel-body').html(frag);
     }, function (errMsg) {
       _mm.errorTips(errMsg);
+      window.location.href = './user-center.html'
     });
   }
 };

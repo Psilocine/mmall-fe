@@ -28,7 +28,6 @@ const ProductSave = React.createClass({
       stock: '',
       detail: '',
       status: ''
-
     };
   },
   componentDidMount: function () {
@@ -216,9 +215,10 @@ const ProductSave = React.createClass({
       // 保存product
       _product.saveProduct(product).then(res => {
         alert(res);
-        window.location.href = '#/product/index';
+        window.location.href = './product-manage.html';
       }, err => {
-        alert(err.msg || '哪里不对了~');
+        window.location.href = './user-center.html';        
+        alert(err.msg || '无权限操作');
       });
     } else {
       alert(checkProduct.msg);

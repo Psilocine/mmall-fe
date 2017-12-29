@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-18 19:30:20
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:42:14
+ * @Last Modified time: 2017-12-29 17:09:53
 */
 /* 通用头部导航 */
 .header .logo{
@@ -21,13 +21,13 @@
 }
 .header .search-con .search-input{
     width: 550px;
-    height: 40px;
-    line-height: 40px;
+    height: 44px;
+    line-height: 44px;
     padding-left: 10px;
     font-size: 15px;
     border: 2px solid #c60023;
     outline: none;
-    box-shadow: border-box;
+    box-sizing: border-box;
 }
 .header .search-con .search-btn{
     position: absolute;

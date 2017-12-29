@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 
 import FileUploader from 'util/component/file-uploader/index.jsx';
 import RichEditor from 'util/component/rich-editor/index.jsx';
-
+// bootstrap
+import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'node_modules/bootstrap/dist/js/bootstrap.min.js';
 import MMUtile from 'util/mm.jsx';
 import Product from 'service/product.jsx';
 
@@ -12,33 +14,7 @@ const _mm = new MMUtile();
 const _product = new Product();
 
 import './index.css';
-
-import 'page/common/nav/index.js';
-import 'page/common/header/index.js';
-import navSide from 'page/common/nav-side/index.js';
-
-// page 逻辑部分
-var page = {
-	init: function () {
-		this.onLoad();
-	},
-	onLoad: function () {
-		// 初始化左侧菜单
-		navSide.init({
-			name: 'product-add'
-		});
-		// 加载用户信息
-		this.loadUserInfo();
-	},
-	// 加载用户信息
-	loadUserInfo: function () {
-			$('.panel-body').html(<ProductSave />);
-	}
-};
-$(function () {
-	page.init();
-});
-
+  
 const ProductSave = React.createClass({
   getInitialState() {
     return {
@@ -373,3 +349,5 @@ const ProductSave = React.createClass({
     );
   }
 });
+
+export default ProductSave;

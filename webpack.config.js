@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-29 14:43:20
+ * @Last Modified time: 2017-12-29 16:07:47
  */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -38,7 +38,7 @@ var config = {
     'user-pass-update': ['./src/page/user-pass-update/index.js'],
     'product-manage': ['./src/page/product-manage/index.js'],
     'product-detail': ['./src/page/product-detail/index.js'],
-    'product-add': ['./src/page/product-add/index.jsx'],
+    'product-add': ['./src/page/product-add/index.js'],
     'user-check': ['./src/page/user-check/index.js'],
     'result': ['./src/page/result/index.js'],
   },
@@ -90,6 +90,11 @@ var config = {
     }
   },
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env": { 
+         NODE_ENV: JSON.stringify("production") 
+       }
+    }),
     // 独立通用模块到js/base.js
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',

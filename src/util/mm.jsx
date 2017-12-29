@@ -1,10 +1,12 @@
 /*
- * @Author: PsiloLau 
- * @Date: 2017-12-18 14:11:46 
+* @Author: Rosen
+* @Date:   2017-02-24 10:47:04
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-29 14:07:54
- */
+ * @Last Modified time: 2017-12-29 14:24:26
+*/
+
 'use strict';
+
 const conf = {
   // online
   // serverHost: 'http://admin.psilocine.cn'
@@ -13,9 +15,9 @@ const conf = {
   imageHost: 'http://img.psilocine.cn/',
 }
 
-var MMUtil = {
+class MMUtil {
   // 请求服务器
-  request: function(param) {
+  request(param) {
     return new Promise((resolve, reject) => {
       $.ajax({
         type: param.method || 'get',
@@ -41,32 +43,32 @@ var MMUtil = {
         }
       });
     });
-  },
+  }
   // 获取请求url地址
-  getServerUrl: function(path) {
+  getServerUrl(path) {
     return conf.serverHost + path;
-  },
+  }
   // 获取图片地址
-  getImageUrl: function(path) {
+  getImageUrl(path) {
     return conf.imageHost + path;
-  },
+  }
   // 获取url参数
-  getHashParam: function(name) {
+  getHashParam(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
       queryString = window.location.hash.split('?')[1] || '',
       result = queryString.match(reg);
     return result ? decodeURIComponent(result[2]) : null;
-  },
+  }
   // alert
-  successTips: function(msg) {
+  successTips(msg) {
     alert(msg || '操作成功');
-  },
+  }
   // alert
-  errorTips: function(msg) {
+  errorTips(msg) {
     alert(msg || '哪里不对了~');
-  },
+  }
   // 向本地存储里放数据
-  setStorage: function(name, data) {
+  setStorage(name, data) {
     // array / json
     if (typeof data === 'object') {
       let jsonString = JSON.stringify(data);
@@ -80,9 +82,9 @@ var MMUtil = {
     else {
       alert('该数据类型不能用于本地存储');
     }
-  },
+  }
   // 从本地存储获取数据
-  getStorage: function(name) {
+  getStorage(name) {
     let data = window.localStorage.getItem(name);
     if (data) {
       // JSON.parse
@@ -90,14 +92,14 @@ var MMUtil = {
     } else {
       return '';
     }
-  },
+  }
   // 删除本地存储
-  removeStorage: function(name) {
+  removeStorage(name) {
     window.localStorage.removeItem(name);
-  },
+  }
   // 跳转登录
-  doLogin: function() {
+  doLogin() {
     window.location.href = '#/login?redirect=' + encodeURIComponent(window.location.hash);
   }
 }
-module.exports = MMUtil;
+export default MMUtil;

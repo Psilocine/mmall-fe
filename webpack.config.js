@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 11:59:05
+ * @Last Modified time: 2017-12-29 14:43:20
  */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -38,7 +38,7 @@ var config = {
     'user-pass-update': ['./src/page/user-pass-update/index.js'],
     'product-manage': ['./src/page/product-manage/index.js'],
     'product-detail': ['./src/page/product-detail/index.js'],
-    'product-add': ['./src/page/product-add/index.js'],
+    'product-add': ['./src/page/product-add/index.jsx'],
     'user-check': ['./src/page/user-check/index.js'],
     'result': ['./src/page/result/index.js'],
   },
@@ -65,6 +65,14 @@ var config = {
       {
         test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
         loader: 'url-loader?limit=100&name=resource/[name].[ext]'
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015']
+        }
       },
       {
         test: /\.string$/,

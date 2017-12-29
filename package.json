@@ -20,13 +20,21 @@
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
     "webpack": "^1.15.0",
-    "webpack-dev-server": "^1.16.5"
+    "webpack-dev-server": "^1.16.5",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "jsx-loader": "^0.13.2",
+    "babel-preset-react": "^6.5.0"
   },
   "dependencies": {
     "distpicker": "^1.0.4",
     "font-awesome": "^4.7.0",
     "hogan": "^1.0.2",
     "simditor": "^2.3.6",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-fileupload": "^2.4.0"
   }
 }

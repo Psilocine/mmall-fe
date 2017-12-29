@@ -45,6 +45,8 @@ const ProductSave = React.createClass({
       });
     }, err => {
       alert(err.msg || '哪里不对了~');
+      console.log('permission denied');
+      location.href = './user-center.html';
     });
   },
   // 加载二级分类
@@ -60,6 +62,8 @@ const ProductSave = React.createClass({
       });
     }, err => {
       alert(err.msg || '哪里不对了~');
+      console.log('permission denied');
+      location.href = './user-center.html';
     });
   },
   // 编辑的时候，需要初始化商品信息
@@ -77,6 +81,8 @@ const ProductSave = React.createClass({
         this.refs['rich-editor'].setValue(product.detail);
       }, err => {
         alert(err.msg || '哪里不对了~');
+        console.log('permission denied');
+        location.href = './user-center.html';
       });
     }
   },
@@ -215,10 +221,11 @@ const ProductSave = React.createClass({
       // 保存product
       _product.saveProduct(product).then(res => {
         alert(res);
-        window.location.href = './product-manage.html';
-      }, err => {
-        window.location.href = './user-center.html';        
-        alert(err.msg || '无权限操作');
+        location.href = './product-manage.html';
+      }, err => {     
+        alert(err.msg || '哪里不对了');
+        console.log('permission denied');
+        location.href = './user-center.html';
       });
     } else {
       alert(checkProduct.msg);

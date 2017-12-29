@@ -13,9 +13,9 @@ const _product = new Product();
 
 import './index.css';
 
-require('page/common/nav/index.js');
-require('page/common/header/index.js');
-var navSide = require('page/common/nav-side/index.js');
+import 'page/common/nav/index.js';
+import 'page/common/header/index.js';
+import navSide from 'page/common/nav-side/index.js';
 
 // page 逻辑部分
 var page = {
@@ -32,7 +32,7 @@ var page = {
 	},
 	// 加载用户信息
 	loadUserInfo: function () {
-			$('.panel-body').html(ProductSave);
+			$('.panel-body').html(<ProductSave />);
 	}
 };
 $(function () {

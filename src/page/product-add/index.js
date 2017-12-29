@@ -2,15 +2,17 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:33:33
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-29 16:08:03
+ * @Last Modified time: 2017-12-29 16:31:52
  */
 
 'use strict';
 
 import ProductSave from './index.jsx';
 import React from 'react';
-import { render } from 'react-dom';
 
+// bootstrap
+import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'node_modules/bootstrap/dist/js/bootstrap.min.js';
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var navSide = require('page/common/nav-side/index.js');

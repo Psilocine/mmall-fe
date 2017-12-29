@@ -4,9 +4,7 @@ import ReactDOM from 'react-dom';
 
 import FileUploader from 'util/component/file-uploader/index.jsx';
 import RichEditor from 'util/component/rich-editor/index.jsx';
-// bootstrap
-import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
-import 'node_modules/bootstrap/dist/js/bootstrap.min.js';
+
 import MMUtile from 'util/mm.jsx';
 import Product from 'service/product.jsx';
 
@@ -18,7 +16,7 @@ import './index.css';
 const ProductSave = React.createClass({
   getInitialState() {
     return {
-      id: this.props.params.pId,
+      id: '',
       firstCategoryList: [],
       firstCategoryId: '',
       secondCategoryList: [],

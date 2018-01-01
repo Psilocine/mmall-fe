@@ -21,6 +21,7 @@ var page = {
 		navSide.init({
 			name: 'product-add'
 		});
+		console.log('init nav-side');
 		render(
 			<ProductSave />,
 			document.getElementById('panel-body')

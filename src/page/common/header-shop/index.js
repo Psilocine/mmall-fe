@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-01 15:29:55 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 18:31:00
+ * @Last Modified time: 2018-01-01 22:03:51
  */
 'use strict';
 require('./index.css');
@@ -22,6 +22,7 @@ var header = {
       $('#search-input').val(keyword);
     };
     var currentUser = _user.getUserInfo(function(res) {
+      console.log('1');
       $('.shop-name').html(res.shopname); 
     }, function (err) {
       console.log(err);

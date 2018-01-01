@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 20:57:24
+ * @Last Modified time: 2018-01-01 21:26:35
  */
 'use strict';
 require('./index.css');
@@ -24,27 +24,7 @@ var navSide = {
         name: 'user-pass-update',
         desc: '修改密码',
         href: './user-pass-update.html'
-      },
-      // {
-      //   name: 'user-upgrade',
-      //   desc: '会员升级',
-      //   href: './user-upgrade.html'
-      // },
-      // {
-      //   name: 'product-add',
-      //   desc: '商品添加',
-      //   href: './product-add.html'
-      // },
-      // {
-      //   name: 'product-manage',
-      //   desc: '商品管理',
-      //   href: 'javascript:;'
-      // },
-      // {
-      //   name: 'user-check',
-      //   desc: '用户审核',
-      //   href: './user-check.html'
-      // }
+      }
     ]
   },
   init: function (option) {
@@ -52,7 +32,6 @@ var navSide = {
     // 合并选项
     $.extend(this.option, option);
     this.renderNav();
-    
   },
   // 不同身份用户侧边栏选项不同
   roleIdenDiff: function () {
@@ -78,6 +57,10 @@ var navSide = {
           // 批发商
         case "2":
           _this.option.navList.push({
+            name: 'user-upgrade',
+            desc: '会员升级',
+            href: './user-upgrade.html'
+          }, {
             name: 'product-add',
             desc: '商品添加',
             href: './product-add.html'
@@ -90,6 +73,10 @@ var navSide = {
           // 实体店
         case "3":
           _this.option.navList.push({
+            name: 'user-upgrade',
+            desc: '会员升级',
+            href: './user-upgrade.html'
+          }, {
             name: 'product-add',
             desc: '商品添加',
             href: './product-add.html'

@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-16 18:03:01
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 14:35:43
+ * @Last Modified time: 2018-01-01 21:40:17
 */
 
 
@@ -100,12 +100,12 @@ input[type='checkbox'] {
 
 .btn {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 10px;
   line-height: 40px;
   vertical-align: middle;
   border: none;
   background: #c60023;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   color: #fff;
   outline: none;

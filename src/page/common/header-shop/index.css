@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-01 15:30:09 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 19:25:03
+ * @Last Modified time: 2018-01-01 21:41:02
  */
 /* 通用头部导航 */
 .header .logo{
@@ -35,7 +35,7 @@
 }
 
 .header .search-con{
-  padding: 20px 0 20px 560px;
+  padding: 20px 0 20px 585px;
 }
 .header .search-con .search-input{
   width: 320px;

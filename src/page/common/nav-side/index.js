@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 20:23:53
+ * @Last Modified time: 2018-01-01 20:52:01
  */
 'use strict';
 require('./index.css');
@@ -50,14 +50,15 @@ var navSide = {
   init: function (option) {
     this.roleIdenDiff();
     // 合并选项
-    console.log(this.option);
-    alert('hello js');
-    $.extend(this.option, option);
-    this.renderNav();
+    if(!flag) {
+      $.extend(this.option, option);
+      this.renderNav();
+    }
   },
   // 不同身份用户侧边栏选项不同
   roleIdenDiff: function () {
     var _this = this;
+    var flag = true;
     _user.getUserInfoSync(function (res) {
       switch (res.role) {
         // 管理员
@@ -67,6 +68,7 @@ var navSide = {
             desc: '用户审核',
             href: './user-check.html'
           });
+          flag = false;
           break;
           // 普通用户
         case "0":
@@ -75,6 +77,7 @@ var navSide = {
             desc: '会员升级',
             href: './user-upgrade.html'
           });
+          flag = false;
           break;
           // 批发商
         case "2":
@@ -87,6 +90,7 @@ var navSide = {
             desc: '商品管理',
             href: './product-manage.html'
           });
+          flag = false;
           break;
           // 实体店
         case "3":
@@ -99,14 +103,16 @@ var navSide = {
             desc: '商品管理',
             href: './product-manage.html'
           });
-          alert('hello ajax');
+          flag = false;
           break;
         default:
           console.log("can't find the role code")
+          flag = false;
           break;
       }
     }, function (errMsg) {
       _mm.errorTips(errMsg);
+      flag = false;
     });
   },
   // 渲染导航菜单

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%= require('html-loader!./layout/head-common.html')  %>
+  <title>
+    <%= htmlWebpackPlugin.options.title%> - 相约998-商贸联盟
+  </title>
+</head>
+
+<body>
+  <%= require('html-loader!./layout/nav.html')  %>
+  <%= require('html-loader!./layout/header-shop.html')  %>
+  <div class="w">
+    <ul class="shop-nav">
+      <li class="shop-nav-item active">首页</li>
+      <li class="shop-nav-item">所有商品</li>
+    </ul>
+  </div>
+  <div class="w">
+    <div class="floor-wrap">
+      <h1 class="floor-title">商品列表</h1>
+      <ul class="floor-list">
+        <li class="floor-item">
+          <a href="./list.html?categoryId=100010">
+              <span class="floor-text">热水器</span>
+              <img class="floor-img" src="<%= require('../image/floor/floor1-5.jpg') %>" alt="热水器" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <%= require('html-loader!./layout/footer.html')  %>
+</body>
+
+</html>

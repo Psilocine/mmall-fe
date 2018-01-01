@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-27 16:51:28
+ * @Last Modified time: 2018-01-01 18:24:02
  */
 'use strict';
 require("./indes.css");
@@ -78,6 +78,7 @@ var page = {
                       <th>城市</th>
                       <th>区/县</th>
                       <th>具体地址</th>
+                      <th>店铺名称</th>
                       <th>申请身份</th>
                       <th>申请等级</th>
                       <th>操作</th>
@@ -100,6 +101,7 @@ var page = {
       $('.panel-body').html(frag);
     }, function (errMsg) {
       _mm.errorTips(errMsg);
+      location.href = "./user-center.html";
     });
   }
 };

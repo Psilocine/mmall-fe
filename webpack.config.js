@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-29 16:07:47
+ * @Last Modified time: 2018-01-01 15:04:47
  */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -40,6 +40,7 @@ var config = {
     'product-detail': ['./src/page/product-detail/index.js'],
     'product-add': ['./src/page/product-add/index.js'],
     'user-check': ['./src/page/user-check/index.js'],
+    'user-shop': ['./src/page/user-shop/index.js'],
     'result': ['./src/page/result/index.js'],
   },
   output: {
@@ -113,6 +114,7 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
     new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-shop', '店铺详情')),
     new HtmlWebpackPlugin(getHtmlConfig('user-upgrade', '会员升级')),
     new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),

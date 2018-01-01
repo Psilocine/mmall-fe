@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-29 21:56:08
+ * @Last Modified time: 2018-01-01 19:49:26
  */
 'use strict';
 require('./index.css');
@@ -43,6 +43,10 @@ var page = {
           _mm.errorTips(errMsg);
         })
       }
+    });
+    $(document).on('click', '.ediBtn', function () {
+      var productId = $(this).siblings('input').val();
+            
     })
   },
   onLoad: function () {

@@ -5,7 +5,8 @@
   <td>{{province}}</td>
   <td>{{city}}</td>
   <td>{{district}}</td>
-  <td>{{addr}}</td>
+  <td>{{addr}}</td>  
+  <td>{{shopname}}</td>
   <td>{{roleIden}}</td>
   <td>{{lvl}}</td>
   <td>

@@ -1,0 +1,72 @@
+/*
+ * @Author: PsiloLau 
+ * @Date: 2018-01-01 15:30:09 
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2018-01-01 19:25:03
+ */
+/* 通用头部导航 */
+.header .logo{
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  display: block;
+  font-size: 30px;
+  color: #c60023;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header .shop-name {
+  position: absolute;
+  display: table-cell;
+  top: 12px;
+  left: 320px;
+  width: 200px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 17px;
+  text-align: center;  
+  vertical-align:middle;
+}
+
+.shop-name span {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 15px;
+}
+
+.header .search-con{
+  padding: 20px 0 20px 560px;
+}
+.header .search-con .search-input{
+  width: 320px;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 10px;
+  font-size: 15px;
+  border: 2px solid #c60023;
+  outline: none;
+  box-sizing: border-box;
+}
+.header .search-con .search-btn{
+  position: absolute;
+  height: 44px;
+  width: 70px;
+  border-radius: 0;
+}
+
+.header .search-con .search-shop{
+  padding: 0 10px;
+  right: 30px;
+  background: #000;
+}
+
+/* 面包屑导航 */
+.crumb{
+  margin-bottom: 15px;
+  height: 50px;
+  line-height: 50px;
+  background: #eee;
+  color: #888;
+  font-size: 14px;
+  border-top: 2px solid #c60023;
+}

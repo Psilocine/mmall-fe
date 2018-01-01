@@ -11,10 +11,6 @@ require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var navSide = require('page/common/nav-side/index.js');
 
-render(
-  <ProductSave />,
-  document.getElementById('panel-body')
-)
 // page 逻辑部分
 var page = {
 	init: function () {
@@ -25,6 +21,10 @@ var page = {
 		navSide.init({
 			name: 'product-add'
 		});
+		render(
+			<ProductSave />,
+			document.getElementById('panel-body')
+		)
 	},
 }
 $(function () {

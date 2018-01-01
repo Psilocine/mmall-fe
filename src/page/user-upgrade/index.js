@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-08 19:33:20
+ * @Last Modified time: 2018-01-01 18:23:23
  */
 'use strict';
 require('./index.css');
@@ -45,6 +45,7 @@ var page = {
 					city: $("[data-city] option:selected").val(),
 					district: $("[data-district] option:selected").val(),
 					addr: $.trim($('#addr').val()),
+					shopname: $.trim($('#shopname').val())
 				},
 				validateResult = _this.validateForm(userInfo);
 			if (validateResult.status) {

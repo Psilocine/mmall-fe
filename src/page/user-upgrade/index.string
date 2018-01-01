@@ -34,6 +34,11 @@
 </div>
 
 <div class="form-line">
+  <span class="label">店铺名称：</span>
+  <input class="input" id="shopname" autocomplete="off" value="" />
+</div>
+
+<div class="form-line">
   <span class="label">升级类型：</span>
     <select name="role" id="role">
     <option value="3">实体店</option>

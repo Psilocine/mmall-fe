@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-08 19:33:20
+ * @Last Modified time: 2018-01-01 20:10:19
  */
 
 'use strict';
@@ -89,6 +89,15 @@ var _user = {
 		_mm.request({
 			url: _mm.getServerUrl('/user/get_information.do'),
 			method: 'POST',
+			success: resolve,
+			error: reject
+		});
+	},	
+	getUserInfoSync: function (resolve, reject) {
+		_mm.request({
+			url: _mm.getServerUrl('/user/get_information.do'),
+			method: 'POST',
+			async: false,
 			success: resolve,
 			error: reject
 		});

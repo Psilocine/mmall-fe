@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 20:10:49
+ * @Last Modified time: 2018-01-01 20:21:04
  */
 'use strict';
 require('./index.css');
@@ -51,6 +51,7 @@ var navSide = {
     this.roleIdenDiff();
     // 合并选项
     console.log(this.option);
+    alart('hello js');
     $.extend(this.option, option);
     this.renderNav();
   },
@@ -98,6 +99,7 @@ var navSide = {
             desc: '商品管理',
             href: './product-manage.html'
           });
+          alert('hello ajax');
           break;
         default:
           console.log("can't find the role code")

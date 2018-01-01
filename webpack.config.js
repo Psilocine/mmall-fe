@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 15:04:47
+ * @Last Modified time: 2018-01-01 20:21:35
  */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -37,7 +37,6 @@ var config = {
     'user-center-update': ['./src/page/user-center-update/index.js'],
     'user-pass-update': ['./src/page/user-pass-update/index.js'],
     'product-manage': ['./src/page/product-manage/index.js'],
-    'product-detail': ['./src/page/product-detail/index.js'],
     'product-add': ['./src/page/product-add/index.js'],
     'user-check': ['./src/page/user-check/index.js'],
     'user-shop': ['./src/page/user-shop/index.js'],
@@ -109,7 +108,6 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
     new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
     new HtmlWebpackPlugin(getHtmlConfig('product-add', '商品添加')),
-    new HtmlWebpackPlugin(getHtmlConfig('product-detail', '商品详情')),
     new HtmlWebpackPlugin(getHtmlConfig('product-manage', '商品管理')),
     new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),

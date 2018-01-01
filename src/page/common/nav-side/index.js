@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 20:52:01
+ * @Last Modified time: 2018-01-01 20:54:30
  */
 'use strict';
 require('./index.css');
@@ -58,7 +58,7 @@ var navSide = {
   // 不同身份用户侧边栏选项不同
   roleIdenDiff: function () {
     var _this = this;
-    var flag = true;
+    _this.flag = true;
     _user.getUserInfoSync(function (res) {
       switch (res.role) {
         // 管理员

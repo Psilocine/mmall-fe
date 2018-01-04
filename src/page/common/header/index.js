@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-18 19:30:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-04 19:27:44
+ * @Last Modified time: 2018-01-04 19:58:55
  */
 
 'use strict';
@@ -23,35 +23,30 @@ var header = {
 		};
 	},
 	bindEvent: function () {
-		var _this = this;
 		// 点击搜索按钮以后，做搜索提交
-		$('#search-btn').click(function () {
-			_this.searchSubmit();
-		});
+		$('#search-btn').click( () => this.searchSubmit() );
 
 		// 选择搜索类型
+		// hover出现列表
 		var outEvent,
-			typeEvent;
+			inEvent;
 		$('.search-type').hover(function () {
-			clearTimeout(typeEvent);
-			typeEvent = setTimeout(function () {
-				$('.search-list').css('display', 'block');
-			}, 500)
+			clearTimeout(inEvent);
+			inEvent = setTimeout( () => $('.search-list').css('display', 'block'), 500)
 		}, function () {
-			outEvent = setTimeout(function () {
-				$('.search-list').css('display', 'none');
-			}, 500)
+			outEvent = setTimeout( () => $('.search-list').css('display', 'none'), 500)
 		})
+		// 点击出现列表
+		$('.search-type').click( () => $('.search-list').css('display', 'block') )
+
+		
+		$('.search-list').hover( () => clearTimeout(outEvent), () => $(this).css('display', 'none') )
 
 		$('.search-item').click(function () {
 			$('#searchType').html($(this).html())
+			$('.search-list').css('display','none');
 		})
 
-		$('.search-list').hover(function () {
-			clearTimeout(outEvent);
-		}, function () {
-			$(this).css('display', 'none')
-		})
 	},
 	// 搜索的提交
 	searchSubmit: function () {
@@ -71,7 +66,6 @@ var header = {
 			// 
 			console.log(keyword);
 		}
-
 	}
 };
 

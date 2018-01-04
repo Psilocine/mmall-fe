@@ -2,28 +2,23 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-01 15:30:09 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 21:41:02
+ * @Last Modified time: 2018-01-04 19:47:40
  */
 /* 通用头部导航 */
 .header .logo{
-  position: absolute;
-  left: 30px;
-  top: 20px;
-  display: block;
-  font-size: 30px;
-  color: #c60023;
-  font-weight: bold;
-  text-decoration: none;
+	display: inline-block;
+  margin: 40px;
+  margin-right: 20px;
+	font-size: 30px;
+	color: #c60023;
+	font-weight: bold;
+	text-decoration: none;
 }
 .header .shop-name {
-  position: absolute;
-  display: table-cell;
-  top: 12px;
-  left: 320px;
+  display: inline-block;
   width: 200px;
   height: 60px;
-  font-weight: bold;
-  font-size: 17px;
+  font-size: 16px;
   text-align: center;  
   vertical-align:middle;
 }
@@ -35,28 +30,31 @@
 }
 
 .header .search-con{
-  padding: 20px 0 20px 585px;
+  position: relative;
+	display: inline-block;
+  font-size: 14px;
+  margin-left: 20px;
 }
 .header .search-con .search-input{
-  width: 320px;
-  height: 44px;
-  line-height: 44px;
-  padding-left: 10px;
-  font-size: 15px;
-  border: 2px solid #c60023;
-  outline: none;
-  box-sizing: border-box;
+	width: 350px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 10px;
+	font-size: 14px;
+	border: 1px solid #c60023;
+	outline: none;
+	box-sizing: border-box;
 }
 .header .search-con .search-btn{
-  position: absolute;
-  height: 44px;
+  height: 35px;
+  float: right;
   width: 70px;
   border-radius: 0;
 }
 
 .header .search-con .search-shop{
+  margin: 0 5px;
   padding: 0 10px;
-  right: 30px;
   background: #000;
 }
 
@@ -68,5 +66,5 @@
   background: #eee;
   color: #888;
   font-size: 14px;
-  border-top: 2px solid #c60023;
+  border-top: 1px solid #c60023;
 }

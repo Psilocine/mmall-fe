@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-16 18:03:01
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-04 17:26:54
+ * @Last Modified time: 2018-01-04 20:52:37
 */
 
 
@@ -101,11 +101,11 @@ input[type='checkbox'] {
 .btn {
   display: inline-block;
   padding: 0 10px;
-  line-height: 40px;
+  line-height: 35px;
   vertical-align: middle;
   border: none;
   background: #c60023;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   color: #fff;
   outline: none;
@@ -132,4 +132,15 @@ input[type='checkbox'] {
   border-radius: 5px;
   background: url(../../image/icon/loading.gif) no-repeat;
   opacity: .6;
+}
+
+/* clear fix */
+.clearfix:after {
+  content: ' ';
+  clear: both;
+  display: table;
+}
+
+.clearfix {
+  *zoom: 1;
 }

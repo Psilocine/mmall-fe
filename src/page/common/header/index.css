@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-18 19:30:20
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-04 17:36:20
+ * @Last Modified time: 2018-01-04 19:50:31
 */
 
 
@@ -10,7 +10,7 @@
 
 .header .logo {
 	display: inline-block;
-	margin: 40px 15px;
+	margin: 40px;
 	font-size: 30px;
 	color: #c60023;
 	font-weight: bold;
@@ -21,7 +21,7 @@
 	position: relative;
 	display: inline-block;
 	font-size: 14px;
-	margin-left: 50px;
+	margin-left: 100px;
 }
 
 .header .search-con .search-type {
@@ -45,6 +45,8 @@
 	background: #fff;
 	border: 1px solid #c60023; 
 	cursor: pointer;
+	z-index: 999;
+
 }
 
 .search-con .search-list .search-item {
@@ -58,7 +60,7 @@
 }
 
 .header .search-con .search-input {
-	width: 550px;
+	width: 450px;
 	height: 35px;
 	line-height: 35px;
 	padding-left: 70px;

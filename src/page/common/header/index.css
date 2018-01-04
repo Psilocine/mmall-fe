@@ -2,47 +2,88 @@
 * @Author: Rosen
 * @Date:   2017-05-18 19:30:20
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 19:24:55
+ * @Last Modified time: 2018-01-04 17:36:20
 */
+
+
 /* 通用头部导航 */
-.header .logo{
-    position: absolute;
-    left: 15px;
-    top: 38px;
-    display: block;
-    font-size: 30px;
-    color: #c60023;
-    font-weight: bold;
-    text-decoration: none;
+
+.header .logo {
+	display: inline-block;
+	margin: 40px 15px;
+	font-size: 30px;
+	color: #c60023;
+	font-weight: bold;
+	text-decoration: none;
 }
 
-.header .search-con{
-    padding: 40px 0 30px 330px;
+.header .search-con {
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	margin-left: 50px;
 }
-.header .search-con .search-input{
-    width: 550px;
-    height: 44px;
-    line-height: 44px;
-    padding-left: 10px;
-    font-size: 15px;
-    border: 2px solid #c60023;
-    outline: none;
-    box-sizing: border-box;
+
+.header .search-con .search-type {
+	position: absolute;
+	height: 35px;
+	line-height: 35px;
+	width: 42px;
+	padding: 0 10px 0 12px; 
+	color: #666;
+	border-right: 1px solid #C60023;
+	overflow: hidden;
+	cursor: pointer;
 }
-.header .search-con .search-btn{
-    position: absolute;
-    height: 44px;
-    width: 70px;
-    border-radius: 0;
+.search-con .search-list {
+	display: none;
+	position: absolute;
+	top: 34px;
+	left: 0;
+	width: 63px;	
+	color: #666;
+	background: #fff;
+	border: 1px solid #c60023; 
+	cursor: pointer;
 }
+
+.search-con .search-list .search-item {
+	padding-left: 10px;	
+	height: 25px;
+	line-height: 25px;
+}
+
+.search-con .search-list .search-item:hover {
+	background: #f3f3f3;
+}
+
+.header .search-con .search-input {
+	width: 550px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 70px;
+	font-size: 14px;
+	border: 1px solid #c60023;
+	outline: none;
+	box-sizing: border-box;
+}
+
+.header .search-con .search-btn {
+	float: right;
+	height: 35px;
+	width: 70px;
+	border-radius: 0;
+}
+
 
 /* 面包屑导航 */
-.crumb{
-    margin-bottom: 15px;
-    height: 50px;
-    line-height: 50px;
-    background: #eee;
-    color: #888;
-    font-size: 14px;
-    border-top: 2px solid #c60023;
+
+.crumb {
+	margin-bottom: 15px;
+	height: 50px;
+	line-height: 50px;
+	background: #eee;
+	color: #888;
+	font-size: 14px;
+	border-top: 1px solid #c60023;
 }

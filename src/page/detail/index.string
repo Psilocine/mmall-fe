@@ -1,32 +1,41 @@
 <div class="intro-wrap">
-    <div class="p-img-con">
-        <div class="main-img-con">
-            <img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}"/>
-        </div>
-        <ul class="p-img-list">
-            {{#subImages}}
-            <li class="p-img-item">
-                <img class="p-img" src="{{imageHost}}{{.}}" alt="{{name}}" />
-            </li>
-            {{/subImages}}
-        </ul>
-    </div>
-    <div class="p-info-con">
-        <h1 class="p-name">{{name}}</h1>
-        <p class="p-subtitle">{{subtitle}}</p>
-        <div class="p-info-item p-price-con">
-            <span class="label">价格:</span>
-            <span class="info">￥{{price}}</span>
-        </div>
-    </div>
+	<div class="p-img-con">
+		<div class="main-img-con">
+			<img class="main-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}"/>
+		</div>
+		<ul class="p-img-list">
+			{{#subImages}}
+			<li class="p-img-item">
+				<img class="p-img" src="{{imageHost}}{{.}}" alt="{{name}}" />
+			</li>
+			{{/subImages}}
+		</ul>
+</div>
+<div class="p-info-con">
+		<h1 class="p-name">{{name}}</h1>
+		<p class="p-subtitle">{{subtitle}}</p>
+		<div class="p-info-item p-price-con">
+			<span class="label">价格:</span>
+			<span class="info">￥{{price}}</span>
+		</div>
+</div>
+</div>
+<div class='detail-info'>
+	<ul class='tab-list'>
+		<li class='tab-item active'>店铺</li>
+	</ul>
+	<div class='detail-shop'>
+		{{shopname}}
+		<button id='inShop'>进入店铺</button>
+	</div>
 </div>
 <div class="detail-wrap">
-    <div class="detail-tab-con">
-        <ul class="tab-list">
-            <li class="tab-item active">详细描述</li>
-        </ul>
-    </div>
-    <div class="detail-con">
-        {{{detail}}}
-    </div>
+	<div class="detail-tab-con">
+		<ul class="tab-list">
+			<li class="tab-item active">详细描述</li>
+		</ul>
+	</div>
+	<div class="detail-con">
+		{{{detail}}}
+	</div>
 </div>

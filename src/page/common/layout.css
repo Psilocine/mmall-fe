@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-16 18:03:01
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-07 13:32:44
+ * @Last Modified time: 2018-01-07 13:43:48
 */
 
 
@@ -113,7 +113,7 @@ input[type='checkbox'] {
   vertical-align: middle;
   border: none;
   background: #c60023;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   color: #fff;
   outline: none;

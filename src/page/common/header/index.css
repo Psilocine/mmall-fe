@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-18 19:30:20
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-04 19:50:31
+ * @Last Modified time: 2018-01-07 13:41:47
 */
 
 
@@ -67,7 +67,6 @@
 	font-size: 14px;
 	border: 1px solid #c60023;
 	outline: none;
-	box-sizing: border-box;
 }
 
 .header .search-con .search-btn {

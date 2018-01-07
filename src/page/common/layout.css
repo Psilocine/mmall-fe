@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-16 18:03:01
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-04 20:52:37
+ * @Last Modified time: 2018-01-07 13:32:44
 */
 
 
@@ -42,7 +42,15 @@ input[type='checkbox'] {
   width: 1080px;
   margin: 0 auto;
   position: relative;
-  /* overflow: hidden; */
+  *zoom: 1;
+  
+}
+
+/* clear fix */
+.w:after {
+  content: ' ';
+  clear: both;
+  display: table;
 }
 
 
@@ -134,13 +142,3 @@ input[type='checkbox'] {
   opacity: .6;
 }
 
-/* clear fix */
-.clearfix:after {
-  content: ' ';
-  clear: both;
-  display: table;
-}
-
-.clearfix {
-  *zoom: 1;
-}

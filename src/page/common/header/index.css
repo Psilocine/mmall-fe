@@ -67,6 +67,7 @@
 	font-size: 14px;
 	border: 1px solid #c60023;
 	outline: none;
+	box-sizing: border-box;
 }
 
 .header .search-con .search-btn {

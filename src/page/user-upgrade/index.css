@@ -14,3 +14,14 @@
   width: 100px;
   text-align: center;
 }
+
+/* clearfix */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}

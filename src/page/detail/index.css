@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-28 19:45:57
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-04 16:35:45
+ * @Last Modified time: 2018-01-14 20:01:24
 */
 
 
@@ -50,7 +50,7 @@
 }
 
 .intro-wrap .p-img-con .p-img-item:hover {
-	border: 2px solid #c60023;
+	border: 1px solid #c60023;
 }
 
 .intro-wrap .p-img-con .p-img-item .p-img {
@@ -203,6 +203,7 @@
 .detail-wrap .detail-con {
 	padding-top: 20px;
 	background: #fff;
+	overflow: hidden;
 }
 
 .detail-wrap .detail-con img {

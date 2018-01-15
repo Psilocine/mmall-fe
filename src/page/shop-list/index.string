@@ -1,0 +1,18 @@
+{{#list}}
+  <li class="p-item">
+    <div class="p-name-con">
+      店铺名: <span class="p-name">{{shopname}}</span>
+    </div>
+    <div class='p-desc-con'>
+      店铺描述: <span class="p-desc">{{desc}}</span>
+    </div>
+    <div class="p-owner-con">
+      卖家: <span class='p-owner'>{{username}}</span>
+    </div>
+    <input type='text' class='shop-id' value='{{id}}' style='display:none !important'/>    
+    <button class='shop-btn'>进入店铺</button>
+  </li>
+{{/list}}
+{{^list}}
+  <p class="err-tip">很抱歉，找不到店铺。</p>
+{{/list}}

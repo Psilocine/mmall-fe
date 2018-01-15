@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 18:24:02
+ * @Last Modified time: 2018-01-16 00:39:04
  */
 'use strict';
 require("./indes.css");
@@ -95,7 +95,7 @@ var page = {
         frag += userHtml;
       }
       if (len === 0) {
-        frag += '<tr><td class="text-center" colspan="10">还没有用户申请</td></tr>'
+        frag += '<tr><td class="text-center" colspan="11">还没有用户申请</td></tr>'
       }
       frag += '</table>';
       $('.panel-body').html(frag);

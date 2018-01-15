@@ -25,7 +25,7 @@
 		<li class='tab-item active'>店铺</li>
 	</ul>
 	<div class='detail-shop'>
-		{{shopname}}
+		<div>{{shopname}}</div>
 		<button id='inShop'>进入店铺</button>
 	</div>
 </div>

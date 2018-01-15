@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:07:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 01:37:11
+ * @Last Modified time: 2018-01-16 01:42:42
  */
 'use strict';
 require('./index.css');
@@ -32,7 +32,7 @@ var page = {
     var _this = this;
     $(document).on('click', '.shop-btn', function() {
       var shopId = $(this).sibings('.shop-id').val();
-      location.href = "./user-shop.html" + "?id=" + shopId;
+      location.href = "./user-shop.html" + "?shopId=" + shopId;
     })
   },
   // 加载list数据

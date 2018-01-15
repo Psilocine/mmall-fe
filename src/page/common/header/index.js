@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-18 19:30:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-04 19:58:55
+ * @Last Modified time: 2018-01-16 01:44:55
  */
 
 'use strict';
@@ -63,8 +63,13 @@ var header = {
 				_mm.goHome();
 			}
 		} else if(type === '店铺') {
-			// 
-			console.log(keyword);
+			if (keyword) {
+				window.location.href = './shop-list.html?keyword=' + keyword;
+			}
+			// 如果keyword为空，直接返回首页
+			else {
+				_mm.goHome();
+			}
 		}
 	}
 };

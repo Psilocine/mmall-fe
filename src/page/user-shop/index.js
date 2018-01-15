@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:42:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 01:43:09
+ * @Last Modified time: 2018-01-16 01:53:01
  */
 'use strict';
 
@@ -31,35 +31,10 @@ var page = {
   },
   bindEvent: function () {
     var _this = this;
-    // 图片预览
-    $(document).on('mouseenter', '.p-img-item', function () {
-      var imageUrl = $(this).find('.p-img').attr('src');
-      $('.main-img').attr('src', imageUrl);
-    });
-
   },
-  // 加载商品详情的数据
+  // 加载店铺详情的数据
   loadDetail: function () {
-    var _this = this,
-      html = '',
-      $pageWrap = $('.page-wrap');
-    // loading
-    $pageWrap.html('<div class="loading"></div>');
-    // 请求detail信息
-    _product.getProductDetail(this.data.productId, function (res) {
-      _this.filter(res);
-      // 缓存住detail的数据
-      _this.data.detailInfo = res;
-      // render
-      html = _mm.renderHtml(templateIndex, res);
-      $pageWrap.html(html);
-    }, function (errMsg) {
-      $pageWrap.html('<p class="err-tip">此商品太淘气，找不到了</p>');
-    });
-  },
-  // 数据匹配
-  filter: function (data) {
-    data.subImages = data.subImages.split(',');
+		
   }
 };
 $(function () {

@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:06:59 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 01:28:09
+ * @Last Modified time: 2018-01-16 01:53:43
  */
 
 /* 列表 */
@@ -17,7 +17,7 @@
   padding: 10px 20px;
   margin: 10px auto;
   font-size: 15px;
-  color: #3c3c3c;
+  color: #848282;
   background: #fff;
 }
 .p-item .p-name-con {
@@ -27,10 +27,11 @@
 }
 
 .p-name {
+  font-size: 19px;
   color: #ff5000;
 }
 
-.p-btn {
+.shop-btn {
   position: absolute;
   top: 34px;
   right: 30px;
@@ -43,7 +44,7 @@
   cursor: pointer;
 }
 
-.p-btn:hover {
+.shop-btn:hover {
   background: #ff294f;
 }
 

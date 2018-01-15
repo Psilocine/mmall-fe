@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:07:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 01:42:42
+ * @Last Modified time: 2018-01-16 01:50:05
  */
 'use strict';
 require('./index.css');
@@ -31,7 +31,7 @@ var page = {
   bindEvent: function () {
     var _this = this;
     $(document).on('click', '.shop-btn', function() {
-      var shopId = $(this).sibings('.shop-id').val();
+      var shopId = $(this).siblings('.shop-id').val();
       location.href = "./user-shop.html" + "?shopId=" + shopId;
     })
   },

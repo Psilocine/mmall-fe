@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:42:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 13:12:31
+ * @Last Modified time: 2018-01-16 14:01:26
  */
 'use strict';
 
@@ -29,7 +29,7 @@ var page = {
     if (!this.data.shopId) {
 			alert('没有找到该店铺页面!')
       _mm.goHome();
-    }
+		}
     this.loadDetail();
   },
   bindEvent: function () {
@@ -43,6 +43,7 @@ var page = {
 			$pListCon = $('.floor-list');
 		$pListCon.html('<div class="loading"></div>');
 		_product.getShopDetail(this.data.shopId, function (res) {
+			$('.shop-name span').html(res.list[0].shopname);
 			listHtml = _mm.renderHtml(templateIndex, {
 				list: res.list
 			});

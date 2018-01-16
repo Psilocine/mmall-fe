@@ -1,3 +1,4 @@
+{{#list}}
 <li class="floor-item">
   <a href="./detail.html?id={{id}}">
       <span class="floor-text">{{name}}</span>
@@ -5,3 +6,4 @@
       <img class="floor-img" src="{{mian_image}}" alt="商品图片" />
   </a>
 </li>
+{{/list}}

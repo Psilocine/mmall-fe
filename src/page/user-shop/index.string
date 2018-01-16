@@ -1,6 +1,6 @@
 {{#list}}
 <li class="floor-item">
-  <a href="./detail.html?id={{id}}">
+  <a href="./detail.html?productId={{id}}">
       <span class="floor-text">{{name}}</span>
       <img class="floor-img"  alt="商品图片" src="{{mainImage}}"  />
   </a>

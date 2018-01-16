@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:42:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 12:23:17
+ * @Last Modified time: 2018-01-16 13:00:51
  */
 'use strict';
 
@@ -15,7 +15,9 @@ var templateIndex = require('./index.string');
 
 var page = {
   data: {
-    productId: _mm.getUrlParam('shopId') || '',
+    shopId: _mm.getUrlParam('shopId') || '',
+    pageNum: _mm.getUrlParam('pageNum') || 1,
+    pageSize: _mm.getUrlParam('pageSize') || 20
   },
   init: function () {
     this.onLoad();
@@ -23,7 +25,7 @@ var page = {
   },
   onLoad: function () {
     // 如果没有传productId, 自动跳回首页
-    if (!this.data.productId) {
+    if (!this.data.shopId) {
 			alert('没有找到该店铺页面!')
       _mm.goHome();
     }
@@ -34,8 +36,39 @@ var page = {
   },
   // 加载店铺详情的数据
   loadDetail: function () {
-		
-  }
+    var _this = this,
+			listHtml = '',
+			listParam = this.data.listParam,
+			$pListCon = $('.floor-list');
+		$pListCon.html('<div class="loading"></div>');
+		_product.getShopDetail(this.data.shopId, function (res) {
+			listHtml = _mm.renderHtml(templateIndex, {
+				list: res.list
+			});
+			$pListCon.html(listHtml);
+			_this.loadPagination({
+				hasPreviousPage: res.hasPreviousPage,
+				prePage: res.prePage,
+				hasNextPage: res.hasNextPage,
+				nextPage: res.nextPage,
+				pageNum: res.pageNum,
+				pages: res.pages
+			});
+		}, function (errMsg) {
+			_mm.errorTips(errMsg);
+    });
+  },
+  loadPagination: function (pageInfo) {
+		var _this = this;
+		this.pagination ? '' : (this.pagination = new Pagination());
+		this.pagination.render($.extend({}, pageInfo, {
+			container: $('.pagination'),
+			onSelectPage: function (pageNum) {
+				_this.data.listParam.pageNum = pageNum;
+				_this.loadList();
+			}
+		}));
+	}
 };
 $(function () {
   page.init();

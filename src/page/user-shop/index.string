@@ -1,6 +1,7 @@
 <li class="floor-item">
   <a href="./detail.html?id={id}">
       <span class="floor-text">{name}</span>
+      <p>{price}<p>
       <img class="floor-img" src="{mian_image}" alt="热水器" />
   </a>
 </li>

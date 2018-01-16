@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-27 18:26:52
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 02:01:07
+ * @Last Modified time: 2018-01-16 12:55:21
  */
 
 'use strict';
@@ -40,9 +40,9 @@ var _product = {
     });
   },
   // 获取店铺详细信息
-  getProductDetail: function (productId, resolve, reject) {
+  getShopDetail: function (shopId, resolve, reject) {
     _mm.request({
-      url: _mm.getServerUrl('/product/shop_detail.do'),
+      url: _mm.getServerUrl('/product/shop_product_list.do'),
       data: {
         shopId: shopId
       },

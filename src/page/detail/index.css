@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-28 19:45:57
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-14 20:01:24
+ * @Last Modified time: 2018-01-16 14:12:49
 */
 
 
@@ -147,7 +147,7 @@
 
 .detail-info {
 	float: left;
-	width: 19%;
+	width: 15%;
 	margin-top: 15px;
 	vertical-align: top;
 	background: #fff;
@@ -174,7 +174,7 @@
 
 .detail-wrap {
 	float: right;
-	width: 80%;
+	width: 84%;
 	margin-top: 15px;
 }
 
@@ -187,10 +187,10 @@
 
 .tab-list .tab-item {
 	float: left;
-	width: 80px;
-	height: 35px;
-	line-height: 35px;
-	font-size: 14px;
+	width: 78px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
 	text-align: center;
 	cursor: pointer;
 }

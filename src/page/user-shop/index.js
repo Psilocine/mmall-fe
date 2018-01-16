@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:42:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 14:01:26
+ * @Last Modified time: 2018-01-16 15:26:32
  */
 'use strict';
 
@@ -44,6 +44,9 @@ var page = {
 		$pListCon.html('<div class="loading"></div>');
 		_product.getShopDetail(this.data.shopId, function (res) {
 			$('.shop-name span').html(res.list[0].shopname);
+			// res.list 按修改时间 排序
+			_this.orderByUpdateTime(res);
+
 			listHtml = _mm.renderHtml(templateIndex, {
 				list: res.list
 			});
@@ -70,6 +73,19 @@ var page = {
 				_this.loadList();
 			}
 		}));
+	},
+	orderByUpdateTime: function(data) {
+		var productList = [],
+				temp;
+		for(var i = 0, len = data.list.length; i < len; i++) {
+			for(var j = 0; j < len - 1; j++) {
+				if(data.list[j].updateTime < data.list[j + 1].updateTime) {
+					temp = data.list[j].updateTime;
+					data.list[j].updateTime = data.list[j + 1].updateTime;
+					data.list[j + 1].updateTime = temp;
+				}
+			}
+		}
 	}
 };
 $(function () {

@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:42:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 15:26:32
+ * @Last Modified time: 2018-01-16 15:30:13
  */
 'use strict';
 
@@ -75,14 +75,13 @@ var page = {
 		}));
 	},
 	orderByUpdateTime: function(data) {
-		var productList = [],
-				temp;
+		var temp;
 		for(var i = 0, len = data.list.length; i < len; i++) {
 			for(var j = 0; j < len - 1; j++) {
 				if(data.list[j].updateTime < data.list[j + 1].updateTime) {
-					temp = data.list[j].updateTime;
-					data.list[j].updateTime = data.list[j + 1].updateTime;
-					data.list[j + 1].updateTime = temp;
+					temp = data.list[j];
+					data.list[j] = data.list[j + 1];
+					data.list[j + 1] = temp;
 				}
 			}
 		}

@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:42:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 13:00:51
+ * @Last Modified time: 2018-01-16 13:12:31
  */
 'use strict';
 
@@ -11,6 +11,7 @@ require('page/common/nav/index.js');
 require('page/common/header-shop/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
+var Pagination = require('util/pagination/index.js');
 var templateIndex = require('./index.string');
 
 var page = {

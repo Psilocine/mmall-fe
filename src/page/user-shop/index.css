@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-01 15:12:51 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 16:49:10
+ * @Last Modified time: 2018-01-16 13:21:38
  */
 .shop-nav {
   background: #eee;
@@ -99,23 +99,6 @@
   font-weight: normal;
   font-size: 20px;
   border-bottom: 1px solid #d58717;
-}
-/* 更改各楼层标题颜色 */
-.floor-wrap:nth-child(2) .floor-title{
-  color: #3b838c;
-  border-bottom: 1px solid #3b838c;
-}
-.floor-wrap:nth-child(3) .floor-title{
-  color: #a93931;
-  border-bottom: 1px solid #a93931;
-}
-.floor-wrap:nth-child(4) .floor-title{
-  color: #488bad;
-  border-bottom: 1px solid #488bad;
-}
-.floor-wrap:nth-child(5) .floor-title{
-  color: #642663;
-  border-bottom: 1px solid #642663;
 }
 .floor-wrap .floor-list{
   margin-right: -20px;

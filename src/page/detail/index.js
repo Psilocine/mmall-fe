@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-12 18:45:47
+ * @Last Modified time: 2018-01-16 13:11:18
  */
 
 'use strict';
@@ -36,7 +36,9 @@ var page = {
       var imageUrl = $(this).find('.p-img').attr('src');
       $('.main-img').attr('src', imageUrl);
     });
-
+    $(document).on('click', '#inShop', function() {
+      console.log(1);
+    })
   },
   // 加载商品详情的数据
   loadDetail: function () {

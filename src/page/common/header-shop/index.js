@@ -2,12 +2,11 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-01 15:29:55 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 22:30:41
+ * @Last Modified time: 2018-01-16 13:37:23
  */
 'use strict';
 require('./index.css');
 var _mm = require('util/mm.js');
-var _user = require('service/user-service.js');
 
 // 通用页面头部
 var header = {
@@ -21,12 +20,6 @@ var header = {
     if (keyword) {
       $('#search-input').val(keyword);
     };
-    var currentUser = _user.getUserInfo(function(res) {
-      console.log(res);
-      $('.shop-name span').html(res.shopname); 
-    }, function (err) {
-      console.log(err);
-    });
   },
   bindEvent: function () {
     var _this = this;

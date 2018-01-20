@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:42:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 16:41:15
+ * @Last Modified time: 2018-01-20 19:48:26
  */
 'use strict';
 
@@ -40,7 +40,7 @@ var page = {
     var _this = this,
 			listHtml = '',
 			listParam = this.data.listParam,
-			$pListCon = $('.floor-list');
+			$pListCon = $('.goods-list');
 		$pListCon.html('<div class="loading"></div>');
 		_product.getShopProduct(this.data.shopId, function (res) {
 			$('.shop-name span').html(res.list[0].shopname);

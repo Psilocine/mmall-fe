@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-18 19:30:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 19:20:36
+ * @Last Modified time: 2018-01-20 19:47:40
  */
 
 'use strict';
@@ -45,7 +45,7 @@ var header = {
 
 		$('#search-input').keydown(function (e) {
 			if(e.keyCode === 13) {
-				searchSubmit();
+				this.searchSubmit();
 			}
 		})
 	},

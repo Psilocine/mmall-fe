@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 16:49:37
+ * @Last Modified time: 2018-01-20 17:10:52
  */
 
 'use strict';
@@ -49,20 +49,15 @@ var page = {
   loadDetail: function () {
     var _this = this,
       html = '',
+      shopname = ''
       $pageWrap = $('.page-wrap');
     // loading
     $pageWrap.html('<div class="loading"></div>');
     // 请求detail信息
     _product.getProductDetail(this.data.productId, function (res) {
       // 店铺名
-      $('.shop-name span').html(res.shopname);
-      // 面包屑链接
-      _product.getShopDetail(res.shopname, function (shopRes) {
-        $('.shop-link').html(shopRes.shopname).attr('href','./user-shop.html?shopId=' + shopRes.id)
-      }, function() {
-        console.log('shop_detail.do error');
-      })
-
+      shopname = res.shopname;
+      $('.shop-name span').html(shopname);
 
       _this.filter(res);
       // 缓存住detail的数据
@@ -73,6 +68,14 @@ var page = {
     }, function (errMsg) {
       $pageWrap.html('<p class="err-tip">此商品太淘气，找不到了</p>');
     });
+
+    // 面包屑链接
+    _product.getShopDetail(shopname, function (shopRes) {
+      $('.shop-link').html(shopRes.shopname).attr('href','./user-shop.html?shopId=' + shopRes.id);
+    }, function(errMsg) {
+      console.log('shop_detail.do error');
+    })
+
   },
   // 数据匹配
   filter: function (data) {

@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-28 19:45:57
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 14:14:30
+ * @Last Modified time: 2018-01-20 17:52:08
 */
 
 
@@ -68,25 +68,25 @@
 }
 
 .intro-wrap .p-info-con .p-name {
-	font-size: 20px;
+	font-size: 18px;
 	color: #333;
 }
 
 .intro-wrap .p-info-con .p-subtitle {
-	font-size: 15px;
+	font-size: 14px;
 	color: #c60023;
 	line-height: 30px;
+	margin-bottom: 20px;
 }
 
 .intro-wrap .p-info-con .p-info-item {
 	position: relative;
 	padding: 0 10px;
-	margin-top: 20px;
 }
 
 .intro-wrap .p-info-con .p-info-item .label {
 	display: inline-block;
-	width: 50px;
+	width: 70px;
 	color: #999;
 }
 
@@ -99,8 +99,8 @@
 }
 
 .intro-wrap .p-info-con .p-price-con .info {
-	color: #c60023;
-	font-size: 18px;
+	color: #FF0036;
+	font-size: 25px;
 }
 
 
@@ -160,16 +160,6 @@
 	margin: 10px;
 	padding: 0 10px;
 }
-
-#inShop {
-	width: 70%;
-	padding: 5px;
-	margin-top: 10px;
-	border: 1px solid #ddd;
-	background: #fff;
-	cursor: pointer;
-}
-
 /* 商品详细信息 */
 
 .detail-wrap {

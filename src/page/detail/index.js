@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:42:52
+ * @Last Modified time: 2018-01-20 17:58:17
  */
 
 'use strict';
@@ -12,6 +12,7 @@ require('page/common/nav/index.js');
 require('page/common/header-shop/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
+var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 
 var pageWrap = document.getElementsByClassName('page-wrap')[0];
@@ -49,33 +50,43 @@ var page = {
   loadDetail: function () {
     var _this = this,
       html = '',
-      shopname = '',
       $pageWrap = $('.page-wrap');
     // loading
     $pageWrap.html('<div class="loading"></div>');
     // 请求detail信息
     _product.getProductDetail(this.data.productId, function (res) {
       // 店铺名
-      shopname = res.shopname;
-      $('.shop-name span').html(shopname);
+      $('.shop-name span').html(res.shopname);
+      // 面包屑链接
+      _product.getShopDetail(res.shopname, function (shopRes) {
+        console.log(shopRes);
+        $('.shop-link').html(shopRes.shopname).attr('href','./user-shop.html?shopId=' + shopRes.id);
+      }, function (errMsg) {
+        console.log('shop_detail.do error');
+      });
+
       _this.filter(res);
       // 缓存住detail的数据
       _this.data.detailInfo = res;
       // render
       html = _mm.renderHtml(templateIndex, res);
       $pageWrap.html(html);
+
+      // 商家地址 联系方式渲染
+      _user.getShopOwner(res.username, function (userRes) {
+        $('.shop-addr').html(userRes.province + userRes.city + userRes.district + userRes.addr);
+        $('.shop-phone').html(userRes.phone);
+      }, function (errMsg) {
+        console.log(errMsg);
+      })
+
+
+
+
     }, function (errMsg) {
       $pageWrap.html('<p class="err-tip">此商品太淘气，找不到了</p>');
     });
 
-    // 面包屑链接
-    console.log(shopname);
-    _product.getShopDetail(shopname, function (res) {
-      console.log(res);
-      $('.shop-link').html(res.shopname).attr('href','./user-shop.html?shopId=' + res.id);
-    }, function (errMsg) {
-      console.log('shop_detail.do error');
-    });
 
   },
   // 数据匹配

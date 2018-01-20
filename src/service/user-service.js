@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 20:46:57
+ * @Last Modified time: 2018-01-20 17:21:22
  */
 
 'use strict';
@@ -92,15 +92,6 @@ var _user = {
 			success: resolve,
 			error: reject
 		});
-	},	
-	getUserInfoSync: function (resolve, reject) {
-		_mm.request({
-			url: _mm.getServerUrl('/user/get_information.do'),
-			method: 'POST',
-			async: false,
-			success: resolve,
-			error: reject
-		});
 	},
 	// 更新个人信息
 	updateUserInfo: function (userInfo, resolve, reject) {
@@ -140,6 +131,16 @@ var _user = {
 			success: resolve,
 			error: reject
 		});
+	},
+	// 获取店铺拥有者信息
+	getShopOwnerDetail (username, resolve, reject) {
+		_mm.request({
+			url: _mm.getServerUrl('/user/getShopOwnerDetail'),
+			method: 'GET',
+			success: resolve,
+			error: reject
+		})
 	}
+
 }
 module.exports = _user;

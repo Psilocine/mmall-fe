@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-15 15:26:38
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 13:14:38
+ * @Last Modified time: 2018-01-20 14:03:02
  */
 
 'use strict';
@@ -27,6 +27,7 @@ var _mm = {
 				}
 				// 没有登录状态，需要强制登录
 				else if (10 === res.status) {
+					this.doLogin();
 				}
 				// 请求数据错误
 				else if (1 === res.status) {

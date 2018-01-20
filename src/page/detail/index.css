@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-28 19:45:57
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 14:12:49
+ * @Last Modified time: 2018-01-20 14:14:30
 */
 
 
@@ -45,7 +45,7 @@
 	margin-right: 10px;
 	width: 72px;
 	height: 72px;
-	border: 2px solid #eee;
+	border: 1px solid #ddd;
 	cursor: pointer;
 }
 

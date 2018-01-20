@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 13:11:18
+ * @Last Modified time: 2018-01-20 14:50:58
  */
 
 'use strict';
@@ -13,6 +13,14 @@ require('page/common/header/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
 var templateIndex = require('./index.string');
+
+var pageWrap = document.getElementsByClassName('page-wrap')[0];
+var clientH = document.documentElement.clientHeight;
+
+// 80是footer高度 216是header+crumb+nav高度
+var pH = clientH - 216 - 80;
+
+pageWrap.style.height = pH + 'px';
 
 var page = {
   data: {
@@ -36,9 +44,6 @@ var page = {
       var imageUrl = $(this).find('.p-img').attr('src');
       $('.main-img').attr('src', imageUrl);
     });
-    $(document).on('click', '#inShop', function() {
-      console.log(1);
-    })
   },
   // 加载商品详情的数据
   loadDetail: function () {

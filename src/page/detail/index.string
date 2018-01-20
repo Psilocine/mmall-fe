@@ -10,32 +10,13 @@
 			</li>
 			{{/subImages}}
 		</ul>
-</div>
-<div class="p-info-con">
+	</div>
+	<div class="p-info-con">
 		<h1 class="p-name">{{name}}</h1>
 		<p class="p-subtitle">{{subtitle}}</p>
 		<div class="p-info-item p-price-con">
 			<span class="label">价格:</span>
 			<span class="info">￥{{price}}</span>
 		</div>
-</div>
-</div>
-<div class='detail-info'>
-	<ul class='tab-list'>
-		<li class='tab-item active'>店铺</li>
-	</ul>
-	<div class='detail-shop'>
-		<div>{{shopname}}</div>
-		<button id='inShop'>进入店铺</button>
-	</div>
-</div>
-<div class="detail-wrap">
-	<div class="detail-tab-con">
-		<ul class="tab-list">
-			<li class="tab-item active">详细描述</li>
-		</ul>
-	</div>
-	<div class="detail-con">
-		{{{detail}}}
 	</div>
 </div>

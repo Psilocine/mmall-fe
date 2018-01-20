@@ -25,8 +25,6 @@ const ProductSave = React.createClass({
       subtitle: '',
       subImages: [],
       price: '',
-      stock: '',
-      detail: '',
       status: ''
     };
   },
@@ -45,7 +43,6 @@ const ProductSave = React.createClass({
       });
     }, err => {
       alert(err.msg || '哪里不对了~');
-      console.log('permission denied');
       location.href = './user-center.html';
     });
   },
@@ -78,7 +75,6 @@ const ProductSave = React.createClass({
         if (product.firstCategoryId) {
           this.loadSecondCategory();
         }
-        this.refs['rich-editor'].setValue(product.detail);
       }, err => {
         alert(err.msg || '哪里不对了~');
         console.log('permission denied');
@@ -96,9 +92,7 @@ const ProductSave = React.createClass({
       name: product.name,
       subtitle: product.subtitle,
       subImages: product.subImages.split(','),
-      detail: product.detail,
       price: product.price,
-      stock: product.stock,
       firstCategoryId: firstCategoryId,
       secondCategoryId: secondCategoryId,
       status: product.status
@@ -114,11 +108,11 @@ const ProductSave = React.createClass({
     });
   },
   // 富文本字段更新
-  onRichValueChange(newValue) {
-    this.setState({
-      detail: newValue
-    });
-  },
+  // onRichValueChange(newValue) {
+  //   this.setState({
+  //     detail: newValue
+  //   });
+  // },
   // 一级品类变化
   onFirstCategoryChange(e) {
     let newValue = e.target.value || 0;
@@ -188,12 +182,6 @@ const ProductSave = React.createClass({
         msg: '请输入商品价格'
       }
     }
-    if (!product.subtitle) {
-      result = {
-        status: false,
-        msg: '请输入商品描述'
-      }
-    }
     return result;
   },
   // 提交表单
@@ -206,9 +194,7 @@ const ProductSave = React.createClass({
       name: this.state.name,
       subtitle: this.state.subtitle,
       subImages: this.state.subImages.join(','),
-      detail: this.state.detail,
       price: this.state.price,
-      stock: this.state.stock,
       status: this.state.status || 1 // 状态为正常
     },
       checkProduct = this.checkProduct(product);
@@ -304,7 +290,7 @@ const ProductSave = React.createClass({
                   </div>
                 </div>
               </div>
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="stock" className="col-md-2 control-label">商品库存</label>
                 <div className="col-md-3">
                   <div className="input-group">
@@ -318,7 +304,7 @@ const ProductSave = React.createClass({
                     <div className="input-group-addon">件</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="form-group">
                 <label htmlFor="inputEmail3" className="col-md-2 control-label">商品图片</label>
                 <div className="img-con col-md-10">
@@ -335,12 +321,6 @@ const ProductSave = React.createClass({
                 </div>
                 <div className="col-md-offset-2 col-md-10">
                   <FileUploader onSuccess={this.onUploadSuccess} onError={this.onUploadError} />
-                </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="inputEmail3" className="col-md-2 control-label">商品详情</label>
-                <div className="col-md-10">
-                  <RichEditor ref="rich-editor" onValueChange={this.onRichValueChange} placeholder="商品详细信息" />
                 </div>
               </div>
               <div className="form-group">

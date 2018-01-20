@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 01:05:41
+ * @Last Modified time: 2018-01-20 13:41:49
  */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -105,9 +105,9 @@ var config = {
     new ExtractTextPlugin("css/[name].css"),
     // html模板的处理
     new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
-    new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表页')),
-    new HtmlWebpackPlugin(getHtmlConfig('shop-list', '店铺列表页')),
-    new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情页')),
+    new HtmlWebpackPlugin(getHtmlConfig('list', '商品列表')),
+    new HtmlWebpackPlugin(getHtmlConfig('shop-list', '店铺列表')),
+    new HtmlWebpackPlugin(getHtmlConfig('detail', '商品详情')),
     new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
     new HtmlWebpackPlugin(getHtmlConfig('product-add', '商品添加')),
     new HtmlWebpackPlugin(getHtmlConfig('product-manage', '商品管理')),

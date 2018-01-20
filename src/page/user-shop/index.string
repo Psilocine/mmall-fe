@@ -3,6 +3,7 @@
   <a href="./detail.html?productId={{id}}">
     <img class="goods-img"  alt="商品图片" src="{{imageHost}}{{mainImage}}"  />
     <p class="goods-text">{{name}}</p>
+    <p class="goods-text">{{subtitle}}</p>
     <p class='goods-price'>¥ {{price}}</p>
   </a>
 </li>

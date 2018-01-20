@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-25 14:59:31 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-28 18:47:42
+ * @Last Modified time: 2018-01-20 19:16:50
  */
 
 .cate-select {
@@ -28,24 +28,4 @@
   display: block;
   width: 100%;
   height: 100%;
-}
-
-.fa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  cursor: pointer;
-  text-align: center;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  background: rgba(0, 0, 0, .2);
-  font-size: 50px;
-  font-weight: normal;
-  color: #aaa;
-}
-
-.fa:hover {
-  display: block;
 }

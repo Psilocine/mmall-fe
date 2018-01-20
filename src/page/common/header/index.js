@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-18 19:30:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 01:44:55
+ * @Last Modified time: 2018-01-20 19:20:36
  */
 
 'use strict';
@@ -25,7 +25,6 @@ var header = {
 	bindEvent: function () {
 		// 点击搜索按钮以后，做搜索提交
 		$('#search-btn').click( () => this.searchSubmit() );
-
 		// 选择搜索类型
 		// hover出现列表
 		var outEvent,
@@ -38,15 +37,17 @@ var header = {
 		})
 		// 点击出现列表
 		$('.search-type').click( () => $('.search-list').css('display', 'block') )
-
-		
 		$('.search-list').hover( () => clearTimeout(outEvent), () => $(this).css('display', 'none') )
-
 		$('.search-item').click(function () {
 			$('#searchType').html($(this).html())
 			$('.search-list').css('display','none');
-		})
+		});
 
+		$('#search-input').keydown(function (e) {
+			if(e.keyCode === 13) {
+				searchSubmit();
+			}
+		})
 	},
 	// 搜索的提交
 	searchSubmit: function () {

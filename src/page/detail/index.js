@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:58:17
+ * @Last Modified time: 2018-01-20 19:11:52
  */
 
 'use strict';
@@ -79,9 +79,6 @@ var page = {
       }, function (errMsg) {
         console.log(errMsg);
       })
-
-
-
 
     }, function (errMsg) {
       $pageWrap.html('<p class="err-tip">此商品太淘气，找不到了</p>');

@@ -9,6 +9,7 @@ import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'node_modules/bootstrap/dist/js/bootstrap.min.js';
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
+require('./index.css');
 var navSide = require('page/common/nav-side/index.js');
 
 // page 逻辑部分

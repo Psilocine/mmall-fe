@@ -1,10 +1,10 @@
 {{#list}}
-<li class="floor-item">
+<li class="goods-item">
   <a href="./detail.html?productId={{id}}">
-    <span class="floor-text">{{name}}</span>
-    <img class="floor-img"  alt="商品图片" src="{{imageHost}}{{mainImage}}"  />
+    <img class="goods-img"  alt="商品图片" src="{{imageHost}}{{mainImage}}"  />
+    <p class="goods-text">{{name}}</p>
+    <p class='goods-price'>¥ {{price}}</p>
   </a>
-  <p class='item-price'>价格: {{price}}<p>
 </li>
 {{/list}}
 {{^list}}

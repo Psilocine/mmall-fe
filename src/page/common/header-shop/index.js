@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-01 15:29:55 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 13:37:23
+ * @Last Modified time: 2018-01-20 18:07:37
  */
 'use strict';
 require('./index.css');
@@ -44,7 +44,7 @@ var header = {
       _mm.goHome();
     }
   },
-  // 搜索本店
+  // 搜索本店 not yet
   searchShop() {
     var keyword = $.trim($('#search-input').val());
     // 如果提交的时候有keyword,正常跳转到list页

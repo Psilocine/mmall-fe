@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:17:48
+ * @Last Modified time: 2018-01-20 17:42:52
  */
 
 'use strict';
@@ -58,7 +58,6 @@ var page = {
       // 店铺名
       shopname = res.shopname;
       $('.shop-name span').html(shopname);
-
       _this.filter(res);
       // 缓存住detail的数据
       _this.data.detailInfo = res;
@@ -70,7 +69,9 @@ var page = {
     });
 
     // 面包屑链接
+    console.log(shopname);
     _product.getShopDetail(shopname, function (res) {
+      console.log(res);
       $('.shop-link').html(res.shopname).attr('href','./user-shop.html?shopId=' + res.id);
     }, function (errMsg) {
       console.log('shop_detail.do error');

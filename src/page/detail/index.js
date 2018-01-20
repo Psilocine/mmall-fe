@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:13:17
+ * @Last Modified time: 2018-01-20 17:17:48
  */
 
 'use strict';
@@ -70,11 +70,11 @@ var page = {
     });
 
     // 面包屑链接
-    _product.getShopDetail(shopname, function (shopRes) {
-      $('.shop-link').html(shopRes.shopname).attr('href','./user-shop.html?shopId=' + shopRes.id);
-    }, function(errMsg) {
+    _product.getShopDetail(shopname, function (res) {
+      $('.shop-link').html(res.shopname).attr('href','./user-shop.html?shopId=' + res.id);
+    }, function (errMsg) {
       console.log('shop_detail.do error');
-    })
+    });
 
   },
   // 数据匹配

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:10:52
+ * @Last Modified time: 2018-01-20 17:13:17
  */
 
 'use strict';
@@ -49,7 +49,7 @@ var page = {
   loadDetail: function () {
     var _this = this,
       html = '',
-      shopname = ''
+      shopname = '',
       $pageWrap = $('.page-wrap');
     // loading
     $pageWrap.html('<div class="loading"></div>');

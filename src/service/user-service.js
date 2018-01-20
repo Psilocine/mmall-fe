@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:43:51
+ * @Last Modified time: 2018-01-20 18:06:00
  */
 
 'use strict';
@@ -136,7 +136,10 @@ var _user = {
 	getShopOwner (username, resolve, reject) {
 		_mm.request({
 			url: _mm.getServerUrl('/user/shop_owner.do'),
-			method: 'GET',
+			method: 'POST',
+			data: {
+				username: username
+			},
 			success: resolve,
 			error: reject
 		})

@@ -2,14 +2,14 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 14:50:58
+ * @Last Modified time: 2018-01-20 16:49:37
  */
 
 'use strict';
 
 require('./index.css');
 require('page/common/nav/index.js');
-require('page/common/header/index.js');
+require('page/common/header-shop/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
 var templateIndex = require('./index.string');
@@ -54,6 +54,16 @@ var page = {
     $pageWrap.html('<div class="loading"></div>');
     // 请求detail信息
     _product.getProductDetail(this.data.productId, function (res) {
+      // 店铺名
+      $('.shop-name span').html(res.shopname);
+      // 面包屑链接
+      _product.getShopDetail(res.shopname, function (shopRes) {
+        $('.shop-link').html(shopRes.shopname).attr('href','./user-shop.html?shopId=' + shopRes.id)
+      }, function() {
+        console.log('shop_detail.do error');
+      })
+
+
       _this.filter(res);
       // 缓存住detail的数据
       _this.data.detailInfo = res;

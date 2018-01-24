@@ -10,7 +10,7 @@
       卖家: <span class='p-owner'>{{username}}</span>
     </div>
     <input type='text' class='shop-id' value='{{id}}' style='display:none !important'/>    
-    <button class='shop-btn'>进入店铺1</button>
+    <button class='shop-btn'>进入店铺</button>
   </li>
 {{/list}}
 {{^list}}

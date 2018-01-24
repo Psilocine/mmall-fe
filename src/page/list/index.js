@@ -2,19 +2,16 @@
  * @Author: Mall
  * @Date:   2017-05-27 17:57:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 18:47:41
+ * @Last Modified time: 2018-01-24 19:07:08
  */
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-var tem = require('./123.string');
-console.log(tem);
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
 var Pagination = require('util/pagination/index.js');
-var templateIndex = require('./index.string');
-
+// var templateIndex = require('./inedx.string');
 
 var page = {
 	data: {
@@ -78,6 +75,7 @@ var page = {
 		$pListCon.html('<div class="loading"></div>');
 		// 请求接口
 		_product.getProductList(listParam, function (res) {
+			console.log(res);
 			listHtml = _mm.renderHtml(templateIndex, {
 				list: res.list
 			});

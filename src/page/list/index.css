@@ -1,105 +1,61 @@
 /*
-* @Author: Mall
-* @Date:   2017-05-27 18:04:22
+ * @Author: PsiloLau 
+ * @Date: 2018-01-16 01:06:59 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 17:06:38
-*/
-
-
-/* 排序按钮 */
-
-.sort-con {
-	overflow: auto;
-}
-
-.sort-con .sort-item {
-	display: inline-block;
-	position: relative;
-	padding: 0 8px;
-	height: 24px;
-	line-height: 24px;
-	border: 1px solid #ccc;
-	margin-right: -1px;
-	background: #fff;
-	color: #333;
-	cursor: pointer;
-}
-
-.sort-con .sort-item.active {
-	background: #c60023;
-	border: 1px solid #c60023;
-	color: #fff;
-}
-
-.sort-con .sort-item .fa-sort-desc {
-	position: absolute;
-	top: 8px;
-	right: 8px;
-}
-
-.sort-con .sort-item.asc .fa-sort-desc {
-	opacity: .6;
-}
-
-.sort-con .sort-item.desc .fa-sort-asc {
-	opacity: .6;
-}
-
+ * @Last Modified time: 2018-01-16 01:53:43
+ */
 
 /* 列表 */
-
-.p-list-con {
-	margin-top: 15px;
-	margin-right: -20px;
-	overflow: hidden;
+.p-list-con{
+  margin-top: 15px;
+  margin-right: -20px;
+  overflow: hidden;
+}
+.p-list-con .p-item{
+  position: relative;
+  width: 65%;
+  padding: 10px 20px;
+  margin: 10px auto;
+  font-size: 15px;
+  color: #848282;
+  background: #fff;
+}
+.p-item .p-name-con {
+  height: 35px;
+  line-height: 35px;
+  font-size: 17px;
 }
 
-.p-list-con .p-item {
-	position: relative;
-	width: 180px;
-	float: left;
-	padding: 10px;
-	margin: 0 20px 20px 0;
-	background: #fff;
+.p-name {
+  font-size: 19px;
+  color: #ff5000;
 }
 
-.p-list-con .p-item .p-img-con {
-	width: 180px;
-	height: 200px;
+.shop-btn {
+  position: absolute;
+  top: 34px;
+  right: 30px;
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background: #c60023;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.p-list-con .p-item .p-img-con .p-img {
-	width: 100%;
-	height: 100%;
-}
-
-.p-list-con .p-item .p-price-con {
-	height: 30px;
-	line-height: 30px;
-}
-
-.p-list-con .p-item .p-price-con .p-price {
-	font-size: 16px;
-	color: #e7380d;
-}
-
-.p-list-con .p-item .p-name-con {
-	height: 20px;
-	line-height: 20px;
-	padding-top: 5px;
-	color: #666;
-	overflow: hidden;
+.shop-btn:hover {
+  background: #ff294f;
 }
 
 
 /* 错误信息 */
-
-.err-tip {
-	height: 60px;
-	line-height: 60px;
-	color: #f60;
-	font-size: 16px;
-	font-weight: bold;
-	text-align: center;
-	background: #eee;
+.err-tip{
+  height: 60px;
+  line-height: 60px;
+  color: #f60;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  background: #eee;
 }

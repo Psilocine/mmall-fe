@@ -2,13 +2,18 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-25 14:59:31 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 19:16:50
+ * @Last Modified time: 2018-01-24 16:42:07
  */
 
 .cate-select {
   width: 188px !important;
   float: left;
   margin-right: 10px;
+}
+
+
+.form-group#pifaForm {
+  display: none;
 }
 
 .img-con {
@@ -30,7 +35,7 @@
   height: 100%;
 }
 
-.sub-img .img .fa{
+.sub-img .fa{
   position: absolute;
   top: 0;
   left: 0;
@@ -45,7 +50,7 @@
   font-weight: normal;
   color: #aaa;
 }
-.sub-img .img:hover .fa{
+.sub-img:hover .fa{
   display: block;
 }
     

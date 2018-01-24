@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-18 19:30:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 15:42:27
+ * @Last Modified time: 2018-01-24 16:28:16
  */
 
 'use strict';
@@ -23,6 +23,7 @@ var header = {
 		};
 	},
 	bindEvent: function () {
+		var _this = this;
 		// 点击搜索按钮以后，做搜索提交
 		$('#search-btn').click( () => this.searchSubmit() );
 		// 选择搜索类型
@@ -45,7 +46,7 @@ var header = {
 
 		$('#search-input').keydown((e) => {
 			if(e.keyCode === 13) {
-				this.searchSubmit();
+				_this.searchSubmit();
 			}
 		})
 	},

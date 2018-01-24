@@ -2,9 +2,8 @@
  * @Author: Mall
  * @Date:   2017-05-27 17:57:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 01:29:26
+ * @Last Modified time: 2018-01-24 16:29:07
  */
-
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');

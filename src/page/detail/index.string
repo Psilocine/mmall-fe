@@ -21,7 +21,7 @@
 			</div>
 			<div class='common-price'>
 				<span class="label">批&ensp;发&ensp;价:</span>
-				<span class="info">￥{{pfPrice}}</span>
+				<span class="info">￥{{pifaprice}}</span>
 			</div>
 		</div>
 		<div class="p-info-item p-price-con">

@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-28 19:45:57
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:52:08
+ * @Last Modified time: 2018-01-24 18:50:58
 */
 
 
@@ -93,14 +93,19 @@
 
 /* 价格部分 */
 
+.intro-wrap .p-info-con .common-price {
+	display: inline-block;
+}
+
 .intro-wrap .p-info-con .p-price-con {
 	background: #eee;
 	padding: 10px;
 }
 
 .intro-wrap .p-info-con .p-price-con .info {
-	color: #FF0036;
 	font-size: 25px;
+	color: #FF0036;
+	margin-right: 30px;
 }
 
 

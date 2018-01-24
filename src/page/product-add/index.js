@@ -39,9 +39,9 @@ var page = {
 			<ProductSave />,
 			document.getElementById('panel-body')
 		);
+		this.bindEvent();
 	},
 }
 $(function () {
 	page.init();
-	page.bindEvent();
 });

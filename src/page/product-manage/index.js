@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 16:26:10
+ * @Last Modified time: 2018-01-24 16:45:27
  */
 'use strict';
 require('./index.css');
@@ -35,7 +35,9 @@ var page = {
     var _this = this;
     var productId = $(this).siblings('input').val();    
     // lookBtn
-    $('.lookBtn').href('./detail.html?productId=' + productId);
+    $('.lookBtn').attr('href', './detail.html?productId=' + productId);
+
+    // delBtn
     $(document).on('click', '.delBtn', function () {
       if (window.confirm("确定要删除该商品吗")) {
         _product.deleteProduct(productId, function (res, msg) {

@@ -5,7 +5,7 @@
 	</td>
 	<td>
 		<p>{{price}}</p>
-		<p>{{pfPrice}}</p>
+		<p>{{pifaprice}}</p>
 	</td>
 	<td style="vertical-align: middle;text-align: center;">
 		<a class="btn btn-sm btn-warning opear lookBtn" href="javascript:;" target='_blank'>查看</a>

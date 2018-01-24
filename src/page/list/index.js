@@ -2,7 +2,7 @@
  * @Author: Mall
  * @Date:   2017-05-27 17:57:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 18:20:51
+ * @Last Modified time: 2018-01-24 18:38:40
  */
 'use strict';
 require('./index.css');
@@ -11,7 +11,7 @@ require('page/common/header/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
 var Pagination = require('util/pagination/index.js');
-var templateIndex = require('index.string');
+var templateIndex = require('./index.string');
 
 var page = {
 	data: {
@@ -73,7 +73,6 @@ var page = {
 			listParam = this.data.listParam,
 			$pListCon = $('.p-list-con');
 		$pListCon.html('<div class="loading"></div>');
-		// 删除参数中不必要的字段
 		// 请求接口
 		_product.getProductList(listParam, function (res) {
 			listHtml = _mm.renderHtml(templateIndex, {

@@ -22,7 +22,9 @@ var page = {
 	// 判断用户类型 渲染批发价格是否显示
 	bindEvent: function () {
 		_user.getUserInfo(function (res){
-			if(res.role === 3) {
+			console.log(res);
+			if(res.role === '3') {
+				console.log('inside');
 				$('#pifaForm').css('display', 'none');
 			}
 		}, function (errMsg) {

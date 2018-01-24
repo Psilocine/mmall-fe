@@ -25,8 +25,8 @@ const ProductSave = React.createClass({
       subtitle: '',
       subImages: [],
       price: '',
-      status: '',
-      pifaprice: ''
+      pifaprice: '',
+      status: ''
     };
   },
   componentDidMount: function () {
@@ -96,8 +96,8 @@ const ProductSave = React.createClass({
       price: product.price,
       firstCategoryId: firstCategoryId,
       secondCategoryId: secondCategoryId,
-      status: product.status,
-      pifaprice: product.pifaprice
+      pifaprice: product.pifaprice,
+      status: product.status
     }
   },
   // 普通字段更新

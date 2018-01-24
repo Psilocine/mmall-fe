@@ -4,7 +4,8 @@
 		<p>{{subtitle}}</p>
 	</td>
 	<td>
-		{{price}}
+		<p>{{price}}</p>
+		<p>{{pfPrice}}</p>
 	</td>
 	<td style="vertical-align: middle;text-align: center;">
 		<a class="btn btn-sm btn-warning opear lookBtn" href="javascript:;" target='_blank'>查看</a>

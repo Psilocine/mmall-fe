@@ -2,7 +2,7 @@
  * @Author: Mall
  * @Date:   2017-05-27 17:57:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 16:29:07
+ * @Last Modified time: 2018-01-24 17:23:51
  */
 'use strict';
 require('./index.css');
@@ -11,7 +11,7 @@ require('page/common/header/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
 var Pagination = require('util/pagination/index.js');
-var templateIndex = require("./index.string");
+var templateIndex = require('./index.string');
 
 var page = {
 	data: {

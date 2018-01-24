@@ -197,6 +197,7 @@ const ProductSave = React.createClass({
       subtitle: this.state.subtitle,
       subImages: this.state.subImages.join(','),
       price: this.state.price,
+      pfPrice: this.state.pfPrice,
       status: this.state.status || 1 // 状态为正常
     },
       checkProduct = this.checkProduct(product);

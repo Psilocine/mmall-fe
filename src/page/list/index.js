@@ -2,7 +2,7 @@
  * @Author: Mall
  * @Date:   2017-05-27 17:57:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 17:31:10
+ * @Last Modified time: 2018-01-24 18:15:02
  */
 'use strict';
 require('./index.css');
@@ -10,14 +10,13 @@ require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
-var templateIndex = require('./index.string');
 var Pagination = require('util/pagination/index.js');
+var templateIndex = require('../index/inde.string');
 
 var page = {
 	data: {
 		listParam: {
 			keyword: _mm.getUrlParam('keyword') || '',
-			categoryId: _mm.getUrlParam('categoryId') || '',
 			orderBy: _mm.getUrlParam('orderBy') || 'default',
 			pageNum: _mm.getUrlParam('pageNum') || 1,
 			pageSize: _mm.getUrlParam('pageSize') || 20
@@ -75,8 +74,6 @@ var page = {
 			$pListCon = $('.p-list-con');
 		$pListCon.html('<div class="loading"></div>');
 		// 删除参数中不必要的字段
-		listParam.categoryId ?
-			(delete listParam.keyword) : (delete listParam.categoryId);
 		// 请求接口
 		_product.getProductList(listParam, function (res) {
 			listHtml = _mm.renderHtml(templateIndex, {

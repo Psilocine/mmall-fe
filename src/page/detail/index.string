@@ -15,8 +15,14 @@
 		<h1 class="p-name">{{name}}</h1>
 		<p class="p-subtitle">{{subtitle}}</p>
 		<div class="p-info-item p-price-con">
-			<span class="label">价&emsp;&emsp;格:</span>
-			<span class="info">￥{{price}}</span>
+			<div class='common-price'>
+				<span class="label">价&emsp;&emsp;格:</span>
+				<span class="info">￥{{price}}</span>
+			</div>
+			<div class='common-price'>
+				<span class="label">批&ensp;发&ensp;价:</span>
+				<span class="info">￥{{pfPrice}}</span>
+			</div>
 		</div>
 		<div class="p-info-item p-price-con">
 			<span class="label">商家地址:</span>

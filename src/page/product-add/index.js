@@ -38,7 +38,7 @@ var page = {
 			<ProductSave />,
 			document.getElementById('panel-body')
 		);
-		bindEvent();
+		this.bindEvent();
 	},
 }
 $(function () {

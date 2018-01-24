@@ -6,7 +6,7 @@
 	<td>
 		{{price}}
 	</td>
-	<td style="vertical-align: middle">
+	<td style="vertical-align: middle;text-align: center;">
 		<a class="btn btn-sm btn-warning opear lookBtn" href="javascript:;" target='_blank'>查看</a>
 	
 		<a class="btn btn-sm btn-warning opear ediBtn" href="javascript:;">编辑</a>

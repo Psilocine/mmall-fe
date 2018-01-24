@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 16:45:27
+ * @Last Modified time: 2018-01-24 16:52:29
  */
 'use strict';
 require('./index.css');
@@ -33,9 +33,11 @@ var page = {
   bindEvent: function () {
     // 点击提交按钮后的动作
     var _this = this;
-    var productId = $(this).siblings('input').val();    
     // lookBtn
-    $('.lookBtn').attr('href', './detail.html?productId=' + productId);
+    $(document).on('click', '.lookBtn', function () {
+      var productId = $(this).siblings('input').val();    
+      this.href = './detail.html?productId=' + productId;
+    })
 
     // delBtn
     $(document).on('click', '.delBtn', function () {

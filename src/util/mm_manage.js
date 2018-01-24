@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 14:11:46 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-29 14:07:54
+ * @Last Modified time: 2018-01-24 15:47:21
  */
 'use strict';
 const conf = {
@@ -29,7 +29,7 @@ var MMUtil = {
           }
           // 没登录状态, 且强制登录, 自动跳转到登录页
           else if (res.status === 10) {
-            this.doLogin();
+            doLogin();
           }
           // 其他状态，调用error
           else {

@@ -12,21 +12,33 @@ require('page/common/header/index.js');
 require('./index.css');
 var navSide = require('page/common/nav-side/index.js');
 
+var _user = require('service/user-service.js');
+
 // page 逻辑部分
 var page = {
 	init: function () {
 		this.onLoad();
+	},
+	// 判断用户类型 渲染批发价格是否显示
+	bindEvent: function () {
+		_user.getUserInfo(function (res){
+			if(res.role === 3) {
+				$('#pifaForm').css('display', 'none');
+			}
+		}, function (errMsg) {
+			console.log(errMsg);
+		})
 	},
 	onLoad: function () {
 		// 初始化左侧菜单
 		navSide.init({
 			name: 'product-add'
 		});
-		console.log('init nav-side');
 		render(
 			<ProductSave />,
 			document.getElementById('panel-body')
-		)
+		);
+		bindEvent();
 	},
 }
 $(function () {

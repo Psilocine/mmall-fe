@@ -25,7 +25,8 @@ const ProductSave = React.createClass({
       subtitle: '',
       subImages: [],
       price: '',
-      status: ''
+      status: '',
+      pfPrice: ''
     };
   },
   componentDidMount: function () {
@@ -95,7 +96,8 @@ const ProductSave = React.createClass({
       price: product.price,
       firstCategoryId: firstCategoryId,
       secondCategoryId: secondCategoryId,
-      status: product.status
+      status: product.status,
+      pfPrice: product.pfPrice
     }
   },
   // 普通字段更新
@@ -290,6 +292,21 @@ const ProductSave = React.createClass({
                   </div>
                 </div>
               </div>
+              <div className="form-group" id="pifaForm">
+                <label htmlFor="pfPrice" className="col-md-2 control-label">批发价格</label>
+                <div className="col-md-3">
+                  <div className="input-group">
+                    <input type="number"
+                      className="form-control"
+                      id="pfPrice"
+                      placeholder="批发价格"
+                      name="pfPrice"
+                      value={this.state.pfPrice}
+                      onChange={this.onValueChange} />
+                    <div className="input-group-addon">元</div>
+                  </div>
+                </div>
+              </div>              
               {/* <div className="form-group">
                 <label htmlFor="stock" className="col-md-2 control-label">商品库存</label>
                 <div className="col-md-3">

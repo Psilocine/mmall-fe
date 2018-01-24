@@ -1,4 +1,4 @@
-{{#list}}
+
 <li class="p-item">
 	<a href="./detail.html?productId={{id}} target="_blank">
 		<div class="p-img-con">
@@ -15,4 +15,3 @@
 		</div>
 	</a>
 </li>
-{{/list}}

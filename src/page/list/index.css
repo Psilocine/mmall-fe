@@ -2,7 +2,7 @@
 * @Author: Mall
 * @Date:   2017-05-27 18:04:22
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 20:05:41
+ * @Last Modified time: 2018-01-24 17:06:38
 */
 
 
@@ -13,7 +13,6 @@
 }
 
 .sort-con .sort-item {
-	float: left;
 	display: inline-block;
 	position: relative;
 	padding: 0 8px;

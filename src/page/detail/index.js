@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 16:53:22
+ * @Last Modified time: 2018-01-27 17:02:14
  */
 
 'use strict';
@@ -74,7 +74,8 @@ var page = {
 
       // 商家地址 联系方式渲染
       _user.getShopOwner(res.username, function (userRes) {
-        console.log('商家信息:' + JSON.stringify(userRes));
+        console.log( '商家信息');
+        console.log(userRes);
         $('.shop-addr').html(userRes.province + userRes.city + userRes.district + userRes.addr);
         $('.shop-phone').html(userRes.phone);
       }, function (errMsg) {

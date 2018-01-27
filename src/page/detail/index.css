@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-28 19:45:57
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 18:55:40
+ * @Last Modified time: 2018-01-27 17:21:43
 */
 
 
@@ -93,8 +93,11 @@
 
 /* 价格部分 */
 
-.intro-wrap .p-info-con .common-price {
+.intro-wrap .p-info-con .common-price, .p-info-con .pifa-price {
 	display: inline-block;
+}
+.p-info-con .pifa-price {
+	opacity: 0;
 }
 
 .intro-wrap .p-info-con .p-price-con {

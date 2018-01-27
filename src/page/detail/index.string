@@ -18,8 +18,8 @@
 			<div class='common-price'>
 				<span class="label">价&emsp;&emsp;格:</span>
 				<span class="info">￥{{price}}</span>
-			</div>
-			<div class='common-price'>
+			</div>	
+			<div class='pifa-price'>
 				<span class="label">批&ensp;发&ensp;价:</span>
 				<span class="info">￥{{pifaprice}}</span>
 			</div>

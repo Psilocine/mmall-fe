@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:15:51
+ * @Last Modified time: 2018-01-27 17:22:27
  */
 
 'use strict';
@@ -86,8 +86,8 @@ var page = {
         console.log('success');
         console.log(res);
       }, function (err) {
-        console.log('false');        
-        console.log(err);
+        // 未登录, 批发价统一不显示
+        $('.pifa-price').css('opacity','1');
       })
 
     }, function (errMsg) {

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:36:56
+ * @Last Modified time: 2018-01-27 17:44:15
  */
 
 'use strict';
@@ -71,6 +71,11 @@ var page = {
       html = _mm.renderHtml(templateIndex, res);
       $pageWrap.html(html);
 
+      // 实体店商品 没有批发价格
+      if(!res.pifaprice) {
+        $('.pifa-price').remove();
+      }
+
       // 商家地址 联系方式渲染
       _user.getShopOwner(res.username, function (userRes) {
         console.log( '商家信息');
@@ -86,23 +91,27 @@ var page = {
             switch(res.lvl) {
               // 全国等级
               case '1':
+                $('.common-price').css('text-decoration','line-through');
                 $('.pifa-price').css('opacity','1');
                 break;
               // 全省 同省显示批发价
               case '2':
                 if(res.province === userRes.province) {
+                  $('.common-price').css('text-decoration','line-through');
                   $('.pifa-price').css('opacity','1');
                 }
                 break;
               // 全市 同市显示批发价
               case '3':
                 if(res.province === userRes.province && res.city === userRes.city) {
+                  $('.common-price').css('text-decoration','line-through');
                   $('.pifa-price').css('opacity','1');                  
                 }
                 break;
               // 全区/县 相同区县才显示批发价
               case '4':
                 if(res.province === userRes.province && res.city === userRes.city && res.district === userRes.district) {
+                  $('.common-price').css('text-decoration','line-through');
                   $('.pifa-price').css('opacity','1');                                    
                 }
                 break;

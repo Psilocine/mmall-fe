@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:22:27
+ * @Last Modified time: 2018-01-27 17:36:56
  */
 
 'use strict';
@@ -77,18 +77,52 @@ var page = {
         console.log(userRes);
         $('.shop-addr').html(userRes.province + userRes.city + userRes.district + userRes.addr);
         $('.shop-phone').html(userRes.phone);
+
+        // 0127 按地区显示批发价格
+        _user.checkLogin(function(res) {
+          console.log(res);
+          // 确定用户是批发商
+          if(res.role === '2') {
+            switch(res.lvl) {
+              // 全国等级
+              case '1':
+                $('.pifa-price').css('opacity','1');
+                break;
+              // 全省 同省显示批发价
+              case '2':
+                if(res.province === userRes.province) {
+                  $('.pifa-price').css('opacity','1');
+                }
+                break;
+              // 全市 同市显示批发价
+              case '3':
+                if(res.province === userRes.province && res.city === userRes.city) {
+                  $('.pifa-price').css('opacity','1');                  
+                }
+                break;
+              // 全区/县 相同区县才显示批发价
+              case '4':
+                if(res.province === userRes.province && res.city === userRes.city && res.district === userRes.district) {
+                  $('.pifa-price').css('opacity','1');                                    
+                }
+                break;
+              default:
+                console.log('匹配不到用户等级');
+                break;
+            }
+          }
+        }, function (err) {
+          // 未登录, 批发价移除 不显示
+          $('.pifa-price').remove();
+        })
+        // 0127 end
+
+
       }, function (errMsg) {
         console.log(errMsg);
       })
 
-      // 0127 按地区显示批发价格
-      _user.checkLogin(function(res) {
-        console.log('success');
-        console.log(res);
-      }, function (err) {
-        // 未登录, 批发价统一不显示
-        $('.pifa-price').css('opacity','1');
-      })
+
 
     }, function (errMsg) {
       $pageWrap.html('<p class="err-tip">此商品太淘气，找不到了</p>');

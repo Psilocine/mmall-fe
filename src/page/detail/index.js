@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:02:14
+ * @Last Modified time: 2018-01-27 17:10:12
  */
 
 'use strict';
@@ -59,7 +59,6 @@ var page = {
       $('.shop-name span').html(res.shopname);
       // 面包屑链接
       _product.getShopDetail(res.shopname, function (shopRes) {
-        console.log(shopRes);
         $('.shop-link').html(shopRes.shopname).attr('href','./user-shop.html?shopId=' + shopRes.id);
       }, function (errMsg) {
         console.log('shop_detail.do error');
@@ -80,6 +79,15 @@ var page = {
         $('.shop-phone').html(userRes.phone);
       }, function (errMsg) {
         console.log(errMsg);
+      })
+
+      // 0127 按地区显示批发价格
+      _user.getUserInfo(function(res) {
+        console.log('success');
+        console.log(res);
+      }, function (err) {
+        console.log('false');        
+        console.log(err);
       })
 
     }, function (errMsg) {

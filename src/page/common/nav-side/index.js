@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:17:44
+ * @Last Modified time: 2018-01-27 17:05:04
  */
 'use strict';
 require('./index.css');
@@ -46,14 +46,6 @@ var navSide = {
             href: './user-check.html'
           });
           break;
-          // 普通用户
-        case "0":
-          _this.option.navList.push({
-            name: 'user-upgrade',
-            desc: '会员升级',
-            href: './user-upgrade.html'
-          });
-          break;
           // 批发商
         case "2":
           _this.option.navList.push({
@@ -84,6 +76,14 @@ var navSide = {
             name: 'product-manage',
             desc: '商品管理',
             href: './product-manage.html'
+          });
+          break;
+        // 普通用户
+        case "4":
+          _this.option.navList.push({
+            name: 'user-upgrade',
+            desc: '会员升级',
+            href: './user-upgrade.html'
           });
           break;
         default:

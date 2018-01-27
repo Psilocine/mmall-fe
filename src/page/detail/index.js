@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:10:12
+ * @Last Modified time: 2018-01-27 17:15:51
  */
 
 'use strict';
@@ -82,7 +82,7 @@ var page = {
       })
 
       // 0127 按地区显示批发价格
-      _user.getUserInfo(function(res) {
+      _user.checkLogin(function(res) {
         console.log('success');
         console.log(res);
       }, function (err) {

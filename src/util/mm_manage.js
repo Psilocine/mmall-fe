@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 14:11:46 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 15:47:21
+ * @Last Modified time: 2018-01-27 17:14:23
  */
 'use strict';
 const conf = {
@@ -16,6 +16,7 @@ const conf = {
 var MMUtil = {
   // 请求服务器
   request: function(param) {
+    var _this = this;
     return new Promise((resolve, reject) => {
       $.ajax({
         type: param.method || 'get',
@@ -29,7 +30,7 @@ var MMUtil = {
           }
           // 没登录状态, 且强制登录, 自动跳转到登录页
           else if (res.status === 10) {
-            doLogin();
+            _this.doLogin();
           }
           // 其他状态，调用error
           else {

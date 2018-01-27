@@ -8,10 +8,10 @@ require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
 
-var templateIndex = require('./inedx.string');
 var _mm = require('util/mm.js');
 var _product = require('service/product-service.js');
 var Pagination = require('util/pagination/index.js');
+var templateIndex = require('./index.string');
 
 var page = {
 	data: {

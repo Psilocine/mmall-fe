@@ -4,6 +4,7 @@ import ProductSave from './index.jsx';
 import React from 'react';
 import { render } from 'react-dom';
 
+// 'promise未定义 低版本ie报错'
 import 'babel-polyfill';
 
 // bootstrap

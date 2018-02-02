@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-02 13:15:33
+ * @Last Modified time: 2018-02-02 13:37:59
  */
 'use strict';
 require('./index.css');
@@ -35,9 +35,13 @@ var page = {
 	bindEvent: function () {
 		var _this = this;
 		// 点击提交按钮后的动作
-		if($('#role option:selected').val() === '2') {
-			$('#lvl').attr("disabled","disabled");
-		}
+		$('#role').on('change', function () {
+			if($('#role option:selected').val() === '3') {
+				$('#lvlBox').css('display', 'inline-block');
+			} else {
+				$('#lvlBox').css('display', 'none');
+			}
+		})
 
 		$(document).on('click', '.btn-submit', function () {
 			var userInfo = {

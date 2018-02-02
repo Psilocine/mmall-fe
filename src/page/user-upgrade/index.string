@@ -38,7 +38,7 @@
   <input class="input" id="shopname" autocomplete="off" value="" />
 </div>
 
-<div class="form-line">
+<div class="form-line form-inline" id='roleBox'>
   <span class="label">升级类型：</span>
     <select name="role" id="role">
     <option value="3">实体店</option>
@@ -46,7 +46,7 @@
   </select>
 </div>
 
-<div class="form-line">
+<div class="form-line form-inline" id='lvlBox'>
   <span class="label">会员等级：</span>
   <select name="level" id="lvl">
     <option value="1">全国</option>

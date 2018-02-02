@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:39
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-05 16:38:07
+ * @Last Modified time: 2018-02-02 13:31:46
 */
 .form-line{
   height: 30px;
@@ -13,6 +13,19 @@
   display: inline-block;
   width: 100px;
   text-align: center;
+}
+.form-inline {
+  display: inline-block
+}
+
+.panel-body .btn {
+  display: block;
+  width: 40px;
+  text-align: center;
+}
+
+#lvlBox {
+  display: none;
 }
 
 /* clearfix */

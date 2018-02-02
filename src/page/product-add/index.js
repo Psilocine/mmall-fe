@@ -4,6 +4,8 @@ import ProductSave from './index.jsx';
 import React from 'react';
 import { render } from 'react-dom';
 
+import 'babel-polyfill';
+
 // bootstrap
 import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'node_modules/bootstrap/dist/js/bootstrap.min.js';
@@ -35,7 +37,6 @@ var page = {
 		navSide.init({
 			name: 'product-add'
 		});
-		window.Promise = Promise;
 		render(
 			<ProductSave />,
 			document.getElementById('panel-body')

@@ -12,20 +12,21 @@
   "author": "psilo",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.11.1",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.28.0",
+    "jsx-loader": "^0.13.2",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
     "webpack": "^1.15.0",
-    "webpack-dev-server": "^1.16.5",
-    "babel-core": "^6.9.1",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.9.0",
-    "jsx-loader": "^0.13.2",
-    "babel-preset-react": "^6.5.0"
+    "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
     "distpicker": "^1.0.4",

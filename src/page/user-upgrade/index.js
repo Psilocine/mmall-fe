@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-02 13:50:46
+ * @Last Modified time: 2018-02-02 13:54:46
  */
 'use strict';
 require('./index.css');
@@ -35,7 +35,7 @@ var page = {
 	bindEvent: function () {
 		var _this = this;
 		// 点击提交按钮后的动作
-		$(document).on('click', '#role', function () {
+		$(document).on('change', '#role', function () {
 			if($('#role option:selected').val() === '3') {
 				console.log('3');
 				$('#lvlBox').css('display', 'inline-block');

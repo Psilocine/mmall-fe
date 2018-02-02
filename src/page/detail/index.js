@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-02 13:07:34
+ * @Last Modified time: 2018-02-02 16:04:35
  */
 
 'use strict';
@@ -98,21 +98,18 @@ var page = {
               // 全省 同省显示批发价
               case '2':
                 if(res.province === userRes.province) {
-                  $('.common-price').css('text-decoration','line-through');
                   $('.pifa-price').css('opacity','1');
                 }
                 break;
               // 全市 同市显示批发价
               case '3':
                 if(res.province === userRes.province && res.city === userRes.city) {
-                  $('.common-price').css('text-decoration','line-through');
                   $('.pifa-price').css('opacity','1');                  
                 }
                 break;
               // 全区/县 相同区县才显示批发价
               case '4':
                 if(res.province === userRes.province && res.city === userRes.city && res.district === userRes.district) {
-                  $('.common-price').css('text-decoration','line-through');
                   $('.pifa-price').css('opacity','1');                                    
                 }
                 break;

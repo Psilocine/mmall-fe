@@ -35,6 +35,7 @@ var page = {
 		navSide.init({
 			name: 'product-add'
 		});
+		window.Promise = Promise;
 		render(
 			<ProductSave />,
 			document.getElementById('panel-body')

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-01 18:23:23
+ * @Last Modified time: 2018-02-02 13:15:33
  */
 'use strict';
 require('./index.css');
@@ -35,6 +35,10 @@ var page = {
 	bindEvent: function () {
 		var _this = this;
 		// 点击提交按钮后的动作
+		if($('#role option:selected').val() === '2') {
+			$('#lvl').attr("disabled","disabled");
+		}
+
 		$(document).on('click', '.btn-submit', function () {
 			var userInfo = {
 					name: $.trim($('#name').val()),

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:44:15
+ * @Last Modified time: 2018-02-02 13:07:34
  */
 
 'use strict';
@@ -86,8 +86,9 @@ var page = {
         // 0127 按地区显示批发价格
         _user.checkLogin(function(res) {
           console.log(res);
-          // 确定用户是批发商
-          if(res.role === '2') {
+          // 0202 批发商改成实体店
+          // 确定用户是实体店
+          if(res.role === '3') {
             switch(res.lvl) {
               // 全国等级
               case '1':

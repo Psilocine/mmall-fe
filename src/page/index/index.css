@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-09 17:16:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 16:13:27
+ * @Last Modified time: 2018-02-13 17:34:45
 */
 
 
@@ -118,11 +118,14 @@
 
 .ctrl .prev {
 	left: 0;
-
+	border-top-right-radius: 45%;
+	border-bottom-right-radius: 45%;
 }
 
 .ctrl .next {
 	right: 0;
+	border-top-left-radius: 45%;
+  border-bottom-left-radius: 45%;
 }
 
 

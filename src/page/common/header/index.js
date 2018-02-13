@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-18 19:30:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-13 22:49:16
+ * @Last Modified time: 2018-02-13 23:08:32
  */
 
 'use strict';
@@ -31,6 +31,8 @@ var header = {
 		$('.search-item').click(function () {
 			$('#searchType').html($(this).html())
 			$('.search-list').css('visibility','hidden');
+			$('.search-list').removeAttr('style');
+			
 		});
 
 		// 回车提交
@@ -41,8 +43,9 @@ var header = {
 		})
 
 		// 点击搜索type 出现搜索list 适配移动端
-		$('#search-type').click(function() {
-			$('.search-list').css('visibility', 'visible');
+		$('.search-type').click(function() {
+			$('.search-list').css('visibility', 'visible');			
+			$('.search-list').removeAttr('style');
 		})
 	},
 	// 搜索的提交

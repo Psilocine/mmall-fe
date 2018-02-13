@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-09 17:16:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-13 17:34:45
+ * @Last Modified time: 2018-02-13 22:47:00
 */
 
 
@@ -106,8 +106,10 @@
 .ctrl .arrow {
 	position: absolute;
 	top: -150px;
-	width: 30px;
-	font-size: 25px;
+	width: 25px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
 	font-family: '宋体';
 	color: #fff;
 	background: #222;

@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-21 00:19:41
+ * @Last Modified time: 2018-03-21 00:27:21
  */
 'use strict';
 require('./index.css');
@@ -38,7 +38,7 @@ var page = {
     // 点击提交按钮后的动作
     var _this = this;
     $(document).on('click', '.search-product-btn', function () {
-      listParam = this.data.listParam;
+      listParam = _this.data.listParam;
       var key = $('.search-product-input').val();
       listParam.keyword = key;
 
@@ -64,7 +64,7 @@ var page = {
   onLoad: function () {
     // 初始化左侧菜单
     navSide.init({
-      name: 'user-downgrade'
+      name: 'product-delete'
     });
     // 加载用户信息
     this.loadProductInfo();

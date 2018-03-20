@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-21 00:27:21
+ * @Last Modified time: 2018-03-21 00:32:35
  */
 'use strict';
 require('./index.css');
@@ -38,7 +38,7 @@ var page = {
     // 点击提交按钮后的动作
     var _this = this;
     $(document).on('click', '.search-product-btn', function () {
-      listParam = _this.data.listParam;
+      var listParam = _this.data.listParam;
       var key = $('.search-product-input').val();
       listParam.keyword = key;
 

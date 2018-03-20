@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-15 15:26:38
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:14:04
+ * @Last Modified time: 2018-03-21 00:31:09
  */
 
 'use strict';
@@ -15,7 +15,7 @@ var _mm = {
 	request: function (param) {
 		var _this = this;
 		$.ajax({
-			type: param.method || 'get',
+			type: param.method || 'post',
 			url: param.url || '',
 			dataType: param.type || 'json',
 			data: param.data || '',

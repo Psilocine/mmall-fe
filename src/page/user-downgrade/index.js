@@ -2,15 +2,13 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-20 23:26:51
+ * @Last Modified time: 2018-03-20 23:32:56
  */
 
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-
-
 
 require('node_modules/bootstrap/dist/css/bootstrap.min.css')
 require('node_modules/bootstrap/dist/js/bootstrap.min.js')
@@ -40,7 +38,7 @@ var page = {
     var _this = this;
     $(document).on('click', '.downBtn', function () {
       var userInfo = {
-        userId = $(this).siblings('.id-input').val()
+        userId: $(this).siblings('.id-input').val()
       }
         role = $(this).siblings('.role-input').val();
       if (window.confirm("确定把该用户降为普通用户吗")) {

@@ -2,25 +2,34 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-20 22:11:16
+ * @Last Modified time: 2018-03-20 22:38:51
  */
 
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
+
+
+
+require('node_modules/bootstrap/dist/css/bootstrap.min.css')
+require('node_modules/bootstrap/dist/js/bootstrap.min.js')
+
 var navSide = require('page/common/nav-side/index.js');
 var _mm = require('util/mm.js');
 var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 
+// 分页器
+var Pagination = require('util/pagination/index.js');
 
 // page 逻辑部分
 var page = {
   data: {
     listParam: {
       listType: 'list',
-      pageNum: 1
+      pageNum: 1,
+			pageSize: _mm.getUrlParam('pageSize') || 20
     }
   },
   init: function () {
@@ -53,6 +62,7 @@ var page = {
   },
   // 加载用户信息
   loadUserInfo: function () {
+    var _this = this;
     var frag = `<table class="table table-striped table-bordered table-hover">
                   <thead>
                     <tr>
@@ -73,12 +83,32 @@ var page = {
       }
       
       frag += '</table>';
-      $('.panel-body').html(frag);
+      $('.user-info').html(frag);
+      _this.loadPagination({
+				hasPreviousPage: res.hasPreviousPage,
+				prePage: res.prePage,
+				hasNextPage: res.hasNextPage,
+				nextPage: res.nextPage,
+				pageNum: res.pageNum,
+				pages: res.pages
+			});
     }, function (errMsg) {
       _mm.errorTips(errMsg);
       location.href = "./user-center.html";
     });
-  }
+  },
+  // 加载分页信息
+	loadPagination: function (pageInfo) {
+		var _this = this;
+		this.pagination ? '' : (this.pagination = new Pagination());
+		this.pagination.render($.extend({}, pageInfo, {
+			container: $('.pagination'),
+			onSelectPage: function (pageNum) {
+				_this.data.listParam.pageNum = pageNum;
+				_this.loadList();
+			}
+		}));
+	}
 };
 $(function () {
   page.init();

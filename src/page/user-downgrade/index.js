@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-20 22:52:57
+ * @Last Modified time: 2018-03-20 23:13:34
  */
 
 'use strict';
@@ -27,7 +27,6 @@ var Pagination = require('util/pagination/index.js');
 var page = {
   data: {
     listParam: {
-      listType: 'list',
       pageNum: _mm.getUrlParam('pageNum') || 1,
 			pageSize: _mm.getUrlParam('pageSize') || 20
     }
@@ -77,6 +76,7 @@ var page = {
 
     $('.panel-body .user-info').html('<div class="loading"></div>');
     _user.getUserListToDown(listParam, function (res) {
+      console.log(res);
       for (var i = 0, len = res.list.length; i < len; i++) {
         var userHtml = '';
 

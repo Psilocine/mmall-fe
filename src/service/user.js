@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-25 14:24:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-20 22:09:22
+ * @Last Modified time: 2018-03-20 22:19:56
  */
 'use strict';
 
@@ -39,17 +39,6 @@ var _user = {
       error: reject
     });
   },
-  // 获取用户名单
-  getUserListToDown(listParam, resolve, reject) {
-    return _mm.request({
-      url: _mm.getServerUrl('/user/get_user_list_down.do'),
-      data: {
-        pagaNum: listParam.pageNum || 1
-      },
-      success: resolve,
-      error: reject
-    });
-  },
   // 审核通过
   getUserPass(userId, role, status, resolve, reject) {
     return _mm.request({
@@ -58,17 +47,6 @@ var _user = {
         userId: userId,
         role: role,
         status: status
-      },
-      success: resolve,
-      error: reject
-    });
-  },
-  // 用户降级
-  getDowngrade(userId, resolve, reject) {
-    return _mm.request({
-      url: _mm.getServerUrl('/user/user_downgrade.do'),
-      data: {
-        userId: userId
       },
       success: resolve,
       error: reject

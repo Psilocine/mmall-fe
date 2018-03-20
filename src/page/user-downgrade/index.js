@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-20 23:32:56
+ * @Last Modified time: 2018-03-20 23:36:47
  */
 
 'use strict';
@@ -40,7 +40,6 @@ var page = {
       var userInfo = {
         userId: $(this).siblings('.id-input').val()
       }
-        role = $(this).siblings('.role-input').val();
       if (window.confirm("确定把该用户降为普通用户吗")) {
         _user.getDowngrade(userInfo, function (res, msg) {
           _mm.successTips(msg);

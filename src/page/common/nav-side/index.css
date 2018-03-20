@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-19 17:39:34
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-18 13:56:19
+ * @Last Modified time: 2018-03-20 21:32:32
 */
 
 
@@ -36,5 +36,12 @@
 
 .content.with-nav {
   float: left;
-  width: 950px;
+  width: 750px;
+}
+
+@media screen and (min-width: 1200px) {
+  .content.with-nav {
+    float: left;
+    width: 950px;
+  }
 }

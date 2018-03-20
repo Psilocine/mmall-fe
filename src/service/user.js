@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-25 14:24:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-25 14:54:04
+ * @Last Modified time: 2018-03-20 22:09:22
  */
 'use strict';
 
@@ -35,8 +35,19 @@ var _user = {
       data: {
         pagaNum: listParam.pageNum || 1
       },
-			success: resolve,
-			error: reject
+      success: resolve,
+      error: reject
+    });
+  },
+  // 获取用户名单
+  getUserListToDown(listParam, resolve, reject) {
+    return _mm.request({
+      url: _mm.getServerUrl('/user/get_user_list_down.do'),
+      data: {
+        pagaNum: listParam.pageNum || 1
+      },
+      success: resolve,
+      error: reject
     });
   },
   // 审核通过
@@ -48,10 +59,21 @@ var _user = {
         role: role,
         status: status
       },
-			success: resolve,
-			error: reject
+      success: resolve,
+      error: reject
+    });
+  },
+  // 用户降级
+  getDowngrade(userId, resolve, reject) {
+    return _mm.request({
+      url: _mm.getServerUrl('/user/user_downgrade.do'),
+      data: {
+        userId: userId
+      },
+      success: resolve,
+      error: reject
     });
   }
 }
 
-module.exports =  _user;
+module.exports = _user;

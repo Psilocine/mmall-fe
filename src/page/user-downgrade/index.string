@@ -1,0 +1,10 @@
+<tr>
+  <td>{{username}}</td>
+  <td>{{name}}</td>
+  <td>{{phone}}</td>
+  <td>{{shopname}}</td>
+  <td>
+    <a class="btn btn-sm btn-warning opear downBtn" href="javascript:;">降级</a>
+    <input type='text' class='id-input' value='{{id}}' style='display:none !important'/>
+  </td>
+</tr>

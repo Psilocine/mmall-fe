@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:05:04
+ * @Last Modified time: 2018-03-20 21:07:48
  */
 'use strict';
 require('./index.css');
@@ -44,6 +44,14 @@ var navSide = {
             name: 'user-check',
             desc: '用户审核',
             href: './user-check.html'
+          }, {
+            name: 'user-downgrade',
+            desc: '用户降级',
+            href: './user-downgrade.html'
+          }, {
+            name: 'product-delete',
+            desc: '商品删除',
+            href: './product-delete.html'
           });
           break;
           // 批发商

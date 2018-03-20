@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 20:10:31
+ * @Last Modified time: 2018-03-20 21:10:05
  */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -42,6 +42,8 @@ var config = {
     'user-check': ['./src/page/user-check/index.js'],
     'user-shop': ['./src/page/user-shop/index.js'],
     'result': ['./src/page/result/index.js'],
+    'user-downgrade': ['./src/page/user-downgrade/index.js'],
+    'product-delete': ['./src/page/product-delete/index.js']
   },
   output: {
     path: './dist',
@@ -120,6 +122,8 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
     new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
     new HtmlWebpackPlugin(getHtmlConfig('user-check', '用户审核')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-downgrade', '用户降级')),
+    new HtmlWebpackPlugin(getHtmlConfig('product-delete', '商品删除')),
   ]
 };
 

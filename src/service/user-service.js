@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-21 00:26:39
+ * @Last Modified time: 2018-03-21 00:55:26
  */
 
 'use strict';
@@ -156,11 +156,12 @@ var _user = {
     });
   },
 	// 用户降级
-	getDowngrade(userInfo, resolve, reject) {
+	getDowngrade(id, resolve, reject) {
 		return _mm.request({
 			url: _mm.getServerUrl('/user/user_downgrade.do'),
-			method: 'POST',
-			data: userInfo,
+			data: {
+				id: id
+			},
 			success: resolve,
 			error: reject
 		});

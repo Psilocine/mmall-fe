@@ -25,11 +25,21 @@
 				<%= require('html-loader!./layout/nav-side.html')  %>
 					<div class="content with-nav">
 						<div class="panel">
-							<div class="panel-title">商品删除</div>
+							<div class="panel-title">商品删除
+							<div class="input-group">
+								<input type="text" class="form-control search-product-input" placeholder="搜索商品名字"> 
+								<a class="input-group-btn" href="javascript:;">
+									<button class="btn search-product-btn btn-default" type="button">
+										搜索
+									</button>
+								</a>
+							</div>
+							</div>
 							<div class="panel-body">
-								<div class="user-info">
-									<div class="loading"></div>
-								</div>
+								<!-- <div class="user-info">
+									asdaaaaa
+								</div> -->
+								请搜索商品来进行删除
 							</div>
 						</div>
 					</div>

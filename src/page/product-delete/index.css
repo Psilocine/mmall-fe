@@ -1,0 +1,16 @@
+/*
+ * @Author: PsiloLau 
+ * @Date: 2018-03-20 23:55:07 
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2018-03-21 00:06:42
+ */
+.penal {
+  position: relative;
+}
+
+.input-group {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 200px;
+}

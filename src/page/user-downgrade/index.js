@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-20 22:51:51
+ * @Last Modified time: 2018-03-20 22:52:57
  */
 
 'use strict';
@@ -74,6 +74,8 @@ var page = {
                     </tr>
                   </thead>`
     var listParam = this.data.listParam;
+
+    $('.panel-body .user-info').html('<div class="loading"></div>');
     _user.getUserListToDown(listParam, function (res) {
       for (var i = 0, len = res.list.length; i < len; i++) {
         var userHtml = '';

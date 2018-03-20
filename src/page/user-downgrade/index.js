@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-20 22:38:51
+ * @Last Modified time: 2018-03-20 22:51:51
  */
 
 'use strict';
@@ -28,7 +28,7 @@ var page = {
   data: {
     listParam: {
       listType: 'list',
-      pageNum: 1,
+      pageNum: _mm.getUrlParam('pageNum') || 1,
 			pageSize: _mm.getUrlParam('pageSize') || 20
     }
   },
@@ -83,7 +83,7 @@ var page = {
       }
       
       frag += '</table>';
-      $('.user-info').html(frag);
+      $('.panel-body .user-info').html(frag);
       _this.loadPagination({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,
@@ -105,7 +105,7 @@ var page = {
 			container: $('.pagination'),
 			onSelectPage: function (pageNum) {
 				_this.data.listParam.pageNum = pageNum;
-				_this.loadList();
+				_this.loadUserInfo();
 			}
 		}));
 	}

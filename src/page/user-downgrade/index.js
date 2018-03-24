@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-24 23:42:01
+ * @Last Modified time: 2018-03-25 00:04:52
  */
 
 'use strict';
@@ -38,9 +38,9 @@ var page = {
     // 点击提交按钮后的动作
     var _this = this;
     $(document).on('click', '.downBtn', function () {
-      var id = parseInt($(this).siblings('.id-input').val())
+      var userId = parseInt($(this).siblings('.id-input').val())
       if (window.confirm("确定把该用户降为普通用户吗")) {
-        _user.getDowngrade(id, function (res, msg) {
+        _user.getDowngrade(userId, function (res, msg) {
           _mm.successTips(msg);
           _this.loadUserInfo();
         }, function (errMsg) {
@@ -104,7 +104,9 @@ var page = {
 		this.pagination.render($.extend({}, pageInfo, {
 			container: $('.pagination'),
 			onSelectPage: function (pageNum) {
-				_this.data.listParam.pageNum = pageNum;
+        _this.data.listParam.pageNum = pageNum;
+        console.log(pageNum)
+        console.log(_this.data.listParam.pageNum)
 				_this.loadUserInfo();
 			}
 		}));

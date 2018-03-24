@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-16 18:03:01
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-21 00:05:38
+ * @Last Modified time: 2018-03-24 23:15:24
 */
 
 
@@ -130,6 +130,10 @@ a {
   padding: 0 10px;
 }
 
+.panel-body .btn-submit {
+	float: right;
+	padding: 0 50px;
+}
 
 /* loading */
 

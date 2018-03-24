@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-21 00:55:26
+ * @Last Modified time: 2018-03-24 23:44:55
  */
 
 'use strict';
@@ -159,6 +159,7 @@ var _user = {
 	getDowngrade(id, resolve, reject) {
 		return _mm.request({
 			url: _mm.getServerUrl('/user/user_downgrade.do'),
+			method: 'POST',
 			data: {
 				id: id
 			},

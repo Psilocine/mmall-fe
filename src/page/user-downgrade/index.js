@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-24 23:30:35
+ * @Last Modified time: 2018-03-24 23:42:01
  */
 
 'use strict';
@@ -21,12 +21,13 @@ var templateIndex = require('./index.string');
 // 分页器
 var Pagination = require('util/pagination/index.js');
 
+
 // page 逻辑部分
 var page = {
   data: {
     listParam: {
       pageNum: _mm.getUrlParam('pageNum') || 1,
-			pageSize: _mm.getUrlParam('pageSize') || 20
+			pageSize: _mm.getUrlParam('pageSize') || 10
     }
   },
   init: function () {

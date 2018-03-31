@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 00:41:57
+ * @Last Modified time: 2018-04-01 00:48:50
  */
 
 'use strict';
@@ -59,22 +59,22 @@ var page = {
   },
   // 加载用户信息
   loadUserInfo: function () {
-    var _this = this;
-    var frag = `<table class="table table-striped table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <th>用户名</th>
-                      <th>姓名</th>
-                      <th>电话</th>
-                      <th>店铺名称</th>
-                      <th>操作</th>
-                    </tr>
-                  </thead>`
+    var _this = this,
+      userHtml = '',
+      frag = `<table class="table table-striped table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>用户名</th>
+                        <th>姓名</th>
+                        <th>电话</th>
+                        <th>店铺名称</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>`;
     var listParam = this.data.listParam;
 
     $('.panel-body .user-info').html('<div class="loading"></div>');
     _user.getUserListToDown(listParam, function (res) {
-
         userHtml = _mm.renderHtml(templateIndex, {
           list: res.list
         });

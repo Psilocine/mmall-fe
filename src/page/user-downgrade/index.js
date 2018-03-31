@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 00:48:50
+ * @Last Modified time: 2018-04-01 00:55:27
  */
 
 'use strict';
@@ -27,7 +27,7 @@ var page = {
   data: {
     listParam: {
       pageNum: _mm.getUrlParam('pageNum') || 1,
-			pageSize: _mm.getUrlParam('pageSize') || 10
+			pageSize: _mm.getUrlParam('pageSize') || 20
     }
   },
   init: function () {
@@ -103,8 +103,6 @@ var page = {
 			container: $('.pagination'),
 			onSelectPage: function (pageNum) {
         _this.data.listParam.pageNum = pageNum;
-        console.log(pageNum)
-        console.log(_this.data.listParam.pageNum)
 				_this.loadUserInfo();
 			}
 		}));

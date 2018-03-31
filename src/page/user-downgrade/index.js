@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-25 00:04:52
+ * @Last Modified time: 2018-04-01 00:41:57
  */
 
 'use strict';
@@ -74,13 +74,11 @@ var page = {
 
     $('.panel-body .user-info').html('<div class="loading"></div>');
     _user.getUserListToDown(listParam, function (res) {
-      console.log(res);
-      for (var i = 0, len = res.list.length; i < len; i++) {
-        var userHtml = '';
 
-        userHtml = _mm.renderHtml(templateIndex, res.list[i]);
+        userHtml = _mm.renderHtml(templateIndex, {
+          list: res.list
+        });
         frag += userHtml;
-      }
       
       frag += '</table>';
       $('.panel-body .user-info').html(frag);

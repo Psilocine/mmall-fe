@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 22:31:23
+ * @Last Modified time: 2018-04-01 22:57:41
  */
 'use strict';
 require("./indes.css");
@@ -24,7 +24,7 @@ var page = {
     listParam: {
       listType: 'list',
       pageNum: _mm.getUrlParam('pageNum') || 1,
-			pageSize: _mm.getUrlParam('pageSize') || 20
+			pageSize: _mm.getUrlParam('pageSize') || 10
     }
   },
   init: function () {

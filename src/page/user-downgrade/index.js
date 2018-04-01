@@ -27,7 +27,7 @@ var page = {
   data: {
     listParam: {
       pageNum: _mm.getUrlParam('pageNum') || 1,
-			pageSize: _mm.getUrlParam('pageSize') || 20
+			pageSize: _mm.getUrlParam('pageSize') || 10
     }
   },
   init: function () {

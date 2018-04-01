@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-16 00:39:04
+ * @Last Modified time: 2018-04-01 21:54:15
  */
 'use strict';
 require("./indes.css");
@@ -22,7 +22,8 @@ var page = {
   data: {
     listParam: {
       listType: 'list',
-      pageNum: 1
+      pageNum: _mm.getUrlParam('pageNum') || 1,
+      
     }
   },
   init: function () {
@@ -67,6 +68,7 @@ var page = {
   },
   // 加载用户信息
   loadUserInfo: function () {
+    var _this = this;
     var frag = `<span class='text-primary pull-right'>申请等级: 1 国, 2 省, 3 市, 4 区</span>
                 <table class="table table-striped table-bordered table-hover">
                   <thead>
@@ -98,12 +100,32 @@ var page = {
         frag += '<tr><td class="text-center" colspan="11">还没有用户申请</td></tr>'
       }
       frag += '</table>';
-      $('.panel-body').html(frag);
+      $('.loading').html(frag);
+      _this.loadPagination({
+				hasPreviousPage: res.hasPreviousPage,
+				prePage: res.prePage,
+				hasNextPage: res.hasNextPage,
+				nextPage: res.nextPage,
+				pageNum: res.pageNum,
+				pages: res.pages
+			});
     }, function (errMsg) {
       _mm.errorTips(errMsg);
       location.href = "./user-center.html";
     });
-  }
+  },
+  // 加载分页信息
+	loadPagination: function (pageInfo) {
+		var _this = this;
+		this.pagination ? '' : (this.pagination = new Pagination());
+		this.pagination.render($.extend({}, pageInfo, {
+			container: $('.pagination'),
+			onSelectPage: function (pageNum) {
+				_this.data.listParam.pageNum = pageNum;
+				_this.loadUserInfo();
+			}
+		}));
+	}
 };
 $(function () {
   page.init();

@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-21 00:32:35
+ * @Last Modified time: 2018-04-02 01:06:44
  */
 'use strict';
 require('./index.css');
@@ -27,7 +27,7 @@ var page = {
     listParam: {
       keyword: _mm.getUrlParam('keyword') || '',
       pageNum: _mm.getUrlParam('pageNum') || 1,
-			pageSize: _mm.getUrlParam('pageSize') || 20
+			pageSize: _mm.getUrlParam('pageSize') || 10
     }
   },
   init: function () {
@@ -36,14 +36,28 @@ var page = {
   },
   bindEvent: function () {
     // 点击提交按钮后的动作
-    var _this = this;
+    var _this = this,
+      listHtml = '',
+			listParam = this.data.listParam,
+      $listCon = $('.panel-body');
     $(document).on('click', '.search-product-btn', function () {
       var listParam = _this.data.listParam;
       var key = $('.search-product-input').val();
       listParam.keyword = key;
 
       _product.getProductList(listParam, function (res) {
-        console.log(res);
+        listHtml = _mm.renderHtml(templateIndex, {
+          list: res.list
+        });
+        $listCon.html(listHtml);
+        _this.loadPagination({
+          hasPreviousPage: res.hasPreviousPage,
+          prePage: res.prePage,
+          hasNextPage: res.hasNextPage,
+          nextPage: res.nextPage,
+          pageNum: res.pageNum,
+          pages: res.pages
+        });
       })
     })
 
@@ -52,12 +66,12 @@ var page = {
         productId: $(this).siblings('.id-input').val()
       }
       if (window.confirm("确定把该商品删除吗")) {
-        _user.getDowngrade(productInfo, function (res, msg) {
-          _mm.successTips(msg);
-          _this.loadProductInfo();
-        }, function (errMsg) {
-          _mm.errorTips(errMsg);
-        })
+        // _user.getDowngrade(productInfo, function (res, msg) {
+        //   _mm.successTips(msg);
+        //   _this.loadProductInfo();
+        // }, function (errMsg) {
+        //   _mm.errorTips(errMsg);
+        // })
       }
     })
   },
@@ -83,7 +97,6 @@ var page = {
                   </thead>`
     var listParam = this.data.listParam;
 
-    $('.panel-body .user-info').html('<div class="loading"></div>');
     // _user.getUserListToDown(listParam, function (res) {
     //   console.log(res);
     //   for (var i = 0, len = res.list.length; i < len; i++) {

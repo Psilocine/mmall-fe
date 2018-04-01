@@ -1,0 +1,20 @@
+{{#list}}
+	<li class="p-item">
+    <div class="p-img-con">
+      <img class="p-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}" />
+    </div>
+    <div class="p-name-con">
+      {{name}}
+    </div>
+    <div class="p-name-con">
+      {{subtitle}}
+    </div>
+    <div class="p-btn-con">
+      <a class="btn btn-small del-btn">删除</a>
+      <input type='text' value='{{id}}' class='id-input' style='display:none !important'/>
+    </div>
+	</li>
+{{/list}}
+{{^list}}
+	<p class="err-tip">很抱歉，实在找不到您要的商品。</p>
+{{/list}}

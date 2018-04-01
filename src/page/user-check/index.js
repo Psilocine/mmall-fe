@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 21:58:43
+ * @Last Modified time: 2018-04-01 22:12:16
  */
 'use strict';
 require("./indes.css");
@@ -24,7 +24,7 @@ var page = {
     listParam: {
       listType: 'list',
       pageNum: _mm.getUrlParam('pageNum') || 1,
-      
+			pageSize: _mm.getUrlParam('pageSize') || 20
     }
   },
   init: function () {
@@ -101,7 +101,7 @@ var page = {
         frag += '<tr><td class="text-center" colspan="11">还没有用户申请</td></tr>'
       }
       frag += '</table>';
-      $('.loading').html(frag);
+      $('.panel-body').html(frag);
       _this.loadPagination({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,

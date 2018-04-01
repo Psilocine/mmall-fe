@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 21:54:15
+ * @Last Modified time: 2018-04-01 21:58:43
  */
 'use strict';
 require("./indes.css");
@@ -12,6 +12,7 @@ require('node_modules/bootstrap/dist/css/bootstrap.min.css')
 require('node_modules/bootstrap/dist/js/bootstrap.min.js')
 
 var navSide = require('page/common/nav-side/index.js');
+var Pagination = require('util/pagination/index.js');
 
 var _mm = require('util/mm.js');
 var _user = require('service/user.js');

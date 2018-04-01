@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 22:38:45
+ * @Last Modified time: 2018-04-01 22:45:37
  */
 
 'use strict';
@@ -61,7 +61,9 @@ var page = {
   loadUserInfo: function () {
     var _this = this,
       userHtml = '',
-      frag = `<table class="table table-striped table-bordered table-hover">
+      listParam = this.data.listParam;
+      
+    let frag = `<table class="table table-striped table-bordered table-hover">
                     <thead>
                       <tr>
                         <th>用户名</th>
@@ -71,7 +73,7 @@ var page = {
                         <th>操作</th>
                       </tr>
                     </thead>`;
-    var listParam = this.data.listParam;
+		console.log(_this.data.listParam.pageNum);
 
     $('.panel-body .user-info').html('<div class="loading"></div>');
     _user.getUserListToDown(listParam, function (res) {

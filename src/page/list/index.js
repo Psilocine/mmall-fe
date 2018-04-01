@@ -74,6 +74,7 @@ var page = {
 			$pListCon = $('.p-list-con');
 		$pListCon.html('<div class="loading"></div>');
 		// 请求接口
+		console.log(_this.data.listParam.pageNum);
 		_product.getProductList(listParam, function (res) {
 			console.log(res);
 			listHtml = _mm.renderHtml(templateIndex, {

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 22:37:07
+ * @Last Modified time: 2018-04-01 22:43:05
  */
 
 'use strict';
@@ -149,7 +149,7 @@ var _user = {
     return _mm.request({
       url: _mm.getServerUrl('/user/get_user_list_down.do'),
       data: {
-				pageNum: 2,
+				pageNum: listParam.pageNum,
 				pageSize: listParam.pageSize
 			},
       success: resolve,

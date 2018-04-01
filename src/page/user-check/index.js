@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-18 11:59:54 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 22:12:16
+ * @Last Modified time: 2018-04-01 22:31:23
  */
 'use strict';
 require("./indes.css");
@@ -69,7 +69,9 @@ var page = {
   },
   // 加载用户信息
   loadUserInfo: function () {
-    var _this = this;
+    var _this = this,
+      $listCon = $('.panel-body');
+    $listCon.html('<div class="loading"></div>');
     var frag = `<span class='text-primary pull-right'>申请等级: 1 国, 2 省, 3 市, 4 区</span>
                 <table class="table table-striped table-bordered table-hover">
                   <thead>
@@ -101,7 +103,7 @@ var page = {
         frag += '<tr><td class="text-center" colspan="11">还没有用户申请</td></tr>'
       }
       frag += '</table>';
-      $('.panel-body').html(frag);
+      $listCon.html(frag);
       _this.loadPagination({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,

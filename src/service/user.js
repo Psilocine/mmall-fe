@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-25 14:24:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-20 22:19:56
+ * @Last Modified time: 2018-04-01 22:31:03
  */
 'use strict';
 
@@ -32,9 +32,7 @@ var _user = {
   getUserList(listParam, resolve, reject) {
     return _mm.request({
       url: _mm.getServerUrl('/user/get_user_list.do'),
-      data: {
-        pagaNum: listParam.pageNum || 1
-      },
+      data: listParam,
       success: resolve,
       error: reject
     });

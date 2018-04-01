@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-25 00:03:48
+ * @Last Modified time: 2018-04-01 22:30:51
  */
 
 'use strict';
@@ -148,9 +148,7 @@ var _user = {
   getUserListToDown(listParam, resolve, reject) {
     return _mm.request({
       url: _mm.getServerUrl('/user/get_user_list_down.do'),
-      data: {
-        pagaNum: listParam.pageNum || 1
-      },
+      data: listParam,
       success: resolve,
       error: reject
     });

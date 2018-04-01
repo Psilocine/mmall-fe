@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 21:36:11 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-01 00:55:27
+ * @Last Modified time: 2018-04-01 22:32:30
  */
 
 'use strict';
@@ -81,7 +81,7 @@ var page = {
         frag += userHtml;
       
       frag += '</table>';
-      $('.panel-body .user-info').html(frag);
+      $('.panel-body .user-info .loading').html(frag);
       _this.loadPagination({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,

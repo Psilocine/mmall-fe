@@ -1,5 +1,8 @@
 <tr>
 	<td>
+		<img src="{{imageHost}}{{mainImage}}" alt="{{name}}" width="58" height="58"/>
+	</td>
+	<td>
 		<p>{{name}}</p>
 		<p>{{subtitle}}</p>
 	</td>
@@ -10,7 +13,6 @@
 	<td style="vertical-align: middle;text-align: center;">
 		<a class="btn btn-sm btn-warning opear lookBtn" href="javascript:;" target='_blank'>查看</a>
 	
-		<a class="btn btn-sm btn-warning opear ediBtn" href="javascript:;">编辑</a>
 		<input type='text' value='{{id}}' style='display:none !important'/>
 		<a class="btn btn-sm btn-warning opear delBtn" href="javascript:;">删除</a>		
 	</td>

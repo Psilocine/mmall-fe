@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-24 16:52:29
+ * @Last Modified time: 2018-04-02 18:53:56
  */
 'use strict';
 require('./index.css');
@@ -69,6 +69,7 @@ var page = {
     var frag = `<table class="table table-striped table-bordered table-hover">
                   <thead>
                     <tr>
+                      <th>图片</th>
                       <th>信息</th>
                       <th>价格</th>
                       <th>操作</th>

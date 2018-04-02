@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-27 18:26:52
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 17:22:05
+ * @Last Modified time: 2018-04-02 13:23:23
  */
 
 'use strict';
@@ -57,6 +57,16 @@ var _product = {
       data: {
         shopname: shopname
       },
+      success: resolve,
+      error: reject
+    });
+  },
+  // 删除商品
+  deleteProduct: function (productId, resolve, reject) {
+    _mm.request({
+      url: _mm.getServerUrl('/product/delete.do'),
+      data: {productId: productId},
+      method: 'POST',
       success: resolve,
       error: reject
     });

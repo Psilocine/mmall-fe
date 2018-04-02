@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 13:15:52
+ * @Last Modified time: 2018-04-02 13:25:00
  */
 'use strict';
 require('./index.css');
@@ -42,7 +42,7 @@ var page = {
       var listParam = _this.data.listParam;
       var key = $('.search-product-input').val();
       listParam.keyword = key;
-      loadProductInfo(listParam.keyword);
+      _this.loadProductInfo(listParam.keyword);
     })
 
     $(document).on('click', '.del-btn', function () {
@@ -50,12 +50,12 @@ var page = {
         productId: $(this).siblings('.id-input').val()
       }
       if (window.confirm("确定把该商品删除吗")) {
-        // _user.getDowngrade(productInfo, function (res, msg) {
-        //   _mm.successTips(msg);
-        //   _this.loadProductInfo();
-        // }, function (errMsg) {
-        //   _mm.errorTips(errMsg);
-        // })
+        _product.deleteProduct(productId, function (res, msg) {
+          _mm.successTips(msg);
+          _this.loadProductInfo(_this.data.listParam.keyword);
+        }, function(errMsg) {
+          _mm.errorTips(errMsg);
+        })
       }
     })
   },

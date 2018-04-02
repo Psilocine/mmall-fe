@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-27 18:26:52
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 13:23:23
+ * @Last Modified time: 2018-04-02 18:29:11
  */
 
 'use strict';
@@ -65,6 +65,16 @@ var _product = {
   deleteProduct: function (productId, resolve, reject) {
     _mm.request({
       url: _mm.getServerUrl('/product/delete.do'),
+      data: {productId: productId},
+      method: 'POST',
+      success: resolve,
+      error: reject
+    });
+  },
+  // 管理员删除商品
+  deleteProductByAdmin: function (productId, resolve, reject) {
+    _mm.request({
+      url: _mm.getServerUrl('/product/delete_by_admin.do'),
       data: {productId: productId},
       method: 'POST',
       success: resolve,

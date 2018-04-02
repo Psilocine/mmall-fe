@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 13:28:19
+ * @Last Modified time: 2018-04-02 13:37:49
  */
 'use strict';
 require('./index.css');
@@ -27,7 +27,7 @@ var page = {
     listParam: {
       keyword: _mm.getUrlParam('keyword') || '',
       pageNum: _mm.getUrlParam('pageNum') || 1,
-			pageSize: _mm.getUrlParam('pageSize') || 10
+			pageSize: _mm.getUrlParam('pageSize') || 12
     }
   },
   init: function () {

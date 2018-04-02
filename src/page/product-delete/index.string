@@ -1,12 +1,12 @@
 {{#list}}
 	<li class="p-item">
     <div class="p-img-con">
-      <img class="p-img" src="{{imageHost}}{{mainImage}}" alt="{{name}}" />
+      <img class="p-img" src="{{imageHost}}{{mainImage}}" width="230" height="230" alt="{{name}}" />
     </div>
     <div class="p-name-con">
       {{name}}
     </div>
-    <div class="p-name-con">
+    <div class="p-subname-con">
       {{subtitle}}
     </div>
     <div class="p-btn-con">

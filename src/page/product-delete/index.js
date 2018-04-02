@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 01:06:44
+ * @Last Modified time: 2018-04-02 13:15:52
  */
 'use strict';
 require('./index.css');
@@ -37,28 +37,12 @@ var page = {
   bindEvent: function () {
     // 点击提交按钮后的动作
     var _this = this,
-      listHtml = '',
-			listParam = this.data.listParam,
-      $listCon = $('.panel-body');
+			listParam = this.data.listParam;
     $(document).on('click', '.search-product-btn', function () {
       var listParam = _this.data.listParam;
       var key = $('.search-product-input').val();
       listParam.keyword = key;
-
-      _product.getProductList(listParam, function (res) {
-        listHtml = _mm.renderHtml(templateIndex, {
-          list: res.list
-        });
-        $listCon.html(listHtml);
-        _this.loadPagination({
-          hasPreviousPage: res.hasPreviousPage,
-          prePage: res.prePage,
-          hasNextPage: res.hasNextPage,
-          nextPage: res.nextPage,
-          pageNum: res.pageNum,
-          pages: res.pages
-        });
-      })
+      loadProductInfo(listParam.keyword);
     })
 
     $(document).on('click', '.del-btn', function () {
@@ -84,8 +68,10 @@ var page = {
     this.loadProductInfo();
   },
   // 加载用户信息
-  loadProductInfo: function () {
-    var _this = this;
+  loadProductInfo: function (key) {
+    var _this = this,
+      listHtml = '',
+      $listCon = $('.panel-body');
     var frag = `<table class="table table-striped table-bordered table-hover">
                   <thead>
                     <tr>
@@ -97,6 +83,25 @@ var page = {
                   </thead>`
     var listParam = this.data.listParam;
 
+    if (!!key) {
+      _product.getProductList(listParam, function (res) {
+        listHtml = _mm.renderHtml(templateIndex, {
+          list: res.list
+        });
+        $listCon.html(listHtml);
+        _this.loadPagination({
+          hasPreviousPage: res.hasPreviousPage,
+          prePage: res.prePage,
+          hasNextPage: res.hasNextPage,
+          nextPage: res.nextPage,
+          pageNum: res.pageNum,
+          pages: res.pages
+        });
+      }, function (errMsg) {
+        _mm.errorTips(errMsg);
+        location.href = "./user-center.html";
+      })
+    }
     // _user.getUserListToDown(listParam, function (res) {
     //   console.log(res);
     //   for (var i = 0, len = res.list.length; i < len; i++) {
@@ -116,10 +121,6 @@ var page = {
 		// 		pageNum: res.pageNum,
 		// 		pages: res.pages
 		// 	});
-    // }, function (errMsg) {
-    //   _mm.errorTips(errMsg);
-    //   location.href = "./user-center.html";
-    // });
   },
   // 加载分页信息
 	loadPagination: function (pageInfo) {
@@ -129,7 +130,7 @@ var page = {
 			container: $('.pagination'),
 			onSelectPage: function (pageNum) {
 				_this.data.listParam.pageNum = pageNum;
-				_this.loadProductInfo();
+				_this.loadProductInfo(_this.data.listParam.keyword);
 			}
 		}));
 	}

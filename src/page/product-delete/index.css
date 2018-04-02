@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:55:07 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-21 00:06:42
+ * @Last Modified time: 2018-04-02 13:06:20
  */
 .penal {
   position: relative;
@@ -13,4 +13,37 @@
   top: 10px;
   right: 20px;
   width: 200px;
+}
+
+.penal .p-item {
+  float: left;
+  width: 230px;
+  height: 325px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.panel .p-img-con {
+  width: 230px;
+  height: 230px;
+  overflow: hidden;
+}
+
+.panel .p-img-con .p-img {
+  width: 230px;
+  height: 230px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.panel .p-name-con,
+.panel .p-subname-con,
+.panel .p-btn-con {
+  margin: 5px;
+}
+
+.panel .p-btn-con .btn:hover {
+  color: #fff;
+  background: #ef193f;
 }

@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:39
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-02 13:41:03
+ * @Last Modified time: 2018-04-02 13:17:08
 */
 .form-line{
   height: 30px;
@@ -22,16 +22,4 @@
   display: block;
   width: 40px;
   text-align: center;
-}
-
-
-/* clearfix */
-.clearfix {
-  *zoom: 1;
-}
-
-.clearfix:after {
-  content: '';
-  display: table;
-  clear: both;
 }

@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-16 18:03:01
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-24 23:15:24
+ * @Last Modified time: 2018-04-02 13:16:55
 */
 
 
@@ -146,5 +146,16 @@ a {
   border-radius: 5px;
   background: url(../../image/icon/loading.gif) no-repeat;
   opacity: .6;
+}
+
+/* clearfix */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 

@@ -20,9 +20,10 @@ var _product = {
     });
   },
   // 获取全部商品列表
-  getAllProductList: function (resolve, reject) {
+  getAllProductList: function (listParam, resolve, reject) {
     _mm.request({
       url: _mm.getServerUrl('/product/list_all.do'),
+      data: listParam,
       success: resolve,
       error: reject
     });

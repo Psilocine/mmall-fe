@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-04 13:19:49
+ * @Last Modified time: 2018-04-04 13:24:58
  */
 'use strict';
 require('./index.css');
@@ -91,7 +91,7 @@ var page = {
     var listParam = this.data.listParam;
 
     _product.getAllProductList(function (res) {
-      listHtml = _mm.renderHtml(templateIndex, {
+      listHtml = _mm.renderHtml(listParam, templateIndex, {
         list: res.list
       });
       $listCon.html(listHtml);

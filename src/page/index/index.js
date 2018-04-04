@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-05 02:16:05
+ * @Last Modified time: 2018-04-05 02:34:49
  */
 
 'use strict';
@@ -19,6 +19,16 @@ var templateIndex = require('./index.string');
 var Pagination = require('util/pagination/index.js');
 
 var page = {
+	data: {
+		shitiParam: {
+			pageNum: _mm.getUrlParam('pageNum') || 1,
+			pageSize: _mm.getUrlParam('pageSize') || 10
+		},
+		pifaParam: {
+			pageNum: _mm.getUrlParam('pageNum') || 1,
+			pageSize: _mm.getUrlParam('pageSize') || 10
+		}
+	},
 	init: function () {
 		this.onLoad();
 	},
@@ -31,10 +41,7 @@ var page = {
 		let _this = this,
 			listHtml = '',
 			$content = $('#shitiList'),
-			pageinfo = {
-				pageNum: _mm.getUrlParam('pageNum') || 1,
-				pageSize: _mm.getUrlParam('pageSize') || 10
-			}
+			pageinfo = this.data.shitiParam;
 
 		function loadPagination(pageInfo) {
 			var _this = this;
@@ -52,7 +59,7 @@ var page = {
 				list: res.list
 			});
 			$content.html(listHtml);
-			loadPagination({
+			_this.loadPagination({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,
 				hasNextPage: res.hasNextPage,
@@ -68,28 +75,14 @@ var page = {
 		let _this = this,
 			listHtml = '',
 			$content = $('#pifaList'),
-			pageinfo = {
-				pageNum: _mm.getUrlParam('pageNum') || 1,
-				pageSize: _mm.getUrlParam('pageSize') || 10
-			};
+			pageinfo = this.data.pifaParam;
 
-		function loadPagination(pageInfo) {
-			var _this = this;
-			this.pagination ? '' : (this.pagination = new Pagination());
-			this.pagination.render($.extend({}, pageInfo, {
-				container: $('.pagination-pifa'),
-				onSelectPage: function (pageNum) {
-					this.pageinfo.pageNum = pageNum;
-					_this.loadPifaList();
-				}
-			}));
-		}
 		_user.getPifaList(pageinfo, function (res) {
 			listHtml = _mm.renderHtml(templateIndex, {
 				list: res.list
 			});
 			$content.html(listHtml);
-			loadPagination({
+			_this.loadPaginationPifa({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,
 				hasNextPage: res.hasNextPage,
@@ -116,6 +109,28 @@ var page = {
 			playSpeed: 300, //图片切换速度 
 			effect: 'left'
 		});
+	},
+	loadPagination: function (pageInfo) {
+		var _this = this;
+		this.pagination ? '' : (this.pagination = new Pagination());
+		this.pagination.render($.extend({}, pageInfo, {
+			container: $('.pagination'),
+			onSelectPage: function (pageNum) {
+				_this.data.shitiParam.pageNum = pageNum;
+				_this.loadList();
+			}
+		}));
+	},
+	loadPaginationPifa: function (pageInfo) {
+		var _this = this;
+		this.pagination ? '' : (this.pagination = new Pagination());
+		this.pagination.render($.extend({}, pageInfo, {
+			container: $('.pagination-pifa'),
+			onSelectPage: function (pageNum) {
+				_this.data.pifaParam.pageNum = pageNum;
+				_this.loadList();
+			}
+		}));
 	}
 };
 $(function () {

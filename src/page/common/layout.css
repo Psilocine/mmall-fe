@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-16 18:03:01
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 13:16:55
+ * @Last Modified time: 2018-04-05 02:10:32
 */
 
 
@@ -37,6 +37,7 @@ input[type='checkbox'] {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 /* 定宽布局 */

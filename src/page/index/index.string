@@ -1,6 +1,6 @@
 {{#list}}
   <li class="floor-item">
-    <a href="http://psilocine.cn/user-shop.html?shopId=${shopId}">
+    <a href="http://psilocine.cn/user-shop.html?shopId=${{shopId}}">
       <img src="http://img.psilocine.cn/avatar.jpg" width="130" height="130" alt="默认头像">
       <p>用户: {{name}}</p>
       <p>店铺名: {{shopname}}</p>

@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-04 13:24:58
+ * @Last Modified time: 2018-04-04 13:33:36
  */
 'use strict';
 require('./index.css');
@@ -90,8 +90,8 @@ var page = {
                   </thead>`
     var listParam = this.data.listParam;
 
-    _product.getAllProductList(function (res) {
-      listHtml = _mm.renderHtml(listParam, templateIndex, {
+    _product.getAllProductList(listParam, function (res) {
+      listHtml = _mm.renderHtml(templateIndex, {
         list: res.list
       });
       $listCon.html(listHtml);

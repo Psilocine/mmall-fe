@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 18:29:10
+ * @Last Modified time: 2018-04-04 13:07:02
  */
 'use strict';
 require('./index.css');
@@ -42,7 +42,11 @@ var page = {
       var listParam = _this.data.listParam;
       var key = $('.search-product-input').val();
       listParam.keyword = key;
-      _this.loadProductInfo(listParam.keyword);
+      if (!!key) {
+        _this.loadProductInfo(listParam.keyword);
+      } else {
+        _this.loadAllProductInfo();
+      }
     })
 
     $(document).on('click', '.del-btn', function () {
@@ -62,10 +66,46 @@ var page = {
     navSide.init({
       name: 'product-delete'
     });
-    // 加载用户信息
+    // 加载商品列表信息
     this.loadProductInfo();
   },
-  // 加载用户信息
+  // 加载全部商品列表
+  loadAllProductInfo () {
+    var _this = this,
+      listHtml = '',
+      $listCon = $('.panel-body');
+    var frag = `<table class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>商品名</th>
+                      <th>描述</th>
+                      <th>店铺名称</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>`
+    var listParam = this.data.listParam;
+
+    if (!!key) {
+      _product.getAllProductList(function (res) {
+        listHtml = _mm.renderHtml(templateIndex, {
+          list: res.list
+        });
+        $listCon.html(listHtml);
+        _this.loadPagination({
+          hasPreviousPage: res.hasPreviousPage,
+          prePage: res.prePage,
+          hasNextPage: res.hasNextPage,
+          nextPage: res.nextPage,
+          pageNum: res.pageNum,
+          pages: res.pages
+        });
+      }, function (errMsg) {
+        _mm.errorTips(errMsg);
+        location.href = "./user-center.html";
+      })
+    }
+  },
+  // 加载商品列表信息
   loadProductInfo: function (key) {
     var _this = this,
       listHtml = '',
@@ -100,25 +140,6 @@ var page = {
         location.href = "./user-center.html";
       })
     }
-    // _user.getUserListToDown(listParam, function (res) {
-    //   console.log(res);
-    //   for (var i = 0, len = res.list.length; i < len; i++) {
-    //     var userHtml = '';
-
-    //     userHtml = _mm.renderHtml(templateIndex, res.list[i]);
-    //     frag += userHtml;
-    //   }
-      
-    //   frag += '</table>';
-    //   $('.panel-body .user-info').html(frag);
-    //   _this.loadPagination({
-		// 		hasPreviousPage: res.hasPreviousPage,
-		// 		prePage: res.prePage,
-		// 		hasNextPage: res.hasNextPage,
-		// 		nextPage: res.nextPage,
-		// 		pageNum: res.pageNum,
-		// 		pages: res.pages
-		// 	});
   },
   // 加载分页信息
 	loadPagination: function (pageInfo) {
@@ -127,8 +148,12 @@ var page = {
 		this.pagination.render($.extend({}, pageInfo, {
 			container: $('.pagination'),
 			onSelectPage: function (pageNum) {
-				_this.data.listParam.pageNum = pageNum;
-				_this.loadProductInfo(_this.data.listParam.keyword);
+        _this.data.listParam.pageNum = pageNum;
+        if (!!_this.data.listParam.keyword) {
+          _this.loadProductInfo(_this.data.listParam.keyword);
+        } else {
+          _this.loadAllProductInfo();
+        }
 			}
 		}));
 	}

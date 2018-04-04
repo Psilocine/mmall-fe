@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-09 17:16:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-13 22:47:00
+ * @Last Modified time: 2018-04-03 13:55:27
 */
 
 
@@ -160,7 +160,26 @@
 	margin-right: -20px;
 }
 
-.floor-wrap .floor-list .floor-item {
+.floor-list .floor-item {
+	display: inline-block;
+	font-size: 0;
+	width: 130px;
+	height: 190px;
+	padding: 20px;
+	margin: 20px 20px 0 20px;
+	border: 1px solid #ddd;
+}
+.floor-list .floor-item p {
+	font-size: 12px;
+}
+
+.floor-list .floor-item img {
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+
+
+/* .floor-wrap .floor-list .floor-item {
 	position: relative;
 	width: 200px;
 	height: 220px;
@@ -170,25 +189,9 @@
 	background: #fff;
 	transition: all ease .5s;
 }
+*/
 
 .floor-wrap .floor-list .floor-item:hover {
-	transform: scale(1.1);
+	cursor: pointer;
 	box-shadow: 1px 1px 7px #ddd;
-}
-
-.floor-wrap .floor-list .floor-item .floor-text {
-	position: absolute;
-	top: 12px;
-	left: 20px;
-	font-size: 16px;
-	color: #555;
-}
-
-.floor-wrap .floor-list .floor-item .floor-img {
-	position: absolute;
-	right: 15px;
-	bottom: 10px;
-	width: 80%;
-	height: 75%;
-	border: none;
 }

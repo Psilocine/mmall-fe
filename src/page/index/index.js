@@ -2,7 +2,7 @@
 * @Author: PsiloLau
 * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 15:20:51
+ * @Last Modified time: 2018-04-03 13:56:11
 */
 
 'use strict';
@@ -13,6 +13,8 @@ require('util/myscroll/index.js');
 var navSide         = require('page/common/nav-side/index.js');
 var templateBanner  = require('./banner.string');
 var _mm             = require('util/mm.js');
+
+var Pagination = require('util/pagination/index.js');
 
 $(function() {
 	// 渲染banner的html

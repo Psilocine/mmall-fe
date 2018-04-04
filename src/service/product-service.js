@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-27 18:26:52
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 18:29:11
+ * @Last Modified time: 2018-04-04 13:05:54
  */
 
 'use strict';
@@ -15,6 +15,14 @@ var _product = {
     _mm.request({
       url: _mm.getServerUrl('/product/list.do'),
       data: listParam,
+      success: resolve,
+      error: reject
+    });
+  },
+  // 获取全部商品列表
+  getAllProductList: function (resolve, reject) {
+    _mm.request({
+      url: _mm.getServerUrl('/product/list_all.do'),
       success: resolve,
       error: reject
     });

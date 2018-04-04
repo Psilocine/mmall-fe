@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 00:55:13
+ * @Last Modified time: 2018-04-03 13:33:23
  */
 'use strict';
 require('./index.css');
@@ -52,10 +52,6 @@ var navSide = {
             name: 'product-delete',
             desc: '商品删除',
             href: './product-delete.html'
-          }, {
-            name: 'img-delete',
-            desc: '图片删除',
-            href: './img-delete.html'
           });
           break;
           // 批发商

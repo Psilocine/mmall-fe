@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-05 01:59:54
+ * @Last Modified time: 2018-04-05 02:06:33
  */
 
 'use strict';
@@ -21,7 +21,6 @@ var Pagination = require('util/pagination/index.js');
 var page = {
 	init: function () {
 		this.onLoad();
-		this.bindEvent();
 	},
 	onLoad: function () {
 		this.loadBanner();

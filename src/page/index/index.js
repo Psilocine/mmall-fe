@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-05 02:06:33
+ * @Last Modified time: 2018-04-05 02:16:05
  */
 
 'use strict';
@@ -52,7 +52,7 @@ var page = {
 				list: res.list
 			});
 			$content.html(listHtml);
-			this.loadPagination({
+			loadPagination({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,
 				hasNextPage: res.hasNextPage,
@@ -89,7 +89,7 @@ var page = {
 				list: res.list
 			});
 			$content.html(listHtml);
-			this.loadPagination({
+			loadPagination({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,
 				hasNextPage: res.hasNextPage,

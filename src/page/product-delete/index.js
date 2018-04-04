@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-04 13:12:48
+ * @Last Modified time: 2018-04-04 13:19:49
  */
 'use strict';
 require('./index.css');
@@ -43,7 +43,7 @@ var page = {
       var key = $('.search-product-input').val();
       listParam.keyword = key;
       if (!!key) {
-        _this.loadProductInfo(listParam.keyword);
+        _this.loadProductInfo (listParam.keyword);
       } else {
         _this.loadAllProductInfo();
       }
@@ -54,7 +54,11 @@ var page = {
       if (window.confirm("确定把该商品删除吗")) {
         _product.deleteProductByAdmin(productId, function (res, msg) {
           _mm.successTips(msg);
-          _this.loadProductInfo(_this.data.listParam.keyword);
+          if (_this.data.listParam.keyword) {
+            _this.loadProductInfo(_this.data.listParam.keyword);
+          } else {
+            _this.loadAllProductInfo();
+          }
         }, function(errMsg) {
           _mm.errorTips(errMsg);
         })
@@ -67,6 +71,7 @@ var page = {
       name: 'product-delete'
     });
     // 加载商品列表信息
+    this.loadAllProductInfo();
     this.loadProductInfo();
   },
   // 加载全部商品列表

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-03 13:32:58
+ * @Last Modified time: 2018-04-05 01:47:57
  */
 
 'use strict';
@@ -124,17 +124,19 @@ var _user = {
 		});
 	},
 	// 批发商列表
-	getPifaList (resolve, reject) {
+	getPifaList (pageinfo, resolve, reject) {
 		_mm.request({
 			url: _mm.getServerUrl('/user/get_pifa_list.do'),
+			data: pageinfo,
 			success: resolve,
 			error: reject
 		})
 	},
 	// 实体店列表
-	getShitiList (resolve, reject) {
+	getShitiList (pageinfo, resolve, reject) {
 		_mm.request({
 			url: _mm.getServerUrl('/user/get_shiti_list.do'),
+			data: pageinfo,
 			success: resolve,
 			error: reject
 		})

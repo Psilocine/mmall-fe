@@ -1,0 +1,12 @@
+{{#list}}
+  <li class="floor-item">
+    <a href="http://psilocine.cn/user-shop.html?shopId=${shopId}">
+      <img src="http://img.psilocine.cn/avatar.jpg" width="130" height="130" alt="默认头像">
+      <p>用户: {{name}}</p>
+      <p>店铺名: {{shopname}}</p>
+    </a>
+  </li>
+{{/list}}
+{{^list}}
+	<p class="err-tip">很抱歉，实在找不到您要的商品。</p>
+{{/list}}

@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-16 01:42:16 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 19:48:26
+ * @Last Modified time: 2018-04-05 02:41:56
  */
 'use strict';
 
@@ -43,7 +43,13 @@ var page = {
 			$pListCon = $('.goods-list');
 		$pListCon.html('<div class="loading"></div>');
 		_product.getShopProduct(this.data.shopId, function (res) {
-			$('.shop-name span').html(res.list[0].shopname);
+			console.log("res" + res);
+			console.log("res.list" + res.list);
+			if (!!res.list[0].shopname) {
+				$('.shop-name span').html(res.list[0].shopname);
+			} else {
+				_mm.goHome();
+			}
 			// res.list 按修改时间 排序
 			_this.orderByUpdateTime(res);
 

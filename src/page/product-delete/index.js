@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-04 13:07:02
+ * @Last Modified time: 2018-04-04 13:12:48
  */
 'use strict';
 require('./index.css');
@@ -85,25 +85,23 @@ var page = {
                   </thead>`
     var listParam = this.data.listParam;
 
-    if (!!key) {
-      _product.getAllProductList(function (res) {
-        listHtml = _mm.renderHtml(templateIndex, {
-          list: res.list
-        });
-        $listCon.html(listHtml);
-        _this.loadPagination({
-          hasPreviousPage: res.hasPreviousPage,
-          prePage: res.prePage,
-          hasNextPage: res.hasNextPage,
-          nextPage: res.nextPage,
-          pageNum: res.pageNum,
-          pages: res.pages
-        });
-      }, function (errMsg) {
-        _mm.errorTips(errMsg);
-        location.href = "./user-center.html";
-      })
-    }
+    _product.getAllProductList(function (res) {
+      listHtml = _mm.renderHtml(templateIndex, {
+        list: res.list
+      });
+      $listCon.html(listHtml);
+      _this.loadPagination({
+        hasPreviousPage: res.hasPreviousPage,
+        prePage: res.prePage,
+        hasNextPage: res.hasNextPage,
+        nextPage: res.nextPage,
+        pageNum: res.pageNum,
+        pages: res.pages
+      });
+    }, function (errMsg) {
+      _mm.errorTips(errMsg);
+      location.href = "./user-center.html";
+    })
   },
   // 加载商品列表信息
   loadProductInfo: function (key) {

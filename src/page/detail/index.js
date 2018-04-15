@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-02 16:04:35
+ * @Last Modified time: 2018-04-15 15:22:28
  */
 
 'use strict';
@@ -92,7 +92,6 @@ var page = {
             switch(res.lvl) {
               // 全国等级
               case '1':
-                $('.common-price').css('text-decoration','line-through');
                 $('.pifa-price').css('opacity','1');
                 break;
               // 全省 同省显示批发价

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 14:31:54
+ * @Last Modified time: 2018-04-15 15:01:18
  */
 'use strict';
 require('./index.css');
@@ -32,7 +32,6 @@ var page = {
 		// 点击提交按钮后的动作
 		$(document).on('click', '.btn-submit', function () {
 			var userInfo = {
-					phone: $.trim($('#phone').val()),
 					email: $.trim($('#email').val()),
 					question: $.trim($('#question').val()),
 					answer: $.trim($('#answer').val())

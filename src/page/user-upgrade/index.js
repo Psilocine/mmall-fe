@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-02 13:54:46
+ * @Last Modified time: 2018-04-15 14:52:11
  */
 'use strict';
 require('./index.css');
@@ -47,6 +47,7 @@ var page = {
 
 		$(document).on('click', '.btn-submit', function () {
 			var userInfo = {
+					username: $('#username').html(),
 					name: $.trim($('#name').val()),
 					phone: $.trim($('#phone').val()),
 					lvl: $('#lvl option:selected').val(),

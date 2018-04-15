@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-05 02:34:49
+ * @Last Modified time: 2018-04-15 15:40:05
  */
 
 'use strict';
@@ -117,7 +117,7 @@ var page = {
 			container: $('.pagination'),
 			onSelectPage: function (pageNum) {
 				_this.data.shitiParam.pageNum = pageNum;
-				_this.loadList();
+				_this.loadShitiList();
 			}
 		}));
 	},
@@ -128,7 +128,7 @@ var page = {
 			container: $('.pagination-pifa'),
 			onSelectPage: function (pageNum) {
 				_this.data.pifaParam.pageNum = pageNum;
-				_this.loadList();
+				_this.loadPifaList();
 			}
 		}));
 	}

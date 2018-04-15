@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-09 17:16:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-03 13:55:27
+ * @Last Modified time: 2018-04-15 15:41:33
 */
 
 
@@ -194,4 +194,9 @@
 .floor-wrap .floor-list .floor-item:hover {
 	cursor: pointer;
 	box-shadow: 1px 1px 7px #ddd;
+}
+
+.pagination,
+.pagination-pifa {
+	padding-top: 10px;
 }

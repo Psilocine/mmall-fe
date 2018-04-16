@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-16 21:18:51
+ * @Last Modified time: 2018-04-16 22:16:20
  */
 'use strict';
 require('./index.css');
@@ -106,7 +106,7 @@ var page = {
 			return result;
 		}
 		// 验证店铺名
-		if (!_mm.validate(formData.phone, 'shopname')) {
+		if (!_mm.validate(formData.shopname, 'shopname')) {
 			result.msg = '您的店铺名不能为空';
 			return result;
 		}

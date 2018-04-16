@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-15 15:07:30
+ * @Last Modified time: 2018-04-16 21:18:51
  */
 'use strict';
 require('./index.css');
@@ -97,7 +97,17 @@ var page = {
 		}
 		// 验证手机号
 		if (!_mm.validate(formData.phone, 'phone')) {
-			result.msg = '手机号格式不正确';
+			result.msg = '您的手机号格式不正确';
+			return result;
+		}
+		// 验证地址
+		if (!_mm.validate(formData.addr, 'addr')) {
+			result.msg = '您的地址不能为空';
+			return result;
+		}
+		// 验证店铺名
+		if (!_mm.validate(formData.phone, 'shopname')) {
+			result.msg = '您的店铺名不能为空';
 			return result;
 		}
 		// 通过验证，返回正确提示

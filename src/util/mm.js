@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-15 15:26:38
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-03-21 00:41:55
+ * @Last Modified time: 2018-04-16 21:18:14
  */
 
 'use strict';
@@ -82,6 +82,14 @@ var _mm = {
 		// 邮箱格式验证
 		if ('email' === type) {
 			return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
+		}
+		// 地址addr
+		if ('addr' === type) {
+			return !!value;
+		}
+		// 店铺名
+		if ('shopname' === type) {
+			return !!value;
 		}
 	},
 	// 统一登录处理

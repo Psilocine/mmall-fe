@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-15 15:40:05
+ * @Last Modified time: 2018-04-16 21:55:51
  */
 
 'use strict';
@@ -42,18 +42,6 @@ var page = {
 			listHtml = '',
 			$content = $('#shitiList'),
 			pageinfo = this.data.shitiParam;
-
-		function loadPagination(pageInfo) {
-			var _this = this;
-			this.pagination ? '' : (this.pagination = new Pagination());
-			this.pagination.render($.extend({}, pageInfo, {
-				container: $('.pagination'),
-				onSelectPage: function (pageNum) {
-					this.pageinfo.pageNum = pageNum;
-					_this.loadPifaList();
-				}
-			}));
-		}
 		_user.getShitiList(pageinfo, function (res) {
 			listHtml = _mm.renderHtml(templateIndex, {
 				list: res.list

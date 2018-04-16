@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-16 22:25:47
+ * @Last Modified time: 2018-04-16 22:33:14
  */
 
 'use strict';
@@ -47,9 +47,7 @@ var page = {
 				list: res.list
 			});
 			$content.html(listHtml);
-			console.log('loadshitilist')
-			console.log(listHtml)
-			_this.loadPagination({
+			_this.loadPaginationShiti({
 				hasPreviousPage: res.hasPreviousPage,
 				prePage: res.prePage,
 				hasNextPage: res.hasNextPage,
@@ -71,8 +69,6 @@ var page = {
 			listHtml = _mm.renderHtml(templateIndex, {
 				list: res.list
 			});
-			console.log('loadpifalist');
-			console.log(listHtml);
 			$content.html(listHtml);
 			_this.loadPaginationPifa({
 				hasPreviousPage: res.hasPreviousPage,
@@ -102,15 +98,13 @@ var page = {
 			effect: 'left'
 		});
 	},
-	loadPagination: function (pageInfo) {
+	loadPaginationShiti: function (pageInfo) {
 		var _this = this;
 		this.pagination ? '' : (this.pagination = new Pagination());
 		this.pagination.render($.extend({}, pageInfo, {
-			container: $('.pagination'),
+			container: $('.pagination-shiti'),
 			onSelectPage: function (pageNum) {
 				_this.data.shitiParam.pageNum = pageNum;
-				console.log('loadPagination');
-				console.log(_this.data.shitiParam);
 				_this.loadShitiList();
 			}
 		}));
@@ -122,8 +116,6 @@ var page = {
 			container: $('.pagination-pifa'),
 			onSelectPage: function (pageNum) {
 				_this.data.pifaParam.pageNum = pageNum;
-				console.log('loadPaginationPifa');
-				console.log(_this.data.pifaParam);
 				_this.loadPifaList();
 			}
 		}));

@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-16 22:33:14
+ * @Last Modified time: 2018-04-17 12:39:21
  */
 
 'use strict';
@@ -100,8 +100,9 @@ var page = {
 	},
 	loadPaginationShiti: function (pageInfo) {
 		var _this = this;
-		this.pagination ? '' : (this.pagination = new Pagination());
-		this.pagination.render($.extend({}, pageInfo, {
+		let paginationShiti;
+		paginationShiti ? '' : (paginationShiti = new Pagination());
+		paginationShiti.render($.extend({}, pageInfo, {
 			container: $('.pagination-shiti'),
 			onSelectPage: function (pageNum) {
 				_this.data.shitiParam.pageNum = pageNum;
@@ -111,8 +112,9 @@ var page = {
 	},
 	loadPaginationPifa: function (pageInfo) {
 		var _this = this;
-		this.pagination ? '' : (this.pagination = new Pagination());
-		this.pagination.render($.extend({}, pageInfo, {
+		let paginationPifa;
+		paginationPifa ? '' : (paginationPifa = new Pagination());
+		paginationPifa.render($.extend({}, pageInfo, {
 			container: $('.pagination-pifa'),
 			onSelectPage: function (pageNum) {
 				_this.data.pifaParam.pageNum = pageNum;

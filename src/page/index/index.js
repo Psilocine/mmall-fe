@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-17 12:39:21
+ * @Last Modified time: 2018-04-17 12:58:34
  */
 
 'use strict';
@@ -17,6 +17,7 @@ var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 
 var Pagination = require('util/pagination/index.js');
+var Pagination2 = require('util/pagination2/index.js');
 
 var page = {
 	data: {
@@ -113,7 +114,7 @@ var page = {
 	loadPaginationPifa: function (pageInfo) {
 		var _this = this;
 		let paginationPifa;
-		paginationPifa ? '' : (paginationPifa = new Pagination());
+		paginationPifa ? '' : (paginationPifa = new Pagination2());
 		paginationPifa.render($.extend({}, pageInfo, {
 			container: $('.pagination-pifa'),
 			onSelectPage: function (pageNum) {

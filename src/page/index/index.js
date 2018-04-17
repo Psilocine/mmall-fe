@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-17 12:58:34
+ * @Last Modified time: 2018-04-17 13:00:45
  */
 
 'use strict';
@@ -17,7 +17,7 @@ var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 
 var Pagination = require('util/pagination/index.js');
-var Pagination2 = require('util/pagination2/index.js');
+var Pagination2 = require('util/pagination/index2.js');
 
 var page = {
 	data: {

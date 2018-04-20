@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-27 18:26:52
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-04 13:05:54
+ * @Last Modified time: 2018-04-20 16:21:36
  */
 
 'use strict';
@@ -74,7 +74,7 @@ var _product = {
   deleteProduct: function (productId, resolve, reject) {
     _mm.request({
       url: _mm.getServerUrl('/product/delete.do'),
-      data: {productId: productId},
+      data: productId,
       method: 'POST',
       success: resolve,
       error: reject

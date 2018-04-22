@@ -1,7 +1,7 @@
 <div class="header">
 	<div class="w">
 		<a class="logo" href="./index.html">相约998-商贸联盟</a>
-		<div class="search-con">
+		<div class="search-con clearfix">
 			<div class="search-type">
 				<span id="searchType">商品</span>
 				<i class="fa fa-angle-down"></i>
@@ -12,6 +12,24 @@
 			</div>
 			<input class="search-input" id="search-input" />
 			<button class="btn search-btn" id="search-btn">搜 索</button>
+
+			<div data-toggle="distpicker" id="distpick">
+				<div class="form-line">
+					<span class="label">省 份：</span>
+					<select data-province="---- 选择省 ----"></select>
+				</div>
+				<div class="form-line">
+					<span class="label">城 市：</span>
+					<select data-city="---- 选择市 ----"></select>
+				</div>
+				<div class="form-line">
+					<span class="label">区/县：</span>
+					<select data-district="---- 选择区 ----"></select>
+				</div>
+			</div>
+			<div>
+				<a href="javascript:;" style="color: #c60023;" class="dist-btn">按区域搜索</a>
+			</div>
 		</div>
 	</div>
 </div>

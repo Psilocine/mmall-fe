@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-18 19:30:20
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-02-13 18:18:46
+ * @Last Modified time: 2018-04-23 01:19:00
 */
 
 
@@ -18,7 +18,8 @@
 }
 
 .header .search-con {
-	position: relative;
+	position: absolute;
+	top: 34px;
 	display: inline-block;
 	font-size: 14px;
 	margin-left: 100px;
@@ -65,22 +66,43 @@
 }
 
 .header .search-con .search-input {
+	float: left;
 	width: 450px;
 	height: 35px;
+	margin: 0 0 5px 0;
 	line-height: 35px;
 	padding-left: 70px;
 	font-size: 14px;
 	border: 1px solid #c60023;
+	border-radius: 5px;
 	outline: none;
 	box-sizing: border-box;
 }
 
 .header .search-con .search-btn {
-	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
 	height: 35px;
 	width: 70px;
-	border-radius: 0;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
+
+.search-con #distpick {
+	display: none;
+}
+
+.search-con #distpick .form-line {
+	display: inline-block;
+}
+
+.search-con #distpick select {
+	height: 25px;
+	border: 1px solid #c60023;
+	border-radius: 5px;
+}
+
 
 
 /* 面包屑导航 */

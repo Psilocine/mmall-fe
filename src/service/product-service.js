@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-27 18:26:52
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-20 16:21:36
+ * @Last Modified time: 2018-04-23 00:21:44
  */
 
 'use strict';
@@ -10,10 +10,29 @@
 var _mm = require('util/mm.js');
 
 var _product = {
-  // 获取商品列表
+  // 获取商品列表, 搜索框用
   getProductList: function (listParam, resolve, reject) {
     _mm.request({
       url: _mm.getServerUrl('/product/list.do'),
+      data: listParam,
+      success: resolve,
+      error: reject
+    });
+  },
+  getProduct: function (productId, resolve, reject) {
+    return _mm.request({
+      url: _mm.getServerUrl('/product/detailB.do'),
+      data: {
+        productId: productId || 0
+      },
+      success: resolve,
+      error: reject
+    });
+  },
+  // 商户获取自己的商品列表
+  getProductListByShop: function (listParam, resolve, reject) {
+    return _mm.request({
+      url: _mm.getServerUrl('/product/listB.do'),
       data: listParam,
       success: resolve,
       error: reject
@@ -89,6 +108,38 @@ var _product = {
       success: resolve,
       error: reject
     });
-  }
+  },
+    // 改变商品状态
+    setProductStatus: function (productId, status, resolve, reject) {
+      return _mm.request({
+        url: _mm.getServerUrl('/product/set_sale_status.do'),
+        data: {
+          productId: productId,
+          status: status
+        },
+        success: resolve,
+        error: reject
+      });
+    },
+    // 获取品类
+    getCategory: function (parentCategoryId, resolve, reject) {
+      return _mm.request({
+        url: _mm.getServerUrl('/category/get_category.do'),
+        data: {
+          categoryId: parentCategoryId || 0
+        },
+        success: resolve,
+        error: reject
+      });
+    },
+    // 更新品类名称
+    updateCategoryName: function (category, resolve, reject) {
+      return _mm.request({
+        url: _mm.getServerUrl('/category/set_category_name.do'),
+        data: category,
+        success: resolve,
+        error: reject
+      });
+    }
 }
 module.exports = _product;

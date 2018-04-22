@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2017-12-12 19:27:20 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-20 16:31:41
+ * @Last Modified time: 2018-04-23 00:19:01
  */
 'use strict';
 require('./index.css');
@@ -14,7 +14,7 @@ require('node_modules/bootstrap/dist/js/bootstrap.min.js')
 var navSide = require('page/common/nav-side/index.js');
 
 var _mm = require('util/mm.js');
-var _product = require('service/product.js');
+var _product = require('service/product-service.js');
 var templateIndex = require('./index.string');
 // 分页器
 var Pagination = require('util/pagination/index.js');
@@ -78,7 +78,7 @@ var page = {
                   </thead>`
     var _this = this;
     var listParam = this.data.listParam;
-    _product.getProductList(listParam, function (res) {
+    _product.getProductListByShop(listParam, function (res) {
       for (var i = 0, len = res.list.length; i < len; i++) {
         var userHtml = '';
         userHtml = _mm.renderHtml(templateIndex, res.list[i]);

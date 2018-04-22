@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-05 01:47:57
+ * @Last Modified time: 2018-04-23 00:12:34
  */
 
 'use strict';
@@ -124,7 +124,7 @@ var _user = {
 		});
 	},
 	// 批发商列表
-	getPifaList (pageinfo, resolve, reject) {
+	getPifaList(pageinfo, resolve, reject) {
 		_mm.request({
 			url: _mm.getServerUrl('/user/get_pifa_list.do'),
 			data: pageinfo,
@@ -133,7 +133,7 @@ var _user = {
 		})
 	},
 	// 实体店列表
-	getShitiList (pageinfo, resolve, reject) {
+	getShitiList(pageinfo, resolve, reject) {
 		_mm.request({
 			url: _mm.getServerUrl('/user/get_shiti_list.do'),
 			data: pageinfo,
@@ -162,18 +162,18 @@ var _user = {
 			error: reject
 		})
 	},
-  // 获取用户名单
-  getUserListToDown(listParam, resolve, reject) {
-    return _mm.request({
-      url: _mm.getServerUrl('/user/get_user_list_down.do'),
-      data: {
+	// 获取用户名单
+	getUserListToDown(listParam, resolve, reject) {
+		return _mm.request({
+			url: _mm.getServerUrl('/user/get_user_list_down.do'),
+			data: {
 				pageNum: listParam.pageNum,
 				pageSize: listParam.pageSize
 			},
-      success: resolve,
-      error: reject
-    });
-  },
+			success: resolve,
+			error: reject
+		});
+	},
 	// 用户降级
 	getDowngrade(userId, resolve, reject) {
 		return _mm.request({
@@ -181,6 +181,47 @@ var _user = {
 			method: 'POST',
 			data: {
 				userId: userId
+			},
+			success: resolve,
+			error: reject
+		});
+	},
+	// 检查用于登录的信息是否合法
+	checkLoginInfo(userInfo) {
+		if (!userInfo.username) {
+			return {
+				state: false,
+				msg: '用户名不能为空'
+			}
+		}
+		if (!userInfo.password) {
+			return {
+				state: false,
+				msg: '密码不能为空'
+			}
+		}
+		return {
+			state: true,
+			msg: '验证通过'
+		}
+	},
+	// 获取审核用户名单
+	getUserList(listParam, resolve, reject) {
+		return _mm.request({
+			url: _mm.getServerUrl('/user/get_user_list.do'),
+			data: listParam,
+			success: resolve,
+			error: reject
+		});
+	},
+	// 审核通过
+	getUserPass(userId, role, status, resolve, reject) {
+		return _mm.request({
+			url: _mm.getServerUrl('/user/user_pass.do'),
+			data: {
+				userId: userId,
+				role: role,
+				status: status
 			},
 			success: resolve,
 			error: reject

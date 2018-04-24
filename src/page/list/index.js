@@ -19,7 +19,10 @@ var page = {
 			keyword: _mm.getUrlParam('keyword') || '',
 			orderBy: _mm.getUrlParam('orderBy') || 'default',
 			pageNum: _mm.getUrlParam('pageNum') || 1,
-			pageSize: _mm.getUrlParam('pageSize') || 20
+			pageSize: _mm.getUrlParam('pageSize') || 20,
+			province: _mm.getUrlParam('province') || '',
+			city: _mm.getUrlParam('city') || '',
+			district: _mm.getUrlParam('district') || ''
 		}
 	},
 	init: function () {

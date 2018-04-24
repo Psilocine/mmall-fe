@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-18 19:30:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-23 01:06:18
+ * @Last Modified time: 2018-04-24 13:09:12
  */
 
 'use strict';
@@ -68,13 +68,25 @@ var header = {
 	},
 	// 搜索的提交
 	searchSubmit: function () {
-		var keyword = $.trim($('#search-input').val()),
-			type = $('#searchType').html();
-
+		let keyword = $.trim($('#search-input').val()),
+			type = $('#searchType').html(),
+			province = $("[search-province] option:selected").val(),
+			city = $("[search-city] option:selected").val(),
+			district = $("[search-district] option:selected").val();
+		let query = ''
+		if (province) {
+			query = `&province=${province}`
+			if (city) {
+				query += `&city=${city}`
+				if (district) {
+					query += `&district=${district}`
+				}
+			}
+		}
 		if (type === '商品') {
 			// 如果提交的时候有keyword,正常跳转到list页
 			if (keyword) {
-				window.location.href = './list.html?keyword=' + keyword;
+				window.location.href = './list.html?keyword=' + keyword + query;
 			}
 			// 如果keyword为空，直接返回首页
 			else {
@@ -82,7 +94,7 @@ var header = {
 			}
 		} else if (type === '店铺') {
 			if (keyword) {
-				window.location.href = './shop-list.html?keyword=' + keyword;
+				window.location.href = './shop-list.html?keyword=' + keyword + query;
 			}
 			// 如果keyword为空，直接返回首页
 			else {

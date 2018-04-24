@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-23 19:33:39
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 13:17:08
+ * @Last Modified time: 2018-04-24 20:58:45
 */
 .form-line{
   height: 30px;
@@ -16,6 +16,9 @@
 }
 .form-inline {
   display: inline-block
+}
+.form-inline .input {
+  border-radius: 5px;
 }
 
 .panel-body .btn {

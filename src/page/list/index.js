@@ -20,9 +20,9 @@ var page = {
 			orderBy: _mm.getUrlParam('orderBy') || 'default',
 			pageNum: _mm.getUrlParam('pageNum') || 1,
 			pageSize: _mm.getUrlParam('pageSize') || 20,
-			province: _mm.getUrlParam('province') || '',
-			city: _mm.getUrlParam('city') || '',
-			district: _mm.getUrlParam('district') || ''
+			province: _mm.getUrlParam('province') || null,
+			city: _mm.getUrlParam('city') || null,
+			district: _mm.getUrlParam('district') || null
 		}
 	},
 	init: function () {

@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-28 19:45:57
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:21:43
+ * @Last Modified time: 2018-04-25 20:56:29
 */
 
 
@@ -100,6 +100,10 @@
 	opacity: 0;
 }
 
+.p-info-con .shop-phone-wrapper,
+.p-info-con .shop-addr-wrapper {
+	opacity: 0;
+}
 .intro-wrap .p-info-con .p-price-con {
 	background: #eee;
 	padding: 10px;

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-28 19:45:49
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-15 15:22:28
+ * @Last Modified time: 2018-04-25 20:55:41
  */
 
 'use strict';
@@ -93,33 +93,47 @@ var page = {
               // 全国等级
               case '1':
                 $('.pifa-price').css('opacity','1');
+                $('.shop-phone-wrapper').css('opacity', '1');
+                $('.shop-addr-wrapper').css('opacity', '1');
                 break;
               // 全省 同省显示批发价
               case '2':
                 if(res.province === userRes.province) {
                   $('.pifa-price').css('opacity','1');
+                  $('.shop-phone-wrapper').css('opacity', '1');
+                  $('.shop-addr-wrapper').css('opacity', '1');
                 }
                 break;
               // 全市 同市显示批发价
               case '3':
                 if(res.province === userRes.province && res.city === userRes.city) {
-                  $('.pifa-price').css('opacity','1');                  
+                  $('.pifa-price').css('opacity','1');   
+                  $('.shop-phone-wrapper').css('opacity', '1');
+                  $('.shop-addr-wrapper').css('opacity', '1');               
                 }
                 break;
               // 全区/县 相同区县才显示批发价
               case '4':
                 if(res.province === userRes.province && res.city === userRes.city && res.district === userRes.district) {
-                  $('.pifa-price').css('opacity','1');                                    
+                  $('.pifa-price').css('opacity','1');       
+                  $('.shop-phone-wrapper').css('opacity', '1');
+                  $('.shop-addr-wrapper').css('opacity', '1');                             
                 }
                 break;
               default:
                 console.log('匹配不到用户等级');
                 break;
             }
+          } else if (res.role === "2") {
+            $('.pifa-price').css('opacity','1');
+            $('.shop-phone-wrapper').css('opacity', '1');
+            $('.shop-addr-wrapper').css('opacity', '1');
           }
         }, function (err) {
           // 未登录, 批发价移除 不显示
           $('.pifa-price').remove();
+          $('.shop-phone-wrapper').remove();
+          $('.shop-addr-wrapper').remove();
         })
         // 0127 end
 

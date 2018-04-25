@@ -24,11 +24,11 @@
 				<span class="info">￥{{pifaprice}}</span>
 			</div>
 		</div>
-		<div class="p-info-item p-price-con">
+		<div class="p-info-item p-price-con shop-addr-wrapper">
 			<span class="label">商家地址:</span>
 			<span class="shop-addr"></span>
 		</div>
-		<div class="p-info-item p-price-con">
+		<div class="p-info-item p-price-con shop-phone-wrapper">
 			<span class="label">联系方式:</span>
 			<span class="shop-phone"></span>
 		</div>

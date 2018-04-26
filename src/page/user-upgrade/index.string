@@ -38,11 +38,6 @@
   <input class="input" id="shopname" autocomplete="off" value="{{shopname}}" />
 </div>
 
-<div class="form-line">
-  <span class="label">店铺头像：</span>
-  <input type="file">
-</div>
-
 <div class="form-line form-inline" id='roleBox'>
   <span class="label">升级类型：</span>
     <select name="role" id="role">

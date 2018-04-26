@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-16 22:16:20
+ * @Last Modified time: 2018-04-26 13:12:06
  */
 'use strict';
 require('./index.css');
@@ -81,7 +81,7 @@ var page = {
 			$('.panel-body').html(userHtml);
 			$('#target').distpicker();
 		},function(errMsg){
-				_mm.errorTips(errMsg);
+			_mm.errorTips(errMsg);
 		});
 	},
 	// 验证字段信息

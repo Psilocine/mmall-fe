@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:33:33
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-27 17:04:07
+ * @Last Modified time: 2018-04-26 13:15:16
  */
 
 'use strict';
@@ -69,6 +69,8 @@ var page = {
 			$('.panel-body').html(userHtml);
 		}, function (errMsg) {
 			_mm.errorTips(errMsg);
+			_mm.goHome();
+			
 		});
 	}
 };

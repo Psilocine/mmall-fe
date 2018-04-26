@@ -2,7 +2,7 @@
  * @Author: PsiloLau
  * @Date:   2017-05-08 15:19:12
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-17 13:00:45
+ * @Last Modified time: 2018-04-26 13:14:39
  */
 
 'use strict';
@@ -80,7 +80,7 @@ var page = {
 				pages: res.pages
 			});
 		}, function (errMsg) {
-			_mm.errorTips(errMsg);
+			_mm.errorTips(errMsg);	
 		})
 	},
 	loadBanner() {

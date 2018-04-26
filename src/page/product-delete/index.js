@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-03-20 23:34:18 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-23 00:20:09
+ * @Last Modified time: 2018-04-26 13:14:03
  */
 'use strict';
 require('./index.css');
@@ -61,6 +61,8 @@ var page = {
           }
         }, function(errMsg) {
           _mm.errorTips(errMsg);
+          _mm.goHome();
+          
         })
       }
     })

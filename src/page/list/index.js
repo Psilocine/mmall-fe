@@ -93,7 +93,7 @@ var page = {
 				pages: res.pages
 			});
 		}, function (errMsg) {
-			_mm.errorTips(errMsg);
+			_mm.errorTips(errMsg);	
 		});
 	},
 	// 加载分页信息

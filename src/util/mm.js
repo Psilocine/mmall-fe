@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-15 15:26:38
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-16 21:18:14
+ * @Last Modified time: 2018-05-02 00:12:05
  */
 
 'use strict';
@@ -67,6 +67,10 @@ var _mm = {
 	// 字段的验证，支持非空、手机、邮箱的判断
 	validate: function (value, type) {
 		var value = $.trim(value);
+		// value不存在
+		if (!value) {
+			return true;
+		}
 		// 非空验证
 		if ('require' === type) {
 			return !!value;

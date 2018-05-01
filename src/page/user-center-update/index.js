@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-23 19:52:16
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-26 13:15:11
+ * @Last Modified time: 2018-05-02 00:13:50
  */
 'use strict';
 require('./index.css');
@@ -84,11 +84,6 @@ var page = {
 			status: false,
 			msg: ''
 		};
-		// 验证手机号
-		if (!_mm.validate(formData.phone, 'phone')) {
-			result.msg = '手机号格式不正确';
-			return result;
-		}
 		// 验证邮箱格式
 		if (!_mm.validate(formData.email, 'email')) {
 			result.msg = '邮箱格式不正确';

@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-24 11:04:03
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-24 20:57:09
+ * @Last Modified time: 2018-05-01 23:30:31
 */
 .form-line{
     margin-bottom: 10px;
@@ -18,7 +18,10 @@
 .form-line .input{
     height: 25px;
     width: 200px;
+    padding: 0 10px;
     line-height: 25px;
     font-size: 14px;
+    border: 1px soild #333;
     border-radius: 5px;
+    outline: none;
 }

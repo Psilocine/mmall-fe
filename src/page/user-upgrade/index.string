@@ -5,12 +5,12 @@
 
 <div class="form-line">
   <span class="label">姓 名：</span>
-  <input class="input" id="name" autocomplete="off" value="{{name}}" />
+  <input class="input" id="name" autocomplete="off" value="{{name}}">
 </div>
 
 <div class="form-line">
   <span class="label">电 话：</span>
-  <input class="input" id="phone" autocomplete="off" value="{{phone}}" />
+  <input class="input" id="phone" autocomplete="off" value="{{phone}}">
 </div>
 
 <div data-toggle="distpicker" id="target">
@@ -30,12 +30,12 @@
 
 <div class="form-line">
   <span class="label">地 址：</span>
-  <input class="input" id="addr" autocomplete="off" value="" />
+  <input class="input" id="addr" autocomplete="off" value="{{addr}}">
 </div>
 
 <div class="form-line">
   <span class="label">店铺名称：</span>
-  <input class="input" id="shopname" autocomplete="off" value="{{shopname}}" />
+  <input class="input" id="shopname" autocomplete="off" value="{{shopname}}">
 </div>
 
 <div class="form-line form-inline" id='roleBox'>

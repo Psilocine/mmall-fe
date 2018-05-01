@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-27 18:26:52
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-23 00:21:44
+ * @Last Modified time: 2018-05-02 00:01:29
  */
 
 'use strict';
@@ -93,7 +93,9 @@ var _product = {
   deleteProduct: function (productId, resolve, reject) {
     _mm.request({
       url: _mm.getServerUrl('/product/delete.do'),
-      data: productId,
+      data: {
+        productId: productId
+      },
       method: 'POST',
       success: resolve,
       error: reject
@@ -103,7 +105,9 @@ var _product = {
   deleteProductByAdmin: function (productId, resolve, reject) {
     _mm.request({
       url: _mm.getServerUrl('/product/delete_by_admin.do'),
-      data: {productId: productId},
+      data: {
+        productId: productId
+      },
       method: 'POST',
       success: resolve,
       error: reject

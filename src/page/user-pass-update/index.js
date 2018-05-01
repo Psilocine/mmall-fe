@@ -1,8 +1,8 @@
 /*
 * @Author: Rosen
 * @Date:   2017-05-24 11:03:57
-* @Last Modified by:   Rosen
-* @Last Modified time: 2017-05-24 17:21:02
+ * @Last Modified by: PsiloLau
+ * @Last Modified time: 2018-05-01 23:54:32
 */
 
 'use strict';
@@ -42,6 +42,7 @@ var page = {
                     passwordNew : userInfo.passwordNew
                 }, function(res, msg){
                     _mm.successTips(msg);
+                    location.href = './user-center.html';
                 }, function(errMsg){
                     _mm.errorTips(errMsg);
                 });

@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-08 15:28:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-02 00:54:16
+ * @Last Modified time: 2018-05-01 22:54:26
  */
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -44,7 +44,8 @@ var config = {
     'result': ['./src/page/result/index.js'],
     'user-downgrade': ['./src/page/user-downgrade/index.js'],
     'product-delete': ['./src/page/product-delete/index.js'],
-    'img-delete': ['./src/page/img-delete/index.js']
+    'img-delete': ['./src/page/img-delete/index.js'],
+    'user-delete': ['./src/page/user-delete/index.js']
   },
   output: {
     path: './dist',
@@ -126,6 +127,7 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('user-downgrade', '用户降级')),
     new HtmlWebpackPlugin(getHtmlConfig('product-delete', '商品删除')),
     new HtmlWebpackPlugin(getHtmlConfig('img-delete', '图片删除')),
+    new HtmlWebpackPlugin(getHtmlConfig('user-delete', '会员删除'))
   ]
 };
 

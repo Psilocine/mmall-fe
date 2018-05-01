@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-17 17:04:32
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-23 00:12:34
+ * @Last Modified time: 2018-05-01 23:13:01
  */
 
 'use strict';
@@ -186,6 +186,30 @@ var _user = {
 			error: reject
 		});
 	},
+	// 用户/会员注销 18-05-01
+	userDelete(userId, resolve, reject) {
+		return _mm.request({
+			url: _mm.getServerUrl('/user/user_delete.do'),
+			method: "POST",
+			data: {
+				userId: userId
+			},
+			success: resolve,
+			error: reject
+		});
+	},
+	// 拿到普通用户列表
+	getNormalUserList(listParam, resolve, reject) {
+		return _mm.request({
+			url: _mm.getServerUrl('/user/get_normal_user_list.do'),
+			data: {
+				pageNum: listParam.pageNum,
+				pageSize: listParam.pageSize
+			},
+			success: resolve,
+			error: reject
+		});
+	}, // 18-05-01 end
 	// 检查用于登录的信息是否合法
 	checkLoginInfo(userInfo) {
 		if (!userInfo.username) {

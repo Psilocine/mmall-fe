@@ -1,0 +1,13 @@
+{{#list}} 
+  <tr>
+    <td>{{username}}</td>
+    <td>{{email}}</td>
+    <td>
+      <a class="btn btn-sm btn-warning opear delBtn" href="javascript:;">注销</a>
+      <input type='text' class='id-input' value='{{id}}' style='display:none !important'/>
+    </td>
+  </tr>
+{{/list}}
+{{^list}}
+	<p class="err-tip">很抱歉，发生列表错误!</p>
+{{/list}}

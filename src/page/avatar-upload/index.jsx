@@ -15,7 +15,7 @@ import './index.css';
 const ProductSave = React.createClass({
   getInitialState() {
     return {
-      subImages: '',
+      subImages: [],
     };
   },
   componentDidMount: function () {
@@ -23,7 +23,7 @@ const ProductSave = React.createClass({
   // 图片上传成功
   onUploadSuccess(res) {
     let subImages = this.state.subImages;
-    subImages = res.data.uri;
+    subImages.push(res.data.uri);
     this.setState({
       subImages: subImages
     });

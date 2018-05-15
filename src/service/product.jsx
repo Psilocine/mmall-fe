@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-02-24 10:35:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2017-12-29 14:28:27
+ * @Last Modified time: 2018-05-15 15:35:37
 */
 
 'use strict';
@@ -11,6 +11,15 @@ import MMUtile from 'util/mm.jsx';
 const _mm = new MMUtile();
 
 export default class Product {
+  // 头像上传
+  saveAvatar(image) {
+    return _mm.request({
+      url: _mm.getServerUrl('/user/save_avatar.do'),
+      data: {
+        image: image
+      }
+    });
+  }
 
   // 获取商品信息
   getProduct(productId) {

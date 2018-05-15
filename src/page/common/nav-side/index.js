@@ -2,7 +2,7 @@
  * @Author: Rosen
  * @Date:   2017-05-19 17:39:14
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-05-01 22:53:29
+ * @Last Modified time: 2018-05-15 15:20:43
  */
 'use strict';
 require('./index.css');
@@ -36,76 +36,84 @@ var navSide = {
   // 不同身份用户侧边栏选项不同
   roleIdenDiff: function () {
     var _this = this;
-    _user.getUserInfo(function (res) {
-      switch (res.role) {
-        // 管理员
-        case "1":
-          _this.option.navList.push({
-            name: 'user-check',
-            desc: '用户审核',
-            href: './user-check.html'
-          }, {
-            name: 'user-downgrade',
-            desc: '用户降级',
-            href: './user-downgrade.html'
-          }, {
-            name: 'product-delete',
-            desc: '商品删除',
-            href: './product-delete.html'
-          }, {
-            name: 'user-delete',
-            desc: '会员删除',
-            href: './user-delete.html'
-          });
-          break;
-          // 批发商
-        case "2":
-          _this.option.navList.push({
-            name: 'user-upgrade',
-            desc: '会员升级',
-            href: './user-upgrade.html'
-          }, {
-            name: 'product-add',
-            desc: '商品添加',
-            href: './product-add.html'
-          }, {
-            name: 'product-manage',
-            desc: '商品管理',
-            href: './product-manage.html'
-          });
-          break;
-          // 实体店
-        case "3":
-          _this.option.navList.push({
-            name: 'user-upgrade',
-            desc: '会员升级',
-            href: './user-upgrade.html'
-          }, {
-            name: 'product-add',
-            desc: '商品添加',
-            href: './product-add.html'
-          }, {
-            name: 'product-manage',
-            desc: '商品管理',
-            href: './product-manage.html'
-          });
-          break;
-        // 普通用户
-        case "4":
-          _this.option.navList.push({
-            name: 'user-upgrade',
-            desc: '会员升级',
-            href: './user-upgrade.html'
-          });
-          break;
-        default:
-          console.log("can't find the role code")
-          break;
-      }
-      return _this.renderNav(); 
-    }, function (errMsg) {
-      _mm.errorTips(errMsg);
-    });
+    // _user.getUserInfo(function (res) {
+    //   switch (res.role) {
+    //     // 管理员
+    //     case "1":
+    //       _this.option.navList.push({
+    //         name: 'user-check',
+    //         desc: '用户审核',
+    //         href: './user-check.html'
+    //       }, {
+    //         name: 'user-downgrade',
+    //         desc: '用户降级',
+    //         href: './user-downgrade.html'
+    //       }, {
+    //         name: 'product-delete',
+    //         desc: '商品删除',
+    //         href: './product-delete.html'
+    //       }, {
+    //         name: 'user-delete',
+    //         desc: '会员删除',
+    //         href: './user-delete.html'
+    //       });
+    //       break;
+    //       // 批发商
+    //     case "2":
+    //       _this.option.navList.push({
+    //         name: 'user-upgrade',
+    //         desc: '会员升级',
+    //         href: './user-upgrade.html'
+    //       }, {
+    //         name: 'avatar-upload',
+    //         desc: '头像上传',
+    //         href: './avatar-upload.html'
+    //       },{
+    //         name: 'product-add',
+    //         desc: '商品添加',
+    //         href: './product-add.html'
+    //       }, {
+    //         name: 'product-manage',
+    //         desc: '商品管理',
+    //         href: './product-manage.html'
+    //       });
+    //       break;
+    //       // 实体店
+    //     case "3":
+    //       _this.option.navList.push({
+    //         name: 'user-upgrade',
+    //         desc: '会员升级',
+    //         href: './user-upgrade.html'
+    //       }, {
+    //         name: 'avatar-upload',
+    //         desc: '头像上传',
+    //         href: './avatar-upload.html'
+    //       }, {
+    //         name: 'product-add',
+    //         desc: '商品添加',
+    //         href: './product-add.html'
+    //       }, {
+    //         name: 'product-manage',
+    //         desc: '商品管理',
+    //         href: './product-manage.html'
+    //       });
+    //       break;
+    //     // 普通用户
+    //     case "4":
+    //       _this.option.navList.push({
+    //         name: 'user-upgrade',
+    //         desc: '会员升级',
+    //         href: './user-upgrade.html'
+    //       });
+    //       break;
+    //     default:
+    //       console.log("can't find the role code")
+    //       break;
+    //   }
+    //   return _this.renderNav(); 
+    // }, function (errMsg) {
+    //   _mm.errorTips(errMsg);
+    // });
   },
   // 渲染导航菜单
   renderNav: function () {

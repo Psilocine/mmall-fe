@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-02-24 10:35:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-05-15 15:35:37
+ * @Last Modified time: 2018-05-15 16:06:15
 */
 
 'use strict';
@@ -15,6 +15,7 @@ export default class Product {
   saveAvatar(image) {
     return _mm.request({
       url: _mm.getServerUrl('/user/save_avatar.do'),
+      method: 'POST',
       data: {
         image: image
       }

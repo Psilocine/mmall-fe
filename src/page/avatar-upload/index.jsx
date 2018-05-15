@@ -52,7 +52,7 @@ const ProductSave = React.createClass({
     // 保存product
     _product.saveAvatar(subImages).then(res => {
       alert(res);
-      location.href = './user.center.html';
+      location.href = './user-center.html';
     }, err => {     
       alert(err.msg || '哪里不对了');
       console.log('permission denied');

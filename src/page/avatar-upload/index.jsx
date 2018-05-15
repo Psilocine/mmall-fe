@@ -15,7 +15,7 @@ import './index.css';
 const ProductSave = React.createClass({
   getInitialState() {
     return {
-      subImages: [],
+      subImages: '',
     };
   },
   componentDidMount: function () {
@@ -23,7 +23,7 @@ const ProductSave = React.createClass({
   // 图片上传成功
   onUploadSuccess(res) {
     let subImages = this.state.subImages;
-    subImages.push(res.data.uri);
+    subImages = res.data.uri;
     this.setState({
       subImages: subImages
     });
@@ -51,12 +51,12 @@ const ProductSave = React.createClass({
     let subImages = this.state.subImages.join(',')
     // 保存product
     _product.saveAvatar(subImages).then(res => {
-    alert(res);
-    location.href = './user.center.html';
+      alert(res);
+      location.href = './user.center.html';
     }, err => {     
-    alert(err.msg || '哪里不对了');
-    console.log('permission denied');
-    location.href = './user-center.html';
+      alert(err.msg || '哪里不对了');
+      console.log('permission denied');
+      location.href = './user-center.html';
     });
   },
   render() {
@@ -66,7 +66,7 @@ const ProductSave = React.createClass({
           <div className="form-wrap col-lg-12">
             <div className="form-horizontal">
               <div className="form-group">
-                <label htmlFor="inputEmail3" className="col-md-2 control-label">商品图片</label>
+                <label htmlFor="inputEmail3" className="col-md-2 control-label">上传头像</label>
                 <div className="img-con col-md-10">
                   {
                     this.state.subImages.length ? this.state.subImages.map((image, index) => {
@@ -76,11 +76,13 @@ const ProductSave = React.createClass({
                           <i className="fa fa-close fa-fw" onClick={this.onDeleteImage.bind(this, image)}></i>
                         </div>
                       );
-                    }) : <div className="notice">请上传图片</div>
+                    }) : <div className="notice">请上传头像</div>
                   }
                 </div>
                 <div className="col-md-offset-2 col-md-10">
-                  <FileUploader onSuccess={this.onUploadSuccess} onError={this.onUploadError} />
+                  {
+                    this.state.subImages.length == 1 ? '' : <FileUploader onSuccess={this.onUploadSuccess} onError={this.onUploadError} />
+                  }
                 </div>
               </div>
               <div className="form-group">

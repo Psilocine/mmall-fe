@@ -2,7 +2,7 @@
  * @Author: PsiloLau 
  * @Date: 2018-01-01 15:12:51 
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-01-20 19:58:38
+ * @Last Modified time: 2018-05-23 22:00:04
  */
 .shop-nav {
   background: #eee;
@@ -46,6 +46,7 @@
   margin: 15px 20px 15px 0;
   float: left;
   cursor: pointer;
+  border-radius: 5px;
   background: #fff;
 }
 .goods-wrap .goods-list .goods-item:hover{

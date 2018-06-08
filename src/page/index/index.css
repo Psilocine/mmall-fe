@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-09 17:16:19
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-06-08 17:07:44
+ * @Last Modified time: 2018-06-08 19:29:08
 */
 
 
@@ -11,7 +11,7 @@
 .category {
 	float: left;
 	width: 200px;
-	/* height: 370px; */
+	height: 439px;
 	padding: 10px 0;
 	margin-right: 10px;
 	background: #aaa;

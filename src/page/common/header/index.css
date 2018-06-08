@@ -2,7 +2,7 @@
 * @Author: Rosen
 * @Date:   2017-05-18 19:30:20
  * @Last Modified by: PsiloLau
- * @Last Modified time: 2018-04-25 20:55:21
+ * @Last Modified time: 2018-06-08 17:01:36
 */
 
 
@@ -29,14 +29,13 @@
 	position: absolute;
 	height: 35px;
 	line-height: 35px;
-	width: 42px;
+	width: 50px;
 	padding: 0 10px 0 12px; 
 	color: #666;
 	border-right: 1px solid #C60023;
-	/* overflow: hidden; */
-	box-sizing: content-box;
 	cursor: pointer;
 }
+
 .search-con .search-list {
 	visibility: hidden;
 	position: absolute;
@@ -59,10 +58,6 @@
 	padding-left: 10px;	
 	height: 25px;
 	line-height: 25px;
-}
-
-.search-con .search-list .search-item:hover {
-	background: #f3f3f3;
 }
 
 .header .search-con .search-input {
